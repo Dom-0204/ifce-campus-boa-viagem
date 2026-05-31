@@ -115,6 +115,11 @@ strong {
     font-weight: 800;
 }
 
+section h2{
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--sp-4);
+}
+
 .cabecalho {
     background-color: var(--cor-primaria);
     padding: 1rem;
@@ -166,12 +171,23 @@ strong {
     padding: var(--sp-10) var(--sp-8);
 }
 
+.hero_selo {
+     display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--sp-2) var(--sp-6);
+    border-radius: var(--raio-pill);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--sp-6);
+}
+
 .hero img {
     width: 100%;
     height: auto;
     max-width: 1000px;
     border-radius: var(--raio-lg);
-    margin-bottom: var(--sp-6);
+    margin-bottom: var(--sp-12);
+    box-shadow: var(--sombra-lg);
 }
 
 .hero h1 {
@@ -194,10 +210,26 @@ strong {
     border-radius: var(--raio-pill);
     font-weight: 600;
     transition: var(--transicao-rapida);
+    font-weight: 600;
+}
+
+.botao-2 {
+    display: inline-block;
+    padding: var(--sp-3) var(--sp-6);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-md);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    transition: var(--transicao);
 }
 
 .botao:hover {
     background-color: var(--cor-primaria-hover);
+}
+
+.botao-2:hover {
+    background-color: var(--cor-primaria);
+    color: white;
 }
 
 
