@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    /* ===== CORES INSTITUCIONAIS ===== */
+
+    --cor-primaria: #198754;          /* Verde IF */
+    --cor-primaria-hover: #146c43;    /* Verde mais escuro */
+    --cor-primaria-clara: #d1f2e0;    /* Verde suave */
+
+    --cor-secundaria: #dc3545;        /* Vermelho do logo IF */
+    --cor-secundaria-hover: #b02a37;
+
+    --cor-fundo: #f8f9fa;             /* Fundo geral */
+    --cor-fundo-card: #ffffff;        /* Cards */
+
+    --cor-texto: #212529;             /* Texto principal */
+    --cor-texto-secundario: #6c757d;  /* Texto auxiliar */
+
+    --cor-borda: #dee2e6;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+
+    /* ===== TIPOGRAFIA ===== */
+
+    --fonte-principal: 'Poppins', sans-serif;
+
+    /* Font Size */
+
+    --fs-sm: 0.875rem;   /* 14px */
+    --fs-base: 1rem;     /* 16px */
+    --fs-md: 1.125rem;   /* 18px */
+    --fs-lg: 1.375rem;   /* 22px */
+    --fs-xl: 1.75rem;    /* 28px */
+    --fs-2xl: 2.25rem;   /* 36px */
+    --fs-3xl: 3rem;      /* 48px */
+
+    /* ===== ESPAÇAMENTOS ===== */
+
+    --sp-2: 0.5rem;      /* 8px */
+    --sp-3: 0.75rem;     /* 12px */
+    --sp-4: 1rem;        /* 16px */
+    --sp-5: 1.25rem;     /* 20px */
+    --sp-6: 1.5rem;      /* 24px */
+    --sp-8: 2rem;        /* 32px */
+    --sp-10: 2.5rem;     /* 40px */
+    --sp-12: 3rem;       /* 48px */
+    --sp-16: 4rem;       /* 64px */
+
+    /* ===== BORDAS ===== */
+
+    --raio-sm: 4px;
+    --raio-md: 8px;
+    --raio-lg: 12px;
+    --raio-xl: 20px;
+    --raio-pill: 999px;
+
+    /* ===== SOMBRAS ===== */
+
+    --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --sombra-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --sombra-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    /* ===== TRANSIÇÕES ===== */
+
+    --transicao-rapida: 0.3s ease;
+    --transicao: 0.5s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+strong{
+    color: var(--cor-primaria-hover);
+    font-weight: 800;
+}
+
+.cabecalho{
+    background-color: var(--cor-primaria);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+    box-shadow: var(--sombra-md);
+}
+
+.cabecalho_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--sp-6);
+}
+
+.cabecalho_nav_ancoras{
+    font-family: var(--fonte-principal);
+    font-size: var(--fs-md);
+    font-weight: 500;
+    color: white;
+    padding: var(--sp-2);
+    display: inline-block;
+    transition: var(--transicao-rapida);
+}
+
+.cabecalho_nav_ancoras:hover{
+    color: var(--cor-primaria-clara);
+    transform: translateY(-2px);
+}
+
+.main{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: var(--sp-10);
+
+}
+
+.hero{
+    text-align: center;
+    padding: var(--sp-16) var(--sp-8);
+}
+
+.hero img{
+    width: 100%;
+    max-width: 1000px;
+    border-radius: var(--raio-lg);
+    margin-bottom: var(--sp-8);
+}
+
+.hero h1{
+    font-size: var(--fs-3xl);
+    margin-bottom: var(--sp-4);
+}
+
+.hero p{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.botao{
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: var(--sp-3) var(--sp-6);
+    border-radius: var(--raio-md);
+    margin: var(--sp-4);
+    transition: var(--transicao-rapida);
+}
+
+.botao:hover{
+    background-color: var(--cor-primaria-hover);
+}
