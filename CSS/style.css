@@ -258,6 +258,35 @@ section h2{
     .hero h1 {
         font-size: var(--fs-3xl);
     }
+
+
+    .caixa_dos_quadrados {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+}
+
+.caixa_dos_quadrados {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+    margin-top: var(--sp-4);
+}
+
+.quadrado_item {
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-6);
+    border-radius: var(--raio-md);
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-sm);
+    transition: var(--transicao-rapida);
+}
+
+.quadrado_item:hover {
+    box-shadow: var(--sombra-md);
+    transform: translateY(-4px);
+    border-color: var(--cor-primaria-clara);
 }
 
 
