@@ -115,7 +115,7 @@ strong {
     font-weight: 800;
 }
 
-section h2{
+section h2 {
     font-size: var(--fs-2xl);
     margin-bottom: var(--sp-4);
 }
@@ -133,12 +133,15 @@ section h2{
     box-shadow: var(--sombra-md);
 }
 
+.cabecalho img{
+    display: block;
+    height: auto;
+}
+
 .cabecalho_nav {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--sp-3);
+    align-items: center;
+    gap: var(--sp-6);
 }
 
 .cabecalho_nav_ancoras {
@@ -149,6 +152,28 @@ section h2{
     padding: var(--sp-2);
     display: inline-block;
     transition: var(--transicao-rapida);
+    position: relative;
+}
+
+.cabecalho_nav_ancoras::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.cabecalho_nav_ancoras:hover::after {
+    width: 100%;
+}
+
+.ativo::after {
+    width: 100%;
 }
 
 .cabecalho_nav_ancoras:hover {
@@ -172,13 +197,13 @@ section h2{
 }
 
 .hero_selo {
-     display: inline-block;
+    display: inline-block;
     background-color: var(--cor-primaria);
     color: white;
-    padding: var(--sp-2) var(--sp-6);
+    padding: 10px 10px;
     border-radius: var(--raio-pill);
     font-size: var(--fs-sm);
-    margin-bottom: var(--sp-6);
+    margin-bottom: 24px;
 }
 
 .hero img {
@@ -186,6 +211,7 @@ section h2{
     height: auto;
     max-width: 1000px;
     border-radius: var(--raio-lg);
+    margin-top: var(--sp-6);
     margin-bottom: var(--sp-12);
     box-shadow: var(--sombra-lg);
 }
@@ -239,8 +265,10 @@ section h2{
 
     .cabecalho {
         flex-direction: row;
-        justify-content: space-between;
-        padding: 0.5rem 2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        padding: 0.8rem 2rem;
     }
 
     .cabecalho_nav {
@@ -291,7 +319,7 @@ section h2{
     box-shadow: var(--sombra-lg);
 }
 
-.card:hover .icone-card{
+.card:hover .icone-card {
     transform: scale(1.1);
 }
 
@@ -343,28 +371,28 @@ section h2{
     width: 60%;
 }
 
-.campus-texto h2{
+.campus-texto h2 {
     border-left: 5px solid var(--cor-primaria);
     padding-left: var(--sp-4);
     margin-bottom: var(--sp-4);
 }
 
-.campus-texto p{
+.campus-texto p {
     margin-bottom: var(--sp-6);
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .cards{
+    .cards {
         flex-direction: column;
     }
 
-    .campus-conteudo{
+    .campus-conteudo {
         flex-direction: column;
     }
 
     .campus-img,
-    .campus-texto{
+    .campus-texto {
         width: 100%;
     }
 
