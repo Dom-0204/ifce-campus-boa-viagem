@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
 
     /* ===== CORES INSTITUCIONAIS ===== */
@@ -522,6 +526,249 @@ section h2 {
     width: 60px;
     height: 60px;
     margin-bottom: var(--sp-4);
+}
+
+/* =========================
+   ESTILO - LABLISA
+========================= */
+
+.lisa-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.9), rgba(20, 108, 67, 0.95)), url('../images/Lab.jpg') no-repeat center/cover;
+    padding: var(--sp-12) var(--sp-4);
+    text-align: center;
+    color: white;
+    margin-bottom: var(--sp-6);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.lisa-banner h1 {
+    color: white;
+    font-size: var(--fs-3xl);
+}
+
+.lisa-banner h1 strong {
+    color: var(--cor-primaria-clara);
+}
+
+.lisa-banner p {
+    font-size: var(--fs-lg);
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Container Split (Sidebar + Conteúdo) */
+.lisa-container {
+    display: flex !important;
+    flex-direction: row;
+    gap: var(--sp-8);
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar Fixa */
+.lisa-sidebar {
+    width: 250px;
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-5);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border-top: 4px solid var(--cor-primaria);
+    position: sticky;
+    top: 132px;
+    /* Gruda na tela abaixo do header */
+}
+
+.lisa-sidebar h3 {
+    font-size: var(--fs-md);
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lisa-sidebar ul {
+    list-style: none;
+}
+
+.lisa-sidebar ul li {
+    margin-bottom: var(--sp-3);
+}
+
+.lisa-sidebar ul li a {
+    font-size: var(--fs-base);
+    color: var(--cor-texto-secundario);
+    transition: var(--transicao-rapida);
+    display: block;
+    padding: var(--sp-2) 0;
+}
+
+.lisa-sidebar ul li a:hover {
+    color: var(--cor-primaria);
+    padding-left: var(--sp-2);
+}
+
+.sidebar-badge {
+    margin-top: var(--sp-8);
+    background-color: var(--cor-fundo-secao);
+    padding: var(--sp-3);
+    border-radius: var(--raio-md);
+    text-align: center;
+}
+
+.sidebar-badge strong {
+    display: block;
+    color: var(--cor-secundaria);
+}
+
+.sidebar-badge span {
+    font-size: var(--fs-sm);
+    color: var(--cor-texto-secundario);
+}
+
+/* Área de cards empilhados à direita */
+.lisa-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+}
+
+.lisa-painel-card {
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-8);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border: 1px solid var(--cor-borda);
+    scroll-margin-top: 132px;
+}
+
+/* Linha do tempo (Eixos Estratégicos) */
+.lisa-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-5);
+    margin-top: var(--sp-4);
+}
+
+.lisa-timeline-item {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+}
+
+.lisa-timeline-numero {
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--sombra-sm);
+}
+
+.lisa-timeline-texto h4 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: 4px;
+}
+
+/* Grid de Setores Alternativo (Sem Borda Superior Verde) */
+.lisa-setores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--sp-4);
+    margin-top: var(--sp-5);
+}
+
+.lisa-setor-item {
+    background-color: var(--cor-fundo-mini-card);
+    padding: var(--sp-5);
+    border-radius: var(--raio-md);
+    border-bottom: 4px solid var(--cor-secundaria);
+    /* Diferente da home que é em cima */
+    transition: var(--transicao-rapida);
+}
+
+.lisa-setor-item:hover {
+    transform: scale(1.02);
+    background-color: white;
+    box-shadow: var(--sombra-sm);
+}
+
+.lisa-setor-tag {
+    display: inline-block;
+    background-color: var(--cor-primaria-hover);
+    color: white;
+    padding: 3px 10px;
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+}
+
+/* Layout Assimétrico de Recursos */
+.lisa-flex-recursos {
+    display: flex;
+    gap: var(--sp-6);
+    align-items: center;
+    margin-top: var(--sp-4);
+}
+
+.lisa-recurso-descricao {
+    width: 65%;
+}
+
+.lisa-recurso-destaque {
+    width: 35%;
+    background-color: var(--cor-fundo-secao);
+    padding: var(--sp-6);
+    border-radius: var(--raio-lg);
+    border-right: 5px solid var(--cor-primaria);
+    text-align: right;
+}
+
+.lisa-recurso-destaque h4 {
+    color: var(--cor-primaria-hover);
+    font-size: var(--fs-lg);
+    margin-bottom: var(--sp-2);
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 992px) {
+    .lisa-container {
+        flex-direction: column !important;
+    }
+
+    .lisa-sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-bottom: var(--sp-4);
+    }
+
+    .lisa-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--sp-4);
+    }
+
+    .lisa-sidebar ul li {
+        margin: 0;
+    }
+
+    .lisa-flex-recursos {
+        flex-direction: column;
+    }
+
+    .lisa-recurso-descricao,
+    .lisa-recurso-destaque {
+        width: 100%;
+        text-align: left;
+    }
 }
 
 /* =========================
