@@ -328,7 +328,7 @@ section h2 {
     transform: scaleX(1);
 }
 
-.botao-2:hover{
+.botao-2:hover {
     color: var(--cor-fundo);
 }
 
@@ -554,11 +554,15 @@ section h2 {
 ========================= */
 
 .lisa-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.9), rgba(20, 108, 67, 0.95)), url('../images/Lab.jpg') no-repeat center/cover;
-    padding: var(--sp-12) var(--sp-4);
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, 0.60),
+            rgba(20, 108, 67, 0.90)),
+        url("../images/Lab.jpg") no-repeat center/cover;
+    padding: 6rem var(--sp-4);
     text-align: center;
     color: white;
-    margin-bottom: var(--sp-6);
+    margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
 
@@ -577,8 +581,8 @@ section h2 {
     opacity: 0.9;
 }
 
-/* Container Split (Sidebar + Conteúdo) */
-.lisa-container {
+/* sidebar universal */
+.universal-container {
     display: flex !important;
     flex-direction: row;
     gap: var(--sp-8);
@@ -588,7 +592,7 @@ section h2 {
 }
 
 /* Sidebar Fixa */
-.lisa-sidebar {
+.universal-sidebar {
     width: 250px;
     background-color: var(--cor-fundo-card);
     padding: var(--sp-5);
@@ -600,7 +604,7 @@ section h2 {
     /* Gruda na tela abaixo do header */
 }
 
-.lisa-sidebar h3 {
+.universal-sidebar h3 {
     font-size: var(--fs-md);
     color: var(--cor-primaria-hover);
     margin-bottom: var(--sp-4);
@@ -608,15 +612,15 @@ section h2 {
     letter-spacing: 1px;
 }
 
-.lisa-sidebar ul {
+.universal-sidebar ul {
     list-style: none;
 }
 
-.lisa-sidebar ul li {
+.universal-sidebar ul li {
     margin-bottom: var(--sp-3);
 }
 
-.lisa-sidebar ul li a {
+.universal-sidebar ul li a {
     font-size: var(--fs-base);
     color: var(--cor-texto-secundario);
     transition: var(--transicao-rapida);
@@ -624,7 +628,7 @@ section h2 {
     padding: var(--sp-2) 0;
 }
 
-.lisa-sidebar ul li a:hover {
+.universal-sidebar ul li a:hover {
     color: var(--cor-primaria);
     padding-left: var(--sp-2);
 }
@@ -647,15 +651,15 @@ section h2 {
     color: var(--cor-texto-secundario);
 }
 
-/* Área de cards empilhados à direita */
-.lisa-conteudo {
+/* resto da sidebar universal */
+.universal-conteudo {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: var(--sp-6);
 }
 
-.lisa-painel-card {
+.universal-painel-card {
     background-color: var(--cor-fundo-card);
     padding: var(--sp-8);
     border-radius: var(--raio-lg);
@@ -664,7 +668,6 @@ section h2 {
     scroll-margin-top: 132px;
 }
 
-/* Linha do tempo (Eixos Estratégicos) */
 .lisa-timeline {
     display: flex;
     flex-direction: column;
@@ -697,7 +700,6 @@ section h2 {
     margin-bottom: 4px;
 }
 
-/* Grid de Setores Alternativo (Sem Borda Superior Verde) */
 .lisa-setores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -710,7 +712,6 @@ section h2 {
     padding: var(--sp-5);
     border-radius: var(--raio-md);
     border-bottom: 4px solid var(--cor-secundaria);
-    /* Diferente da home que é em cima */
     transition: var(--transicao-rapida);
 }
 
@@ -731,64 +732,84 @@ section h2 {
     margin-bottom: var(--sp-3);
 }
 
-/* Layout Assimétrico de Recursos */
-.lisa-flex-recursos {
+.lisa-conexoes-container {
+    margin-top: var(--sp-6);
+    padding: var(--sp-4) var(--sp-5);
+    background-color: var(--cor-fundo-mini-card);
+    border-radius: var(--raio-md);
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.lisa-conexoes-titulo {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--sp-3);
+}
+
+.lisa-conexoes-grid {
     display: flex;
-    gap: var(--sp-6);
-    align-items: center;
-    margin-top: var(--sp-4);
+    flex-wrap: wrap;
+    gap: var(--sp-3);
 }
 
-.lisa-recurso-descricao {
-    width: 65%;
-}
-
-.lisa-recurso-destaque {
-    width: 35%;
-    background-color: var(--cor-fundo-secao);
-    padding: var(--sp-6);
-    border-radius: var(--raio-lg);
-    border-right: 5px solid var(--cor-primaria);
-    text-align: right;
-}
-
-.lisa-recurso-destaque h4 {
+.lisa-conexao-tag {
+    background-color: var(--cor-fundo-card);
     color: var(--cor-primaria-hover);
-    font-size: var(--fs-lg);
-    margin-bottom: var(--sp-2);
+    border: 1px solid var(--cor-borda);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-base);
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: var(--transicao-rapida);
+}
+
+.lisa-conexao-tag:hover {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-secao);
+    transform: translateY(-2px);
+}
+
+.lisa-ecossistema-botoes {
+    margin-top: var(--sp-6);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lisa-ecossistema-botoes .botao {
+    margin: 0;
 }
 
 /* Responsividade para Telas Menores */
 @media (max-width: 992px) {
-    .lisa-container {
+    .universal-container {
         flex-direction: column !important;
     }
 
-    .lisa-sidebar {
+    .universal-sidebar {
         width: 100%;
         position: relative;
         top: 0;
         margin-bottom: var(--sp-4);
     }
 
-    .lisa-sidebar ul {
+    .universal-sidebar ul {
         display: flex;
         flex-wrap: wrap;
         gap: var(--sp-4);
     }
 
-    .lisa-sidebar ul li {
+    .universal-sidebar ul li {
         margin: 0;
     }
 
-    .lisa-flex-recursos {
-        flex-direction: column;
-    }
-
-    .lisa-recurso-descricao,
-    .lisa-recurso-destaque {
-        width: 100%;
-        text-align: left;
+    .lisa-conexoes-grid {
+        justify-content: flex-start;
+        gap: var(--sp-2);
     }
 }
 
