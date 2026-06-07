@@ -549,9 +549,9 @@ section h2 {
     margin-bottom: var(--sp-4);
 }
 
-/* =========================
-   ESTILO - LABLISA
-========================= */
+/* ===============================
+   ESTILO - LABLISA & BOLSAS
+================================== */
 
 .lisa-banner {
     background:
@@ -580,6 +580,36 @@ section h2 {
     font-weight: 300;
     opacity: 0.9;
 }
+
+.bolsas-banner {
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, 0.60),
+            rgba(20, 108, 67, 0.90)),
+        url("../images/bolsa.png") no-repeat center/cover;
+    padding: 6rem var(--sp-4);
+    text-align: center;
+    color: white;
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.bolsas-banner h1 {
+    color: white;
+    font-size: var(--fs-3xl);
+}
+
+.bolsas-banner h1 strong {
+    color: var(--cor-primaria-clara);
+}
+
+.bolsas-banner p {
+    font-size: var(--fs-lg);
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+
 
 /* sidebar universal */
 .universal-container {
