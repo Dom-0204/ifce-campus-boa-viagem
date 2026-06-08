@@ -1198,29 +1198,96 @@ section h2 {
 .extensao_card {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--cor-fundo-card);
-    padding: var(--sp-6);
-    border-radius: var(--raio-lg);
-    box-shadow: var(--sombra-sm);
-    border-top: 4px solid var(--cor-primaria);
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            #f7faf8);
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    border-top: 6px solid var(--cor-primaria);
+    position: relative;
+    overflow: hidden;
+}
+
+.icone-card {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.impacto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.impacto-topo span {
+    font-size: 2.5rem;
+}
+
+.impacto-topo small {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(25, 135, 84, .15);
+}
+
+.extensao_card .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+}
+
+.extensao_card .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+    border-top-color: #1fa15f;
 }
 
 .extensao_card .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--sp-5);
+    gap: 2rem;
+}
+
+.extensao_card .card h3 {
+    font-size: 1.6rem;
+    color: var(--cor-primaria-hover);
+    margin-bottom: 1rem;
 }
 
 .extensao_card>p {
-    line-height: 1.9;
+    max-width: 750px;
+}
+
+.extensao_card .card p {
+    line-height: 1.8;
     color: var(--cor-texto-secundario);
-    margin-bottom: var(--sp-6);
 }
 
 .impacto_extensao {
+    background: linear-gradient(100deg, #ffffff, #f5f9f7);
+    padding: 5rem 3rem;
+    border-radius: 24px;
     max-width: 1200px;
     margin: var(--sp-8) auto;
     text-align: center;
+}
+
+.impacto_extensao .card {
+    text-align: left;
+}
+
+.impacto_extensao .card p {
+    text-align: left;
+    line-height: 1.8;
 }
 
 .impacto_extensao h2,
@@ -1230,8 +1297,11 @@ section h2 {
     display: inline-block;
 }
 
-.impacto_extensao .cards,
-.projetos_extensao .cards {
+.impacto_extensao .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
     margin-top: 3rem;
 }
 
@@ -1247,9 +1317,58 @@ section h2 {
 }
 
 .projetos_extensao .card {
+    background: #fff;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: .3s ease;
+}
+
+.projetos_extensao .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.projetos_extensao .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-conteudo {
+    padding: 1.8rem;
+}
+
+.cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.cards-projetos .card {
+    flex: 1;
+    max-width: 380px;
+}
+
+.cards-projetos .card:hover {
+    transform: translateY(-8px);
+}
+
+.cards-projetos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: var(--sp-2);
 }
 
 .projetos_extensao .card:first-child {
@@ -1276,8 +1395,8 @@ section h2 {
     transform: translateX(-50%);
     bottom: 0;
 
-    width: 80px;
-    height: 4px;
+    width: 120px;
+    height: 5px;
 
     background-color: var(--cor-primaria);
     border-radius: 999px;
@@ -1322,20 +1441,68 @@ section h2 {
 }
 
 .contato-info {
+    background: linear-gradient(180deg, #ffffff, #f7faf8);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--cor-fundo-card);
     padding: var(--sp-6);
-    border-radius: var(--raio-lg);
-    box-shadow: var(--sombra-sm);
     border-top: 4px solid var(--cor-primaria);
 }
 
 .contato-info .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--sp-4);
-    margin-top: var(--sp-6);
+    gap: var(--sp-8);
+    margin-top: var(--sp-8);
+}
+
+.contato-info .card {
+    transition: .35s ease;
+    position: relative;
+    min-height: 180px;
+}
+
+.contato-info .card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: var(--cor-primaria);
+}
+
+.contato-info .card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, .10);
+
+    border-top-color: #1fa15f;
+}
+
+.contato-info .card i,
+.contato-info .card .icone {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+    border-radius: 50%;
+
+    background: rgba(25, 135, 84, .12);
+
+    font-size: 1.5rem;
 }
 
 .contato-setores {
@@ -1351,100 +1518,71 @@ section h2 {
 .localizacao {
     max-width: 1200px;
     margin: var(--sp-8) auto;
-
     text-align: center;
 }
 
 .localizacao iframe {
     width: 100%;
     height: 550px;
-
     border-radius: var(--raio-lg);
-
     box-shadow: var(--sombra-sm);
-
     margin-top: var(--sp-6);
 }
 
 .localizacao-endereco {
     margin-top: 1rem;
-
     text-align: center;
-
     font-size: 1.05rem;
-
     color: var(--cor-texto-secundario);
 }
 
 .formulario-contato {
     max-width: 900px;
     margin: var(--sp-8) auto;
-
     background-color: var(--cor-fundo-card);
-
     padding: var(--sp-6);
-
     border-radius: var(--raio-lg);
-
     box-shadow: var(--sombra-sm);
 }
 
 .formulario-descricao {
     text-align: center;
-
     max-width: 700px;
-
     margin: 0 auto 2rem auto;
-
     color: var(--cor-texto-secundario);
 }
 
 .formulario-contato form {
     display: flex;
     flex-direction: column;
-
     gap: 1rem;
-
     margin-top: var(--sp-6);
 }
 
 .formulario-contato input,
 .formulario-contato textarea {
     width: 100%;
-
     padding: 14px;
-
     border: 2px solid #d9d9d9;
-
     border-radius: var(--raio-md);
-
     font-family: inherit;
-
     transition: .2s;
 }
 
 .formulario-contato input:focus,
 .formulario-contato textarea:focus {
     outline: none;
-
     border-color: var(--cor-primaria);
-
     box-shadow: 0 0 0 4px rgba(25, 135, 84, .15);
 }
 
 .formulario-contato button {
     align-self: flex-start;
-
     background-color: var(--cor-primaria);
-
     color: white;
-
     padding: 12px 24px;
-
     border-radius: var(--raio-md);
-
     cursor: pointer;
-
     transition: .2s;
 }
 
@@ -1461,24 +1599,17 @@ section h2 {
         linear-gradient(rgba(25, 135, 84, 0.75),
             rgba(20, 108, 67, 0.80)),
         url("../images/noticias-banner.jpg") center/cover no-repeat;
-
     text-align: center;
     color: white;
-
     padding: 8rem 2rem;
-
     border-bottom: 5px solid var(--cor-secundaria);
-
     margin-bottom: var(--sp-8);
 }
 
 .noticias-banner h1 {
     color: white;
-
     font-size: var(--fs-3xl);
-
     margin-bottom: var(--sp-4);
-
     text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
 }
 
@@ -1488,17 +1619,11 @@ section h2 {
 
 .noticias-banner p {
     display: inline-block;
-
     max-width: 800px;
-
     padding: 10px 18px;
-
     background: rgba(0, 0, 0, .18);
-
     border-radius: var(--raio-md);
-
     font-size: var(--fs-lg);
-
     text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
 }
 
@@ -1509,39 +1634,28 @@ section h2 {
 
 .noticia-destaque {
     max-width: 1200px;
-
     margin: 0 auto var(--sp-8);
-
     padding: 0 var(--sp-4);
 }
 
 .destaque-card {
     display: grid;
-
     grid-template-columns: 1.2fr 1fr;
-
     background: var(--cor-fundo-card);
-
     border-radius: var(--raio-lg);
-
     overflow: hidden;
-
     box-shadow: var(--sombra-md);
 }
 
 .destaque-card img {
     width: 100%;
-
     height: 100%;
-
     min-height: 400px;
-
     object-fit: cover;
 }
 
 .destaque-conteudo {
     padding: 2rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1549,33 +1663,23 @@ section h2 {
 
 .destaque-conteudo h3 {
     font-size: 2rem;
-
     color: var(--cor-primaria-hover);
-
     margin-bottom: 1rem;
 }
 
 .destaque-conteudo p {
     color: var(--cor-texto-secundario);
-
     margin-bottom: 1.5rem;
 }
 
 .categoria {
     display: inline-block;
-
     width: fit-content;
-
     background: var(--cor-primaria);
-
     color: white;
-
     padding: .35rem .75rem;
-
     border-radius: 999px;
-
     font-size: .8rem;
-
     margin-bottom: 1rem;
 }
 
@@ -1586,71 +1690,52 @@ section h2 {
 
 .ultimas-noticias {
     max-width: 1200px;
-
     margin: var(--sp-8) auto;
-
     padding: 0 var(--sp-4);
 }
 
 .ultimas-noticias .cards {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 1.5rem;
-
     margin-top: var(--sp-6);
 }
 
 .ultimas-noticias .card {
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
-
     overflow: hidden;
-
     padding: 0;
-
     min-height: 420px;
-
     transition: .3s ease;
 }
 
 .ultimas-noticias .card:hover {
     transform: translateY(-5px);
-
     box-shadow: var(--sombra-md);
 }
 
 .ultimas-noticias .card img {
     width: 100%;
-
     height: 180px;
-
     object-fit: cover;
 }
 
 .ultimas-noticias .card h3 {
     padding: 0 1rem;
-
     margin-top: 1rem;
 }
 
 .ultimas-noticias .card p {
     padding: 0 1rem;
-
     color: var(--cor-texto-secundario);
-
     flex-grow: 1;
 }
 
 .ultimas-noticias .card a {
     margin: 1rem;
-
     margin-top: auto;
-
     align-self: center;
 }
 
@@ -1660,39 +1745,28 @@ section h2 {
 
 .eventos-avisos {
     max-width: 1000px;
-
     margin: var(--sp-8) auto;
-
     padding: 0 var(--sp-4);
 }
 
 .lista-eventos {
     display: flex;
-
     flex-direction: column;
-
     gap: 1rem;
 }
 
 .evento-item {
     background: var(--cor-fundo-card);
-
     border-left: 5px solid var(--cor-primaria);
-
     padding: 1.2rem;
-
     border-radius: var(--raio-md);
-
     box-shadow: var(--sombra-sm);
 }
 
 .evento-item span {
     display: block;
-
     color: var(--cor-primaria-hover);
-
     font-weight: 700;
-
     margin-bottom: .5rem;
 }
 
@@ -1703,7 +1777,6 @@ section h2 {
 
 .mais-noticias {
     text-align: center;
-
     margin: var(--sp-8) 0;
 }
 
