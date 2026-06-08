@@ -609,6 +609,34 @@ section h2 {
     opacity: 0.9;
 }
 
+.cursos-banner {
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, 0.60),
+            rgba(20, 108, 67, 0.90)),
+        url("../images/ifce2.png") no-repeat center/cover;
+    padding: 6rem var(--sp-4);
+    text-align: center;
+    color: white;
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.cursos-banner h1 {
+    color: white;
+    font-size: var(--fs-3xl);
+}
+
+.cursos-banner h1 strong {
+    color: var(--cor-primaria-clara);
+}
+
+.cursos-banner p {
+    font-size: var(--fs-lg);
+    font-weight: 300;
+    opacity: 0.9;
+}
+
 
 
 /* sidebar universal */
