@@ -321,14 +321,14 @@ section h2 {
 
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform .5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transition: transform .5s cubic-bezier(0.5, 1.4, 0.4, 0.7);
 }
 
 .botao-2:hover::before {
     transform: scaleX(1);
 }
 
-.botao-2:hover{
+.botao-2:hover {
     color: var(--cor-fundo);
 }
 
