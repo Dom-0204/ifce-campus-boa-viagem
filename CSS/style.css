@@ -542,9 +542,9 @@ section h2 {
     gap: var(--sp-6);
     align-items: flex-start;
     width: 100%;
-    max-width: 98%;
-    /* Alargado para colar na borda esquerda */
-    margin: 0 auto;
+    max-width: 1400px;
+    margin-left: var (--sp-4);
+    margin-right: auto;
     padding: 0 var(--sp-4);
 }
 
@@ -556,7 +556,8 @@ section h2 {
     box-shadow: var(--sombra-sm);
     border-top: 4px solid var(--cor-primaria);
     position: sticky;
-    top: 100px;
+    top: 132px;
+    margin-top: var(--sp-1);
     /* Alinhamento correto com o scroll */
     flex-shrink: 0;
     /* Impede deformação */
@@ -1764,4 +1765,38 @@ body.dark-mode .cabecalho_nav_ancoras:hover {
     .cabecalho_nav {
         display: flex;
     }
+}
+
+/* ==================================================
+   CORREÇÃO DEFINITIVA DO MODO ESCURO NA ABA EXTENSÃO
+   ================================================== */
+body.dark-mode .extensao_card,
+body.dark-mode .impacto_extensao {
+    background: #1e1e1e !important;
+    /* Remove o gradiente branco e bota o fundo escuro padrão */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .extensao_card .card,
+body.dark-mode .impacto_extensao .card,
+body.dark-mode .projetos_extensao .card {
+    background-color: #252525 !important;
+    /* Deixa os mini-cards internos ligeiramente mais claros que o fundo */
+    color: var(--cor-texto) !important;
+    border-top-color: var(--cor-primaria) !important;
+}
+
+body.dark-mode .extensao_card .card p,
+body.dark-mode .impacto_extensao .card p,
+body.dark-mode .extensao_card h3,
+body.dark-mode .impacto_extensao h2,
+body.dark-mode .projetos_extensao h2 {
+    color: var(--cor-texto) !important;
+    /* Garante que as letras fiquem claras e visíveis */
+}
+
+body.dark-mode .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+    /* Suaviza os números "01, 02..." no fundo escuro */
 }
