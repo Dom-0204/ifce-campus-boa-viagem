@@ -618,6 +618,7 @@ section h2 {
     flex-direction: column;
     gap: var(--sp-6);
     width: 100%;
+    margin-right: auto;
 }
 
 .universal-painel-card {
@@ -1799,4 +1800,58 @@ body.dark-mode .projetos_extensao h2 {
 body.dark-mode .impacto-topo small {
     color: rgba(255, 255, 255, 0.1) !important;
     /* Suaviza os números "01, 02..." no fundo escuro */
+}
+
+/* ==================================================
+   CORREÇÃO DEFINITIVA DO MODO ESCURO NA ABA CONTATO
+   ================================================== */
+body.dark-mode .contato-info {
+    background: #1e1e1e !important;
+    /* Arranca o gradiente claro e põe o cinza padrão */
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .contato-info .card,
+body.dark-mode .contato-setores .card {
+    background-color: #252525 !important;
+    /* Cards internos ligeiramente mais claros */
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .contato-info .card .icone {
+    background: rgba(38, 162, 105, 0.2) !important;
+    /* Ajusta o círculo dos ícones para não estourar */
+}
+
+/* Torna o fundo do formulário escuro e altera os textos explicativos */
+body.dark-mode .formulario-contato {
+    background: #1e1e1e !important;
+    border-color: var(--cor-borda) !important;
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .formulario-descricao {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Deixa os campos de digitação do formulário escuros com bordas discretas */
+body.dark-mode .formulario-contato input,
+body.dark-mode .formulario-contato textarea {
+    background-color: #121212 !important;
+    border: 2px solid #333a40 !important;
+    color: #ffffff !important;
+}
+
+/* Realce verde ao selecionar um campo para digitação */
+body.dark-mode .formulario-contato input:focus,
+body.dark-mode .formulario-contato textarea:focus {
+    border-color: var(--cor-primaria) !important;
+    box-shadow: 0 0 0 4px rgba(38, 162, 105, 0.25) !important;
+    outline: none !important;
+}
+
+/* Suaviza o fundo do aviso de tempo de resposta */
+body.dark-mode .tempo-resposta {
+    background: rgba(38, 162, 105, 0.1) !important;
+    color: var(--cor-texto-secundario) !important;
 }
