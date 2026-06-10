@@ -22,7 +22,7 @@
             <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
             <a class="cabecalho_nav_ancoras" href="lablisa.html">LabLisa</a>
             <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras " href="ingresso.html">Ingresso</a>
+            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
             <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
             <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
             <a class="cabecalho_nav_ancoras ativo" href="contato.html">Contato</a>
@@ -34,10 +34,10 @@
             </button>
         </nav>
     </header>
+
     <section class="contato-banner">
         <div class="contato-banner-filtro">
             <h1>Fale com o <strong>IFCE</strong></h1>
-
             <p>
                 Entre em contato conosco para tirar dúvidas, solicitar informações
                 ou conhecer melhor o Campus Boa Viagem.
@@ -45,164 +45,120 @@
         </div>
     </section>
 
-    <section class="contato-info">
+    <!-- CONTAINER PADRÃO INSTALADO AQUI PARA ADICIONAR A SIDEBAR -->
+    <main class="main universal-container">
 
-        <h2 class="institucional_titulo">
-            Informações de Contato
-        </h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="icone">📍</div>
-                <h3>Endereço</h3>
-
-                <p>
-                    Rodovia BR-020, Km 209,
-                    Bairro Anafuê,
-                    Boa Viagem - CE
-                </p>
+        <aside class="universal-sidebar">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#informacoes">Informações</a></li>
+                <li><a href="#setores">Setores</a></li>
+                <li><a href="#localizacao">Como Chegar</a></li>
+                <li><a href="#formulario">Mensagem</a></li>
+            </ul>
+            <div class="sidebar-badge">
+                <strong>Gabinete</strong>
+                <span>IFCE Boa Viagem</span>
             </div>
+        </aside>
 
-            <div class="card">
-                <div class="icone">📞</div>
-                <h3>Telefone</h3>
+        <div class="universal-conteudo">
 
-                <p>
-                    (85) 3401-2236
+            <section class="contato-info" id="informacoes">
+                <h2 class="institucional_titulo">Informações de Contato</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="icone">📍</div>
+                        <h3>Endereço</h3>
+                        <p>Rodovia BR-020, Km 209, Bairro Anafuê, Boa Viagem - CE</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icone">📞</div>
+                        <h3>Telefone</h3>
+                        <p>(85) 3401-2236</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icone">✉️</div>
+                        <h3>E-mail</h3>
+                        <p>gabinete.boaviagem@ifce.edu.br</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contato-setores" id="setores">
+                <h2 class="titulo-centralizado">Setores Principais</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Direção-Geral</h3>
+                        <p>Atendimento institutional e administrativo.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ensino</h3>
+                        <p>Informações acadêmicas e cursos.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Assistência Estudantil</h3>
+                        <p>Apoio aos estudantes e programas de permanência.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Pesquisa e Extensão</h3>
+                        <p>Projetos, bolsas e ações extensionistas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="localizacao" id="localizacao">
+                <h2 class="titulo-centralizado">Como Chegar</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.425514231305!2d-39.70851488391413!3d-5.082945747345028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bde893a7028ce9%3A0x1deba2f9a7f5a23b!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20do%20Cear%C3%A1%20%7C%20Campus%20Boa%20Viagem!5e0!3m2!1spt-BR!2sbr!4v1780923371240!5m2!1spt-BR!2sbr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p class="localizacao-endereco">
+                    📍 Rodovia BR-020, Km 209, Bairro Anafuê, Boa Viagem - CE
                 </p>
-            </div>
+            </section>
 
-            <div class="card">
-                <div class="icone">✉️</div>
-                <h3>E-mail</h3>
-
-                <p>
-                    gabinete.boaviagem@ifce.edu.br
+            <section class="formulario-contato" id="formulario">
+                <h2 class="titulo-centralizado">Envie uma Mensagem</h2>
+                <p class="formulario-descricao">
+                    Utilize o formulário abaixo para enviar dúvidas, sugestões ou solicitar informações.
                 </p>
-            </div>
+
+                <form>
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="E-mail">
+                    <input type="text" placeholder="Assunto">
+                    <textarea rows="6" placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                    <p class="tempo-resposta">
+                        As solicitações serão encaminhadas ao setor responsável para análise e retorno.
+                    </p>
+                </form>
+            </section>
 
         </div>
-
-    </section>
-
-    <section class="contato-setores">
-
-        <h2 class="titulo-centralizado">
-            Setores Principais
-        </h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Direção-Geral</h3>
-                <p>Atendimento institucional e administrativo.</p>
-            </div>
-
-            <div class="card">
-                <h3>Ensino</h3>
-                <p>Informações acadêmicas e cursos.</p>
-            </div>
-
-            <div class="card">
-                <h3>Assistência Estudantil</h3>
-                <p>Apoio aos estudantes e programas de permanência.</p>
-            </div>
-
-            <div class="card">
-                <h3>Pesquisa e Extensão</h3>
-                <p>Projetos, bolsas e ações extensionistas.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="localizacao">
-
-        <h2 class="titulo-centralizado">
-            Como Chegar
-        </h2>
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.425514231305!2d-39.70851488391413!3d-5.082945747345028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bde893a7028ce9%3A0x1deba2f9a7f5a23b!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20do%20Cear%C3%A1%20%7C%20Campus%20Boa%20Viagem!5e0!3m2!1spt-BR!2sbr!4v1780923371240!5m2!1spt-BR!2sbr"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <p class="localizacao-endereco">
-            📍 Rodovia BR-020, Km 209, Bairro Anafuê, Boa Viagem - CE
-        </p>
-
-    </section>
-
-    <section class="formulario-contato">
-
-        <h2 class="titulo-centralizado">
-            Envie uma Mensagem
-        </h2>
-
-        <p class="formulario-descricao">
-            Utilize o formulário abaixo para enviar dúvidas, sugestões ou solicitar informações.
-        </p>
-
-        <form>
-
-            <input type="text" placeholder="Nome">
-
-            <input type="email" placeholder="E-mail">
-
-            <input type="text" placeholder="Assunto">
-
-            <textarea rows="6" placeholder="Digite sua mensagem">
-        </textarea>
-
-            <button type="submit">
-                Enviar Mensagem
-            </button>
-
-            <p class="tempo-resposta">
-                As solicitações serão encaminhadas ao setor responsável para análise e retorno.
-            </p>
-
-        </form>
-
-    </section>
-
+    </main>
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_logo">
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE">
-
             </div>
-
             <div class="rodape_info">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Rodovia BR-020, Km 209
-                    <br>
-                    Boa Viagem - Ceará
-                </p>
-
-                <p>
-                    Ensino público, gratuito e de excelência.
-                </p>
-
+                <p>Rodovia BR-020, Km 209<br>Boa Viagem - Ceará</p>
+                <p>Ensino público, gratuito e de excelência.</p>
             </div>
         </div>
-
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
         </div>
-
     </footer>
     <script src="../scripts/script.js"></script>
 </body>
+
+</html>
