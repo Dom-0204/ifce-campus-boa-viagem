@@ -976,24 +976,18 @@ section h2 {
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
+
 .internacional-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/internacional.jpeg) center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/ifintertnacionaal.png) center/cover no-repeat;
     text-align: center;
     color: white;
     padding: 5rem var(--sp-4);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
-.pesquisa-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/pesquisa.png) center/cover no-repeat;
-    text-align: center;
-    color: white;
-    padding: 5rem var(--sp-4);
-    margin-bottom: var(--sp-8);
-    border-bottom: 5px solid var(--cor-secundaria);
-}
+
 .extensao-banner h1,
-.internacional-banner h1{
+.internacional-banner h1 {
     font-size: var(--fs-3xl);
     color: white;
     margin-bottom: var(--sp-4);
@@ -1011,8 +1005,7 @@ section h2 {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.extensao_card,
-.internacional_card {
+.extensao_card {
     max-width: 1200px;
     margin: 0 auto;
     background: linear-gradient(180deg, #ffffff, #f7faf8);
@@ -1022,6 +1015,74 @@ section h2 {
     border-top: 6px solid var(--cor-primaria);
     position: relative;
     overflow: hidden;
+}
+
+.internacional-info {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    padding: 4rem;
+    background: linear-gradient(180deg, #fff, #f7faf8);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    border-top: 5px solid var(--cor-primaria);
+    text-align: center;
+}
+
+.internacional-info p {
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+.internacional-cards {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.internacional-cards .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    transition: .3s;
+}
+
+.internacional-cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+}
+
+.internacional-beneficios {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    text-align: center;
+}
+
+.internacional-beneficios .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.internacional-final {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    padding: 5rem 3rem;
+    text-align: center;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, .95),
+            rgba(20, 108, 67, .95));
+    color: white;
+}
+
+.internacional-final h2 {
+    color: white;
 }
 
 .icone-card {
@@ -1225,7 +1286,7 @@ section h2 {
     CONTATO
 ========================= */
 .contato-banner {
-    background: linear-gradient(rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/contato-banner.png") center/cover no-repeat;
+    background: linear-gradient(rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/cont.png") center/cover no-repeat;
     text-align: center;
     color: white;
     padding: 8rem 2rem;
@@ -1603,6 +1664,145 @@ section h2 {
             font-size: var(--fs-2xl);
         }
     }
+}
+
+/* =========================
+    PESQUISAS
+========================= */
+
+.pesquisa-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/pesquisa.png) center/cover no-repeat;
+    text-align: center;
+    color: white;
+    padding: 5rem var(--sp-4);
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.pesquisa-introducao {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    padding: 4rem;
+    background: linear-gradient(180deg, #fff, #f7faf8);
+    border-radius: 24px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    text-align: center;
+}
+
+.pesquisa-introducao p {
+    max-width: 900px;
+    margin: 1rem auto;
+}
+
+.pesquisa-cards {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.pesquisa-cards .card {
+    background: white;
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    border-top: 5px solid var(--cor-primaria);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+
+    transition: .3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container h2{
+    color: var(--cor-primaria);
+}
+
+.pesquisa-destaques .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    width: 100%;
+    margin: 3rem auto 0;
+}
+
+.pesquisa-destaques .item {
+    background: #fff;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    border-top: 4px solid var(--cor-primaria);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+
+    transition: .3s;
+}
+
+.pesquisa-cards .card,
+.pesquisa-destaques .item {
+    min-height: 220px;
+}
+
+.pesquisa-cards .card h3,
+.pesquisa-destaques .item h3 {
+    color: var(--cor-primaria-hover);
+}
+
+.pesquisa-destaques h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pesquisa-cards .card:hover {
+    transform: translateY(-8px);
+}
+
+.pesquisa-final {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 4rem;
+
+    background: white;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    border-top: 5px solid var(--cor-primaria);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.pesquisa-final h2 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: 1.5rem;
+}
+
+.pesquisa-final p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+@media(max-width:768px) {
+
+    .pesquisa-cards,
+    .pesquisa-destaques .grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* =========================
