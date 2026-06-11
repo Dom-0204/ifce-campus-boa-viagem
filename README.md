@@ -22,8 +22,7 @@ O site busca proporcionar uma navegação intuitiva, moderna e responsiva, permi
 
 * HTML5
 * CSS3
-* Flexbox
-* CSS Grid
+* JavaScript
 * Design Responsivo
 
 ## Estrutura do Projeto
