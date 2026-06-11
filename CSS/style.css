@@ -2371,8 +2371,8 @@ body.dark-mode .pesquisa-introducao h2 {
 
 /* Ajusta a seção de blocos de destaque (Oportunidades) */
 body.dark-mode .pesquisa-destaques {
-    background-color: #121212 !important;
-    background: #121212 !important;
+    background-color: transparent !important;
+    background: transparent !important;
 }
 
 body.dark-mode .pesquisa-destaques h2 {
@@ -2471,4 +2471,23 @@ body.dark-mode .ads-areas .impacto-topo small {
 /* Deixa a marca d'água "</>" do fundo discretamente visível no escuro */
 body.dark-mode .ads-introducao::after {
     color: rgba(46, 194, 126, 0.05) !important;
+}
+
+/* Garante que os cards internos caibam perfeitamente na nova estrutura com sidebar */
+.universal-painel-card .internacional-cards,
+.universal-painel-card .internacional-beneficios .cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Garante o alinhamento em grid nativo de Pesquisas dentro do painel lateral */
+.universal-painel-card .pesquisa-cards,
+.universal-painel-card .pesquisa-destaques .grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
 }
