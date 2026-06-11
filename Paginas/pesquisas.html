@@ -8,6 +8,7 @@
     <meta name="description" content="Pesquisas do IFCE Campus Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -36,204 +37,163 @@
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
             <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
                 <span class="theme-btn-icon">🌙</span>
             </button>
         </nav>
-
     </header>
 
     <section class="pesquisa-banner">
-
         <div class="pesquisa-banner-filtro">
             <h1>Pesquisas Realizadas</h1>
         </div>
-
     </section>
 
-    <main>
+    <main class="main universal-container">
 
+        <aside class="universal-sidebar">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#sobre-pesquisa">O pilar</a></li>
+                <li><a href="#linhas-pesquisa">Modalidades</a></li>
+                <li><a href="#oportunidades-pesquisa">Oportunidades</a></li>
+            </ul>
+            <div class="sidebar-badge">
+                <strong>Pesquisa &</strong>
+                <span>Inovação</span>
+            </div>
+        </aside>
 
-        <section class="pesquisa-introducao">
+        <div class="lisa-conteudo">
 
-            <div class="container">
-
-                <h2>Pesquisa no IFCE</h2>
-
-                <p>
+            <section class="universal-painel-card" id="sobre-pesquisa">
+                <h2 class="institucional_titulo">Pesquisa no IFCE</h2>
+                <p class="institucional_texto">
                     A pesquisa é um dos pilares fundamentais da formação acadêmica no
                     Instituto Federal do Ceará. Por meio dela, estudantes e servidores
                     desenvolvem soluções inovadoras, ampliam a produção científica e
                     contribuem diretamente para o desenvolvimento social e tecnológico
                     da região.
                 </p>
-
-                <p>
+                <p class="institucional_texto" style="margin-bottom: 0;">
                     No Campus Boa Viagem, a pesquisa está integrada ao ensino e à
                     extensão, possibilitando experiências práticas, desenvolvimento de
-                    projetos e participação ativa em grupos de investigação científica.
+                    projetos e participação activa em grupos de investigação científica.
                 </p>
+            </section>
 
-            </div>
+            <section class="universal-painel-card" id="linhas-pesquisa">
+                <h2 class="institucional_titulo">Linhas de Pesquisa Aplicada</h2>
 
-        </section>
-
-
-        <section class="pesquisa-cards">
-
-            <div class="card">
-
-                <i class="fa-solid fa-flask"></i>
-
-                <h3>Iniciação Científica</h3>
-
-                <p>
-                    Incentivo à participação de estudantes em projetos orientados por
-                    professores pesquisadores, promovendo a formação científica e
-                    acadêmica.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <i class="fa-solid fa-lightbulb"></i>
-
-                <h3>Inovação Tecnológica</h3>
-
-                <p>
-                    Desenvolvimento de soluções tecnológicas voltadas para demandas
-                    sociais, empresariais e institucionais da região.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-                <h3>Pesquisa Aplicada</h3>
-
-                <p>
-                    Estudos e investigações que buscam solucionar problemas reais por
-                    meio da ciência, tecnologia e inovação.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="pesquisa-destaques">
-
-            <div class="container">
-
-                <h2>Oportunidades para os Estudantes</h2>
-
-                <div class="grid">
-
-                    <div class="item">
-                        <h3>Bolsas de Pesquisa</h3>
-
+                <div class="pesquisa-cards" style="margin-top: 20px; padding: 0;">
+                    <div class="card">
+                        <i class="fa-solid fa-flask"></i>
+                        <h3>Iniciação Científica</h3>
                         <p>
-                            Participação em programas institucionais de incentivo à
-                            pesquisa científica e tecnológica.
+                            Incentivo à participação de estudantes em projetos orientados por
+                            professores pesquisadores, promovendo a formação científica e
+                            acadêmica.
                         </p>
                     </div>
 
-                    <div class="item">
-                        <h3>Grupos de Pesquisa</h3>
-
+                    <div class="card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Inovação Tecnológica</h3>
                         <p>
-                            Integração com equipes de pesquisa cadastradas e projetos
-                            desenvolvidos pelo campus.
+                            Desenvolvimento de soluções tecnológicas voltadas para demandas
+                            sociais, empresariais e institucionais da região.
                         </p>
                     </div>
 
-                    <div class="item">
-                        <h3>Eventos Científicos</h3>
-
+                    <div class="card">
+                        <i class="fa-solid fa-gears"
+                            style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--cor-primaria);"></i>
+                        <h3>Pesquisa Aplicada</h3>
                         <p>
-                            Participação em seminários, congressos, feiras e encontros
-                            voltados à divulgação científica.
+                            Estudos e investigações que buscam solucionar problemas reais por
+                            meio da ciência, tecnologia e inovação.
                         </p>
                     </div>
-
-                    <div class="item">
-                        <h3>Produção Acadêmica</h3>
-
-                        <p>
-                            Incentivo à publicação de artigos, resumos e trabalhos
-                            científicos.
-                        </p>
-                    </div>
-
                 </div>
+            </section>
 
-            </div>
+            <section class="universal-painel-card" id="oportunidades-pesquisa">
+                <h2 class="institucional_titulo">Oportunidades para os Estudantes</h2>
 
-        </section>
+                <div class="pesquisa-destaques" style="padding: 0; margin-top: 20px; background: transparent;">
+                    <div class="grid" style="margin-top: 0;">
+                        <div class="item">
+                            <h3>Bolsas de Pesquisa</h3>
+                            <p>
+                                Participação em programas institucionais de incentivo à
+                                pesquisa científica e tecnológica.
+                            </p>
+                        </div>
 
+                        <div class="item">
+                            <h3>Grupos de Pesquisa</h3>
+                            <p>
+                                Integração com equipes de pesquisa cadastradas e projetos
+                                desenvolvidos pelo campus.
+                            </p>
+                        </div>
 
-        <section class="pesquisa-final">
+                        <div class="item">
+                            <h3>Eventos Científicos</h3>
+                            <p>
+                                Participação em seminários, congressos, feiras e encontros
+                                voltados à divulgação científica.
+                            </p>
+                        </div>
 
-            <div class="container">
+                        <div class="item">
+                            <h3>Produção Acadêmica</h3>
+                            <p>
+                                Incentivo à publicação de artigos, resumos e trabalhos
+                                científicos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h2>Pesquisa que gera impacto</h2>
-
-                <p>
+            <section class="universal-painel-card">
+                <h2 class="institucional_titulo">Pesquisa que gera impacto</h2>
+                <p class="institucional_texto" style="margin-bottom: 20px;">
                     O IFCE Campus Boa Viagem incentiva a construção do conhecimento,
                     a investigação científica e a criação de soluções inovadoras que
                     contribuam para o desenvolvimento sustentável da região e da sociedade.
                 </p>
+                <div class="lisa-ecossistema-botoes">
+                    <a href="https://ifce.edu.br" class="botao" target="_blank" style="margin: 0;">
+                        Saiba Mais
+                    </a>
+                </div>
+            </section>
 
-                <a href="https://ifce.edu.br" class="botao">
-                    Saiba Mais
-                </a>
-
-            </div>
-
-        </section>
-
+        </div>
     </main>
 
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_logo">
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE">
-
             </div>
 
             <div class="rodape_info">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Rodovia BR-020, Km 209
-                    <br>
-                    Boa Viagem - Ceará
-                </p>
-
-                <p>
-                    Ensino público, gratuito e de excelência.
-                </p>
-
+                <p>Rodovia BR-020, Km 209<br>Boa Viagem - Ceará</p>
+                <p>Ensino público, gratuito e de excelência.</p>
             </div>
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
         </div>
-
     </footer>
+
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
 </body>
+
+</html>

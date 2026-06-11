@@ -475,7 +475,8 @@ section h2 {
 .bolsas-banner,
 .cursos-banner,
 .ingresso-banner,
-.extensao-banner {
+.extensao-banner,
+.ads-banner {
     padding: 6rem var(--sp-4);
     text-align: center;
     color: white;
@@ -502,7 +503,9 @@ section h2 {
 .lisa-banner h1,
 .bolsas-banner h1,
 .cursos-banner h1,
-.ingresso-banner h1 {
+.ingresso-banner h1,
+.ads-banner h1,
+.pesquisa-banner h1 {
     max-width: 1000px;
     margin: 0 auto 1.5rem auto;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
@@ -513,14 +516,19 @@ section h2 {
 .lisa-banner h1 strong,
 .bolsas-banner h1 strong,
 .cursos-banner h1 strong,
-.ingresso-banner h1 strong {
+.ingresso-banner h1 strong,
+.contato-banner h1 strong,
+.ads-banner h1 strong,
+.pesquisa-banner h1 strong {
     color: var(--cor-primaria-clara);
 }
 
 .lisa-banner p,
 .bolsas-banner p,
 .cursos-banner p,
-.ingresso-banner p {
+.ingresso-banner p,
+.ads-banner p,
+.pesquisa-banner p {
     display: inline-block;
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.15);
@@ -2116,25 +2124,48 @@ body.dark-mode .cabecalho_nav_ancoras:hover {
     background-color: transparent !important;
 }
 
-/* Botão de Alternar o Tema (Flutuante Fixo) */
+/* ==================================================
+              BOTÃO ALTERNADOR DE TEMA
+   ================================================== */
 .theme-btn {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
+    bottom: 32px;
+    /* Subimos um pouco mais para desgrudar totalmente do rodapé */
+    right: 32px;
     z-index: 9999;
-    background-color: var(--cor-fundo-card);
-    border: 2px solid var(--cor-primaria);
-    padding: 12px;
+    background-color: var(--cor-fundo-card) !important;
+    /* Herda o fundo branco ou cinza escuro */
+    border: 2px solid var(--cor-primaria) !important;
+    padding: 0;
+    width: 54px;
+    /* Aumentamos um pouquinho para dar mais área de clique */
+    height: 54px;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
     cursor: pointer;
-    font-size: var(--fs-md);
+    font-size: 1.4rem;
+    /* Ícone ligeiramente maior e centralizado */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--sombra-lg);
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra marcante para flutuar de verdade */
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse */
+.theme-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--cor-fundo-mini-card) !important;
+}
+
+/* Ajuste de contraste para o emoji da lua no modo claro */
+.theme-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.15));
+    /* Ajuda a dar contorno na lua amarela */
 }
 
 .theme-btn:hover {
@@ -2298,4 +2329,188 @@ body.dark-mode .lisa-setor-item:hover {
     transform: scale(1.02);
     background-color: rgb(26, 22, 22);
     box-shadow: var(--sombra-sm);
+}
+
+/* ==================================================
+   DARK MODE PARA INTERCÂMBIO (DESIGN CENTRALIZADO ORIGINAL)
+   ================================================== */
+body.dark-mode .internacional-info,
+body.dark-mode .internacional-beneficios {
+    background: #1e1e1e !important;
+    /* Remove o fundo branco/gradiente claro */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .internacional-info p,
+body.dark-mode .internacional-beneficios p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Ajusta os mini-cards dessa página */
+body.dark-mode .internacional-cards .card,
+body.dark-mode .internacional-beneficios .cards .card {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-top-color: var(--cor-primaria) !important;
+}
+
+body.dark-mode .internacional-cards .card h3,
+body.dark-mode .internacional-beneficios .cards .card h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .internacional-cards .card p,
+body.dark-mode .internacional-beneficios .cards .card p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Suaviza o selo do topo e os números decorativos */
+body.dark-mode .tag-internacional {
+    background: rgba(38, 162, 105, 0.15) !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ==================================================
+   DARK MODE PARA PESQUISAS (DESIGN CENTRALIZADO ORIGINAL)
+   ================================================== */
+body.dark-mode .pesquisa-introducao,
+body.dark-mode .pesquisa-final {
+    background: #1e1e1e !important;
+    /* Remove os fundos claros e gradientes */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .pesquisa-introducao p,
+body.dark-mode .pesquisa-final p,
+body.dark-mode .pesquisa-introducao h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Ajusta a seção de blocos de destaque (Oportunidades) */
+body.dark-mode .pesquisa-destaques {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+body.dark-mode .pesquisa-destaques h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Estiliza os cards de Iniciação, Inovação e os Itens da Grid */
+body.dark-mode .pesquisa-cards .card,
+body.dark-mode .pesquisa-destaques .item {
+    background-color: #252525 !important;
+    /* Tom cinza ligeiramente mais claro que o fundo geral */
+    color: var(--cor-texto) !important;
+    border-top-color: var(--cor-primaria) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .pesquisa-cards .card h3,
+body.dark-mode .pesquisa-destaques .item h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .pesquisa-cards .card p,
+body.dark-mode .pesquisa-destaques .item p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Garante que os ícones do Font Awesome fiquem visíveis e verdes */
+body.dark-mode .pesquisa-cards .card i {
+    color: var(--cor-primaria-hover) !important;
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* ==================================================
+   DARK MODE PARA ADS (DESIGN CENTRALIZADO ORIGINAL)
+   ================================================== */
+body.dark-mode .ads-introducao,
+body.dark-mode .ads-diferenciais {
+    background: #1e1e1e !important;
+    /* Arranca o gradiente claro e bota o cinza padrão */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .ads-introducao p,
+body.dark-mode .ads-introducao h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Evita que as seções formem blocos ou linhas verdes gigantes de fundo */
+body.dark-mode .ads-areas,
+body.dark-mode .ads-carreira,
+body.dark-mode .ads-final {
+    background-color: #121212 !important;
+    background: #121212 !important;
+}
+
+body.dark-mode .ads-carreira h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Estiliza TODOS os cards da página (Áreas, Diferenciais e Carreira) */
+body.dark-mode .ads-areas .card,
+body.dark-mode .ads-diferenciais .cards .card,
+body.dark-mode .ads-carreira .cards .card {
+    background-color: #252525 !important;
+    /* Tom cinza ligeiramente mais claro */
+    color: var(--cor-texto) !important;
+    border-top: 5px solid var(--cor-primaria) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .ads-areas .card h3,
+body.dark-mode .ads-diferenciais .cards .card h3,
+body.dark-mode .ads-carreira .cards .card h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .ads-areas .card p,
+body.dark-mode .ads-diferenciais .cards .card p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Ajusta os detalhes visuais do topo do card e tags */
+body.dark-mode .tag-ads {
+    background: rgba(38, 162, 105, 0.15) !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .ads-areas .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+    /* Suaviza os números 01, 02... */
+}
+
+/* Deixa a marca d'água "</>" do fundo discretamente visível no escuro */
+body.dark-mode .ads-introducao::after {
+    color: rgba(46, 194, 126, 0.05) !important;
+}
+
+/* Garante que os cards internos caibam perfeitamente na nova estrutura com sidebar */
+.universal-painel-card .internacional-cards,
+.universal-painel-card .internacional-beneficios .cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Garante o alinhamento em grid nativo de Pesquisas dentro do painel lateral */
+.universal-painel-card .pesquisa-cards,
+.universal-painel-card .pesquisa-destaques .grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
 }
