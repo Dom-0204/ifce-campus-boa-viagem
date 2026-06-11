@@ -2131,3 +2131,9 @@ body.dark-mode .tempo-resposta {
     background: rgba(38, 162, 105, 0.1) !important;
     color: var(--cor-texto-secundario) !important;
 }
+
+body.dark-mode .lisa-setor-item:hover {
+    transform: scale(1.02);
+    background-color: rgb(26, 22, 22);
+    box-shadow: var(--sombra-sm);
+}
