@@ -475,7 +475,8 @@ section h2 {
 .bolsas-banner,
 .cursos-banner,
 .ingresso-banner,
-.extensao-banner {
+.extensao-banner,
+.ads-banner {
     padding: 6rem var(--sp-4);
     text-align: center;
     color: white;
@@ -502,7 +503,9 @@ section h2 {
 .lisa-banner h1,
 .bolsas-banner h1,
 .cursos-banner h1,
-.ingresso-banner h1 {
+.ingresso-banner h1,
+.ads-banner h1,
+.pesquisa-banner h1 {
     max-width: 1000px;
     margin: 0 auto 1.5rem auto;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
@@ -514,14 +517,18 @@ section h2 {
 .bolsas-banner h1 strong,
 .cursos-banner h1 strong,
 .ingresso-banner h1 strong,
-.contato-banner h1 strong {
+.contato-banner h1 strong,
+.ads-banner h1 strong,
+.pesquisa-banner h1 strong {
     color: var(--cor-primaria-clara);
 }
 
 .lisa-banner p,
 .bolsas-banner p,
 .cursos-banner p,
-.ingresso-banner p {
+.ingresso-banner p,
+.ads-banner p,
+.pesquisa-banner p {
     display: inline-block;
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.15);
