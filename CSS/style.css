@@ -1871,6 +1871,161 @@ section h2 {
 }
 
 /* =========================
+    ADS
+========================= */
+
+.ads-banner {
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, .88),
+            rgba(20, 108, 67, .92)),
+        url("../images/ads-banner.png") center/cover no-repeat;
+
+    text-align: center;
+    color: white;
+
+    padding: 8rem 2rem;
+
+    border-bottom: 5px solid var(--cor-secundaria);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-banner::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    top: -250px;
+    right: -200px;
+}
+
+.ads-introducao {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    padding: 4rem;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            #f7faf8);
+
+    border-radius: 24px;
+
+    border-top: 6px solid var(--cor-primaria);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-introducao::after {
+    content: "</>";
+    position: absolute;
+
+    right: 40px;
+    bottom: 20px;
+
+    font-size: 5rem;
+    font-weight: 700;
+
+    color: rgba(25, 135, 84, .08);
+}
+
+.tag-ads {
+    display: inline-block;
+
+    background: rgba(25, 135, 84, .12);
+
+    color: var(--cor-primaria);
+
+    padding: .8rem 1.4rem;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+}
+
+.ads-areas {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.ads-areas .card {
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    border-top: 5px solid var(--cor-primaria);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+
+    transition: .35s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-areas .card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.ads-diferenciais {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    background:
+        linear-gradient(180deg,
+            #fff,
+            #f5f9f7);
+
+    padding: 5rem 3rem;
+
+    border-radius: 24px;
+}
+
+.ads-diferenciais .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.ads-carreira {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+}
+
+.ads-carreira .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* =========================
     FOOTER
 ========================= */
 .rodape {
