@@ -34,12 +34,12 @@
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
             <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
                 <span class="theme-btn-icon">🌙</span>
             </button>
         </nav>
     </header>
+
     <section class="internacional-banner">
         <div class="internacional-banner-filtro">
             <h1>IFCE Internacional</h1>
@@ -47,167 +47,145 @@
                 Conectando estudantes, pesquisa e inovação a oportunidades
                 acadêmicas em âmbito internacional.
             </p>
-
         </div>
-
     </section>
 
-    <main>
-        <div class="main universal-container">
+    <main class="main universal-container">
 
-        </div>
+        <aside class="universal-sidebar">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#o-setor">O Setor</a></li>
+                <li><a href="#eixos-acao">Eixos de Ação</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+            </ul>
+            <div class="sidebar-badge">
+                <strong>Relações</strong>
+                <span>Internacionais</span>
+            </div>
+        </aside>
 
-        <section class="internacional-info">
+        <!-- CONTAINER ADAPTÁVEL -->
+        <div class="lisa-conteudo">
 
-            <span class="tag-internacional">
-                🌎 Cooperação Acadêmica Internacional
-            </span>
+            <!-- ADICIONADA A CLASSE DE PAINEL PADRÃO PARA DAR O ESPAÇAMENTO PERFEITO -->
+            <section class="universal-painel-card" id="o-setor">
+                <span class="tag-internacional">
+                    🌎 Cooperação Acadêmica Internacional
+                </span>
 
-            <h2>O que é o IFCE Internacional?</h2>
+                <h2 class="institucional_titulo" style="margin-top: 15px;">O que é o IFCE Internacional?</h2>
 
-            <p>
-                O <strong>IFCE Internacional</strong> é o setor responsável por promover
-                ações de <strong>cooperação acadêmica</strong>, científica e cultural entre o Instituto Federal do Ceará
-                e instituições de ensino de outros países.
-            </p>
-
-            <p>
-                Por meio de programas de mobilidade acadêmica, parcerias internacionais e
-                oportunidades de intercâmbio, o setor busca ampliar a formação dos estudantes
-                e fortalecer a presença do IFCE em redes de colaboração nacionais e
-                internacionais.
-            </p>
-
-        </section>
-
-        <section class="internacional-cards">
-
-            <div class="card">
-
-                <div class="impacto-topo">
-
-                    <span>✈️</span>
-                    <small>01</small>
-                </div>
-                <h3>Mobilidade Acadêmica</h3>
-
-                <p>
-                    Possibilita que estudantes participem de experiências acadêmicas em
-                    instituições estrangeiras, ampliando conhecimentos e vivências culturais.
+                <p class="institucional_texto">
+                    O <strong>IFCE Internacional</strong> é o setor responsável por promover
+                    ações de <strong>cooperação acadêmica</strong>, científica e cultural entre o Instituto Federal do
+                    Ceará
+                    e instituições de ensino de outros países.
                 </p>
 
-
-            </div>
-
-            <div class="card">
-
-                <div class="impacto-topo">
-
-                    <span>🌎</span>
-                    <small>02</small>
-                </div>
-                <h3>Parcerias Internacionais</h3>
-
-                <p>
-                    Estabelece acordos de cooperação com universidades e centros de pesquisa
-                    de diferentes países para o desenvolvimento de projetos conjuntos.
+                <p class="institucional_texto">
+                    Por meio de programas de mobilidade acadêmica, parcerias internacionais e
+                    oportunidades de intercâmbio, o setor busca ampliar a formação dos estudantes
+                    e fortalecer a presença do IFCE em redes de colaboração nacionais e
+                    internacionais.
                 </p>
+            </section>
 
+            <!-- ENVELOPADO EM PAINEL PADRÃO PARA AJUSTAR O ALINHAMENTO COM A SIDEBAR -->
+            <section class="universal-painel-card" id="eixos-acao">
+                <h2 class="institucional_titulo">Eixos de Ação</h2>
 
-            </div>
+                <div class="internacional-cards" style="margin-top: 20px;">
+                    <div class="card">
+                        <div class="impacto-topo">
+                            <span>✈️</span>
+                            <small>01</small>
+                        </div>
+                        <h3>Mobilidade Acadêmica</h3>
+                        <p>
+                            Possibilita que estudantes participem de experiências acadêmicas em
+                            instituições estrangeiras, ampliando conhecimentos e vivências culturais.
+                        </p>
+                    </div>
 
-            <div class="card">
+                    <div class="card">
+                        <div class="impacto-topo">
+                            <span>🌎</span>
+                            <small>02</small>
+                        </div>
+                        <h3>Parcerias Internacionais</h3>
+                        <p>
+                            Estabelece acordos de cooperação com universidades e centros de pesquisa
+                            de diferentes países para o desenvolvimento de projetos conjuntos.
+                        </p>
+                    </div>
 
-                <div class="impacto-topo">
-
-                    <span>🎓</span>
-                    <small>03</small>
+                    <div class="card">
+                        <div class="impacto-topo">
+                            <span>🎓</span>
+                            <small>03</small>
+                        </div>
+                        <h3>Oportunidades para Estudantes</h3>
+                        <p>
+                            Divulga editais, programas de intercâmbio, cursos e ações voltadas para
+                            a internacionalização da educação e da pesquisa.
+                        </p>
+                    </div>
                 </div>
-                <h3>Oportunidades para Estudantes</h3>
+            </section>
 
-                <p>
-                    Divulga editais, programas de intercâmbio, cursos e ações voltadas para
-                    a internacionalização da educação e da pesquisa.
+            <!-- ENVELOPADO EM PAINEL PADRÃO -->
+            <section class="universal-painel-card" id="beneficios">
+                <h2 class="institucional_titulo">Benefícios da Internacionalização</h2>
+
+                <div class="internacional-beneficios" style="padding: 0; margin: 2rem 0 0 0;">
+                    <div class="cards" style="margin-top: 0;">
+                        <div class="card">
+                            <h3>Experiência Global</h3>
+                            <p>Contato com diferentes culturas, idiomas e metodologias de ensino.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Formação Acadêmica</h3>
+                            <p>Ampliação das oportunidades de aprendizado e desenvolvimento profissional.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Pesquisa e Inovação</h3>
+                            <p>Participação em projetos colaborativos com instituições nacionais e internacionais.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="universal-painel-card">
+                <h2 class="institucional_titulo">Construindo Conexões Globais</h2>
+                <p class="institucional_texto" style="margin: 0;">
+                    O IFCE busca fortalecer sua atuação internacional por meio da cooperação
+                    acadêmica e científica, contribuindo para uma formação cada vez mais
+                    qualificada e conectada às demandas globais.
                 </p>
+            </section>
 
-
-            </div>
-
-        </section>
-
-        <section class="internacional-beneficios">
-
-            <h2>Benefícios da Internacionalização</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Experiência Global</h3>
-
-                    <p>
-                        Contato com diferentes culturas, idiomas e metodologias de ensino.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Formação Acadêmica</h3>
-
-                    <p>
-                        Ampliação das oportunidades de aprendizado e desenvolvimento
-                        profissional.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Pesquisa e Inovação</h3>
-
-                    <p>
-                        Participação em projetos colaborativos com instituições nacionais e
-                        internacionais.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="internacional-final">
-
-            <h2>Construindo Conexões Globais</h2>
-
-            <p>
-                O IFCE busca fortalecer sua atuação internacional por meio da cooperação
-                acadêmica e científica, contribuindo para uma formação cada vez mais
-                qualificada e conectada às demandas globais.
-            </p>
-
-        </section>
-
+        </div> <!-- FIM DA DIV lisa-conteudo -->
     </main>
 
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_logo">
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE">
-
             </div>
 
             <div class="rodape_info">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
                 <p>
                     Rodovia BR-020, Km 209
                     <br>
                     Boa Viagem - Ceará
                 </p>
-
                 <p>
                     Ensino público, gratuito e de excelência.
                 </p>
-
             </div>
         </div>
 
@@ -216,11 +194,11 @@
                 © 2026 IFCE Campus Boa Viagem |
                 Desenvolvido pela Equipe Madalena
             </p>
-
         </div>
-
     </footer>
+
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
-
 </body>
+
+</html>
