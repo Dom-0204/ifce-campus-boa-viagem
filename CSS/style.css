@@ -474,7 +474,8 @@ section h2 {
 .lisa-banner,
 .bolsas-banner,
 .cursos-banner,
-.ingresso-banner {
+.ingresso-banner,
+.extensao-banner {
     padding: 6rem var(--sp-4);
     text-align: center;
     color: white;
@@ -972,7 +973,7 @@ section h2 {
     background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/extensaoo.png") center/cover no-repeat;
     text-align: center;
     color: white;
-    padding: 5rem var(--sp-4);
+    padding: 6rem var(--sp-4);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
@@ -1050,6 +1051,7 @@ section h2 {
 }
 
 .internacional-info h2 {
+    color: var(--cor-primaria-hover);
     position: relative;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -1113,7 +1115,12 @@ section h2 {
     text-align: center;
 }
 
+.internacional-beneficios h2 {
+    color: var(--cor-primaria);
+}
+
 .internacional-beneficios .cards {
+    color: var(--cor-primaria-hover);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
