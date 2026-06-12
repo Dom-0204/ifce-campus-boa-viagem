@@ -2607,3 +2607,15 @@ body.dark-mode .universal-painel-card .ads-diferenciais .card h3 i {
 body.dark-mode .universal-painel-card .card p {
     color: var(--cor-texto-secundario) !important;
 }
+
+/* --- CORES DOS ÍCONES VETORIAIS DO TEMA --- */
+
+/* Cor da Lua no Modo Claro (Cinza grafite para dar ótimo contraste) */
+.theme-btn-icon .fa-moon {
+    color: #495057 !important;
+}
+
+/* Cor do Sol no Modo Escuro (Totalmente BRANCO como você pediu) */
+body.dark-mode .theme-btn-icon .fa-sun {
+    color: #ffffff !important;
+}

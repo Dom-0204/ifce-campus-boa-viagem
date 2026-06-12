@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
-    // 1. MODO ESCURO (DARK MODE) PERSISTENTE
+    // 1. MODO ESCURO (DARK MODE) PERSISTENTE - COM ÍCONES VETORIAIS
     // ==========================================
     const themeToggleBtn = document.getElementById("theme-toggle");
     const themeIcon = document.querySelector(".theme-btn-icon");
     const savedTheme = localStorage.getItem("theme");
 
-    // Aplica o tema salvo ao carregar a página
+    // Aplica o tema salvo ao carregar a página (injetando a tag do ícone)
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
-        if (themeIcon) themeIcon.textContent = "☀️";
+        if (themeIcon) {
+            themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'; // Sol em vetor
+        }
+    } else {
+        if (themeIcon) {
+            themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Lua em vetor
+        }
     }
 
     themeToggleBtn.addEventListener("click", () => {
@@ -17,15 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (document.body.classList.contains("dark-mode")) {
             localStorage.setItem("theme", "dark");
-            if (themeIcon) themeIcon.textContent = "☀️";
+            if (themeIcon) {
+                themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'; // Injeta o Sol em vetor no clique
+            }
         } else {
             localStorage.setItem("theme", "light");
-            if (themeIcon) themeIcon.textContent = "🌙";
+            if (themeIcon) {
+                themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Injeta a Lua em vetor no clique
+            }
         }
     });
 
     // ==========================================
-    // 2. MENU LATERAL SELECIONADO (VERDE)
+    // 2. MENU LATERAL SELECIONADO (VERDE) ... REGRAS SEGUEM IGUAIS ABAIXO
     // ==========================================
     const sidebarLinks = document.querySelectorAll(".universal-sidebar ul li a");
     const sections = document.querySelectorAll(".lisa-conteudo .universal-painel-card, .universal-conteudo .universal-painel-card, .universal-conteudo .extensao_card, .universal-conteudo .impacto_extensao, .universal-conteudo .projetos_extensao, .universal-conteudo .contato-info, .universal-conteudo .contato-setores, .universal-conteudo .localizacao, .universal-conteudo .formulario-contato");
