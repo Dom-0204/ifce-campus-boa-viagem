@@ -870,6 +870,7 @@ section h2 {
 }
 
 .institucional_texto {
+    color: var(--cor-texto-secundario);
     margin-bottom: var(--sp-3);
     line-height: 1.8;
 }
@@ -1744,13 +1745,26 @@ section h2 {
 ========================= */
 
 .pesquisa-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/pesquisa.png) center/cover no-repeat;
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, 0.75),
+            rgba(20, 108, 67, 0.80)),
+        url("../images/pesquisa.png") center/cover no-repeat;
+
     text-align: center;
-    color: white;
+    color: #fff;
     padding: 5rem var(--sp-4);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
+
+.pesquisa-banner h1 {
+    color: white;
+    font-size: var(--fs-3xl);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
+/* INTRODUÇÃO */
 
 .pesquisa-introducao {
     max-width: 1200px;
@@ -1766,24 +1780,26 @@ section h2 {
 .pesquisa-introducao p {
     max-width: 900px;
     margin: 1rem auto;
+    line-height: 1.8;
+    color: var(--cor-texto-secundario);
 }
 
-.pesquisa-cards {
-    max-width: 1200px;
-    margin: var(--sp-8) auto;
+/* CARDS PRINCIPAIS */
 
+.pesquisa-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
 }
 
 .pesquisa-cards .card {
-    background: white;
+    background: #fff;
     padding: 2rem;
+    min-height: 230px;
 
     border-radius: 20px;
-
     border-top: 5px solid var(--cor-primaria);
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
@@ -1791,72 +1807,80 @@ section h2 {
     transition: .3s ease;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.pesquisa-cards .card:hover {
+    transform: translateY(-8px);
 }
 
-.container h2 {
-    color: var(--cor-primaria);
+.pesquisa-cards h3 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: 1rem;
 }
+
+.pesquisa-cards p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.8;
+}
+
+/* OPORTUNIDADES */
 
 .pesquisa-destaques .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-
-    width: 100%;
-    margin: 3rem auto 0;
 }
 
-.pesquisa-destaques .item {
+.pesquisa-destaques .item,
+.pesquisa-destaques .ultimo_item {
     background: #fff;
-
     padding: 2rem;
+    min-height: 190px;
 
     border-radius: 20px;
-
     border-top: 4px solid var(--cor-primaria);
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
 
-    transition: .3s;
+    transition: .3s ease;
 }
 
-.pesquisa-cards .card,
-.pesquisa-destaques .item {
-    min-height: 220px;
+.pesquisa-destaques .item:hover,
+.pesquisa-destaques .ultimo_item:hover {
+    transform: translateY(-6px);
 }
 
-.pesquisa-cards .card h3,
-.pesquisa-destaques .item h3 {
+.pesquisa-destaques h3 {
     color: var(--cor-primaria-hover);
+    margin-bottom: 1rem;
 }
 
-.pesquisa-destaques h2 {
-    text-align: center;
-    margin-bottom: 3rem;
+.pesquisa-destaques p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.8;
 }
 
-.pesquisa-cards .card:hover {
-    transform: translateY(-8px);
+/* CENTRALIZA O ÚLTIMO CARD */
+
+.ultimo_item {
+    grid-column: 1 / 3;
+    max-width: 500px;
+    justify-self: center;
 }
+
+/* FINAL */
 
 .pesquisa-final {
     max-width: 1200px;
     margin: 5rem auto;
     padding: 4rem;
 
-    background: white;
+    background: #fff;
 
     border-radius: 24px;
-
-    text-align: center;
-
     border-top: 5px solid var(--cor-primaria);
 
     box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+    text-align: center;
 }
 
 .pesquisa-final h2 {
@@ -1867,15 +1891,44 @@ section h2 {
 .pesquisa-final p {
     max-width: 800px;
     margin: 0 auto 2rem;
+    line-height: 1.8;
+    color: var(--cor-texto-secundario);
 }
 
-@media(max-width:768px) {
+/* MOBILE */
 
-    .pesquisa-cards,
+@media (max-width: 992px) {
+
+    .pesquisa-cards {
+        grid-template-columns: 1fr;
+    }
+
     .pesquisa-destaques .grid {
         grid-template-columns: 1fr;
     }
 
+    .ultimo_item {
+        grid-column: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pesquisa-banner {
+        padding: 4rem 1rem;
+    }
+
+    .pesquisa-banner h1 {
+        font-size: 2rem;
+    }
+
+    .pesquisa-cards .card,
+    .pesquisa-destaques .item,
+    .pesquisa-destaques .ultimo_item {
+        min-height: auto;
+        padding: 1.5rem;
+    }
 }
 
 /* =========================
@@ -1887,7 +1940,7 @@ section h2 {
         linear-gradient(135deg,
             rgba(25, 135, 84, .88),
             rgba(20, 108, 67, .92)),
-        url("../images/ads-banner.png") center/cover no-repeat;
+        url("/images/ads.png") center/cover no-repeat;
 
     text-align: center;
     color: white;
@@ -1953,17 +2006,11 @@ section h2 {
 
 .tag-ads {
     display: inline-block;
-
     background: rgba(25, 135, 84, .12);
-
     color: var(--cor-primaria);
-
     padding: .8rem 1.4rem;
-
     border-radius: 999px;
-
     font-weight: 600;
-
     margin-bottom: 1.5rem;
 }
 
