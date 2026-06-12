@@ -2513,4 +2513,50 @@ body.dark-mode .ads-introducao::after {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
     gap: 1.5rem !important;
     width: 100% !important;
+
+}
+
+/* ==================================================
+   CORREÇÃO VISUAL DEFINITIVA PARA ADS (MODO CLARO E ESCURO)
+   ================================================== */
+
+/* --- AJUSTES PARA O MODO CLARO (Nativo / Padrão) --- */
+/* Força os novos ícones e títulos a usarem o verde institucional do IFCE no modo claro */
+.universal-painel-card .card .impacto-topo span i,
+.universal-painel-card .ads-diferenciais .card h3 i {
+    color: var(--cor-primaria) !important;
+}
+
+.universal-painel-card .ads-areas .card h3,
+.universal-painel-card .ads-diferenciais .card h3,
+.universal-painel-card .ads-carreira .card h3 {
+    color: var(--cor-primaria) !important;
+}
+
+
+/* --- AJUSTES PARA O MODO ESCURO (dark-mode ativo) --- */
+/* Arranca de vez qualquer fundo preto absoluto de dentro dos painéis adaptáveis */
+body.dark-mode .universal-painel-card .ads-areas,
+body.dark-mode .universal-painel-card .ads-diferenciais,
+body.dark-mode .universal-painel-card .ads-carreira {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Garante que os cards internos herdem o cinza correto de painel, sem manchas pretas */
+body.dark-mode .universal-painel-card .card {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-top: 4px solid var(--cor-primaria) !important;
+}
+
+/* Altera os títulos e ícones internos para o verde com brilho ideal no escuro */
+body.dark-mode .universal-painel-card .card h3,
+body.dark-mode .universal-painel-card .card .impacto-topo span i,
+body.dark-mode .universal-painel-card .ads-diferenciais .card h3 i {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .universal-painel-card .card p {
+    color: var(--cor-texto-secundario) !important;
 }
