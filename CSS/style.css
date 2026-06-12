@@ -1539,6 +1539,133 @@ section h2 {
 }
 
 /* =========================
+    CONTATO RESPONSIVO
+========================= */
+
+@media (max-width: 1024px) {
+
+    .contato-banner {
+        padding: 6rem 2rem;
+    }
+
+    .contato-info .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato-setores .cards {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .localizacao iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contato-banner {
+        padding: 4rem 1.5rem;
+    }
+
+    .contato-banner h1 {
+        font-size: 2rem;
+    }
+
+    .contato-banner p {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+
+    .contato-info,
+    .formulario-contato {
+        padding: 2rem 1.5rem;
+    }
+
+    .contato-info .cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contato-info .card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .contato-setores .cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .localizacao iframe {
+        height: 400px;
+    }
+
+    .formulario-contato button {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .tempo-resposta {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contato-banner {
+        padding: 3rem 1rem;
+    }
+
+    .contato-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .contato-banner p {
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+    .contato-info,
+    .formulario-contato {
+        padding: 1.5rem 1rem;
+    }
+
+    .contato-info .card {
+        padding: 1.25rem;
+    }
+
+    .contato-info .card .icone {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .localizacao iframe {
+        height: 320px;
+    }
+
+    .localizacao-endereco {
+        font-size: .95rem;
+    }
+
+    .formulario-contato input,
+    .formulario-contato textarea {
+        padding: 12px;
+    }
+
+    .formulario-contato button {
+        padding: 12px 20px;
+        font-size: .95rem;
+    }
+
+    .tempo-resposta {
+        font-size: .9rem;
+        padding: .75rem;
+    }
+}
+
+/* =========================
     NOTÍCIAS
 ========================= */
 .noticias-banner {
@@ -1872,14 +1999,10 @@ section h2 {
     max-width: 1200px;
     margin: 5rem auto;
     padding: 4rem;
-
     background: #fff;
-
     border-radius: 24px;
     border-top: 5px solid var(--cor-primaria);
-
     box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
-
     text-align: center;
 }
 
@@ -2078,6 +2201,100 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+/* =========================
+    ADS RESPONSIVO
+========================= */
+
+@media (max-width: 1024px) {
+
+    .ads-banner {
+        padding: 6rem 2rem;
+    }
+
+    .ads-banner::before {
+        width: 350px;
+        height: 350px;
+        top: -180px;
+        right: -150px;
+    }
+
+    .ads-areas,
+    .ads-carreira .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ads-diferenciais .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ads-banner {
+        padding: 4rem 1.5rem;
+    }
+
+    .ads-banner h1 {
+        font-size: 2rem;
+    }
+
+    .ads-banner p {
+        font-size: .95rem;
+    }
+
+    .ads-introducao {
+        padding: 2rem 1.5rem;
+    }
+
+    .ads-introducao::after {
+        display: none;
+    }
+
+    .ads-areas,
+    .ads-carreira .cards,
+    .ads-diferenciais .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .ads-diferenciais {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .ads-areas .card,
+    .ads-diferenciais .card,
+    .ads-carreira .card {
+        padding: 1.5rem;
+    }
+
+    .tag-ads {
+        font-size: .9rem;
+        padding: .7rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ads-banner {
+        padding: 3rem 1rem;
+    }
+
+    .ads-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .ads-introducao {
+        padding: 1.5rem 1rem;
+    }
+
+    .ads-diferenciais {
+        padding: 2rem 1rem;
+    }
+
+    .ads-banner::before {
+        display: none;
+    }
 }
 
 /* =========================
