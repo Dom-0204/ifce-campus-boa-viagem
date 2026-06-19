@@ -469,9 +469,9 @@ section h2 {
 }
 
 /* ===============================================
-   ESTILO - LABLISA, BOLSAS, CURSOS, INGRESSO
+   ESTILO - CIDTS, BOLSAS, CURSOS, INGRESSO
 ================================================== */
-.lisa-banner,
+.cidts-banner,
 .bolsas-banner,
 .cursos-banner,
 .ingresso-banner,
@@ -484,8 +484,8 @@ section h2 {
     border-bottom: 5px solid var(--cor-secundaria);
 }
 
-.lisa-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.60), rgba(20, 108, 67, 0.90)), url("../images/lablisa.png") no-repeat center/cover;
+.cidts-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.60), rgba(20, 108, 67, 0.90)), url("../images/cidts.png") no-repeat center/cover;
 }
 
 .bolsas-banner {
@@ -500,7 +500,7 @@ section h2 {
     background: linear-gradient(135deg, rgba(25, 135, 84, 0.20), rgba(20, 108, 67, 0.50)), url("../images/ifingresso.png") no-repeat center/cover;
 }
 
-.lisa-banner h1,
+.cidts-banner h1,
 .bolsas-banner h1,
 .cursos-banner h1,
 .ingresso-banner h1,
@@ -513,7 +513,7 @@ section h2 {
     font-size: var(--fs-3xl);
 }
 
-.lisa-banner h1 strong,
+.cidts-banner h1 strong,
 .bolsas-banner h1 strong,
 .cursos-banner h1 strong,
 .ingresso-banner h1 strong,
@@ -523,7 +523,7 @@ section h2 {
     color: var(--cor-primaria-clara);
 }
 
-.lisa-banner p,
+.cidts-banner p,
 .bolsas-banner p,
 .cursos-banner p,
 .ingresso-banner p,
@@ -611,7 +611,7 @@ section h2 {
 
 .sidebar-badge strong {
     display: block;
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria-hover);
 }
 
 .sidebar-badge span {
@@ -621,7 +621,7 @@ section h2 {
 
 /* Conteúdos esticando para aproveitar o espaço horizontal */
 .universal-conteudo,
-.lisa-conteudo {
+.cidts-conteudo {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -639,20 +639,20 @@ section h2 {
     scroll-margin-top: 132px;
 }
 
-.lisa-timeline {
+.cidts-timeline {
     display: flex;
     flex-direction: column;
     gap: var(--sp-5);
     margin-top: var(--sp-4);
 }
 
-.lisa-timeline-item {
+.cidts-timeline-item {
     display: flex;
     gap: var(--sp-4);
     align-items: flex-start;
 }
 
-.lisa-timeline-numero {
+.cidts-timeline-numero {
     background-color: var(--cor-primaria);
     color: white;
     font-weight: 700;
@@ -666,19 +666,19 @@ section h2 {
     box-shadow: var(--sombra-sm);
 }
 
-.lisa-timeline-texto h4 {
+.cidts-timeline-texto h4 {
     color: var(--cor-primaria-hover);
     margin-bottom: 4px;
 }
 
-.lisa-setores-grid {
+.cidts-setores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--sp-4);
     margin-top: var(--sp-5);
 }
 
-.lisa-setor-item {
+.cidts-setor-item {
     background-color: var(--cor-fundo-mini-card);
     padding: var(--sp-5);
     border-radius: var(--raio-md);
@@ -686,13 +686,13 @@ section h2 {
     transition: var(--transicao-rapida);
 }
 
-.lisa-setor-item:hover {
+.cidts-setor-item:hover {
     transform: scale(1.02);
     background-color: white;
     box-shadow: var(--sombra-sm);
 }
 
-.lisa-setor-tag {
+.cidts-setor-tag {
     display: inline-block;
     background-color: var(--cor-primaria-hover);
     color: white;
@@ -703,7 +703,7 @@ section h2 {
     margin-bottom: var(--sp-3);
 }
 
-.lisa-conexoes-container {
+.cidts-conexoes-container {
     margin-top: var(--sp-6);
     padding: var(--sp-4) var(--sp-5);
     background-color: var(--cor-fundo-mini-card);
@@ -711,7 +711,7 @@ section h2 {
     border-left: 4px solid var(--cor-primaria);
 }
 
-.lisa-conexoes-titulo {
+.cidts-conexoes-titulo {
     display: block;
     font-size: var(--fs-sm);
     font-weight: 600;
@@ -721,13 +721,13 @@ section h2 {
     margin-bottom: var(--sp-3);
 }
 
-.lisa-conexoes-grid {
+.cidts-conexoes-grid {
     display: flex;
     flex-wrap: wrap;
     gap: var(--sp-3);
 }
 
-.lisa-conexao-tag {
+.cidts-conexao-tag {
     background-color: var(--cor-fundo-card);
     color: var(--cor-primaria-hover);
     border: 1px solid var(--cor-borda);
@@ -739,19 +739,19 @@ section h2 {
     transition: var(--transicao-rapida);
 }
 
-.lisa-conexao-tag:hover {
+.cidts-conexao-tag:hover {
     border-color: var(--cor-primaria);
     background-color: var(--cor-fundo-secao);
     transform: translateY(-2px);
 }
 
-.lisa-ecossistema-botoes {
+.cidts-ecossistema-botoes {
     margin-top: var(--sp-6);
     display: flex;
     justify-content: flex-start;
 }
 
-.lisa-ecossistema-botoes .botao {
+.cidts-ecossistema-botoes .botao {
     margin: 0;
 }
 
@@ -777,7 +777,7 @@ section h2 {
         margin: 0;
     }
 
-    .lisa-conexoes-grid {
+    .cidts-conexoes-grid {
         justify-content: flex-start;
         gap: var(--sp-2);
     }
@@ -2375,7 +2375,7 @@ body.dark-mode .universal-sidebar {
     background-color: #1e1e1e;
 }
 
-body.dark-mode .lisa-conexoes-container {
+body.dark-mode .cidts-conexoes-container {
     background-color: #161616;
 }
 
@@ -2589,7 +2589,7 @@ body.dark-mode .tempo-resposta {
     color: var(--cor-texto-secundario) !important;
 }
 
-body.dark-mode .lisa-setor-item:hover {
+body.dark-mode .cidts-setor-item:hover {
     transform: scale(1.02);
     background-color: rgb(26, 22, 22);
     box-shadow: var(--sombra-sm);

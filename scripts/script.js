@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. MENU LATERAL SELECIONADO (VERDE) ... REGRAS SEGUEM IGUAIS ABAIXO
     // ==========================================
     const sidebarLinks = document.querySelectorAll(".universal-sidebar ul li a");
-    const sections = document.querySelectorAll(".lisa-conteudo .universal-painel-card, .universal-conteudo .universal-painel-card, .universal-conteudo .extensao_card, .universal-conteudo .impacto_extensao, .universal-conteudo .projetos_extensao, .universal-conteudo .contato-info, .universal-conteudo .contato-setores, .universal-conteudo .localizacao, .universal-conteudo .formulario-contato");
+    const sections = document.querySelectorAll(".cidts-conteudo .universal-painel-card, .universal-conteudo .universal-painel-card, .universal-conteudo .extensao_card, .universal-conteudo .impacto_extensao, .universal-conteudo .projetos_extensao, .universal-conteudo .contato-info, .universal-conteudo .contato-setores, .universal-conteudo .localizacao, .universal-conteudo .formulario-contato");
     // Função para ativar o link correto baseado no ID
     function ativarLink(id) {
         sidebarLinks.forEach(link => {

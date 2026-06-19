@@ -36,9 +36,9 @@ Apresentação geral do IFCE Campus Boa Viagem, destaques institucionais e acess
 
 Informações institucionais sobre a história, missão, estrutura e infraestrutura do campus.
 
-### LabLisa
+### CIDTS
 
-Página dedicada ao Laboratório de Linguagens e Sistemas Inteligentes Aplicados (LabLisa), apresentando sua atuação, estrutura e projetos.
+Página dedicada ao Laboratório de Linguagens e Sistemas Inteligentes Aplicados (CIDTS), apresentando sua atuação, estrutura e projetos.
 
 ### Cursos
 
@@ -115,7 +115,7 @@ Informações para contato com o campus, localização e formulário de atendime
 │   ├── ifinternacional.html
 │   ├── ingresso.html
 │   ├── institucional.html
-│   ├── lablisa.html
+│   ├── cidts.html
 │   ├── noticias.html
 │   └── pesquisas.html
 │
