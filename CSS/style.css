@@ -37,7 +37,8 @@ html {
     --cor-icone: #ffffff;
     --cor-borda: #dee2e6;
     --cor-sombra: rgba(0, 0, 0, 0.1);
-
+    --transparencia-cabecalho: rgba(0, 0, 0, .25);
+    --transparencia-dropdown:rgba(18, 18, 22, .85);
     /* ===== TIPOGRAFIA ===== */
     --fonte-principal: 'Poppins', sans-serif;
 
@@ -335,7 +336,7 @@ section h2 {
     height: 60px;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .25);
+    background: var(--transparencia-cabecalho);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
@@ -361,7 +362,7 @@ section h2 {
 
 .cabecalho_nav a {
 
-    color: white;
+    color: var(--cor-texto-banner);
 
     font-size: .95rem;
 
@@ -435,7 +436,7 @@ section h2 {
     display: flex;
     flex-direction: column;
 
-    background: rgba(18, 18, 22, .85);
+    background: var(--transparencia-dropdown);
 
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -512,7 +513,7 @@ section h2 {
 
     transform: translateX(6px);
 
-    color: white;
+    color: var(--cor-texto-banner);
 }
 
 .menu-title {
@@ -597,7 +598,7 @@ section h2 {
     margin: 0 auto;
     text-align: center;
     max-width: 900px;
-    color: white;
+    color:  var(--cor-texto-banner);
     z-index: 3;
 }
 
@@ -615,7 +616,7 @@ section h2 {
 }
 
 .pagina-atual {
-    color: white;
+    color: var(--cor-texto-banner);
     font-size: .95rem;
     font-weight: 600;
 }
@@ -631,7 +632,7 @@ section h2 {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 2rem;
-    color: rgba(255, 255, 255, .92);
+    color: var(--cor-texto-banner);
 }
 
 .hero-info {
@@ -647,7 +648,7 @@ section h2 {
     border: 1px solid rgba(255, 255, 255, .15);
     padding: .8rem 1.2rem;
     border-radius: 999px;
-    color: white;
+    color: var(--cor-texto-banner);
     backdrop-filter: blur(10px);
 }
 
@@ -708,7 +709,7 @@ section h2 {
 .main {
     position: relative;
     z-index: 3;
-    background: #f8f9fa;
+    background:var(--cor-fundo);
     display: flex;
     width: 100%;
     max-width: none;
@@ -729,7 +730,7 @@ section h2 {
 .ads-banner {
     padding: 6rem var(--sp-4);
     text-align: center;
-    color: white;
+    color: var(--cor-texto-banner);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
 }
@@ -1063,6 +1064,7 @@ section h2 {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     font-size: var(--fs-lg);
     font-weight: 400;
+    color: var(--cor-texto-banner);
     opacity: 0.95;
     max-width: 800px;
     margin: 0 auto;
@@ -1232,7 +1234,7 @@ section h2 {
 .extensao-banner {
     background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/extensaoo.png") center/cover no-repeat;
     text-align: center;
-    color: white;
+    color: var(--cor-texto-banner);
     padding: 6rem var(--sp-4);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
@@ -1241,7 +1243,7 @@ section h2 {
 .internacional-banner {
     background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/ifintertnacionaal.png) center/cover no-repeat;
     text-align: center;
-    color: white;
+    color: var(--cor-texto-banner);
     padding: 5rem var(--sp-4);
     margin-bottom: var(--sp-8);
     border-bottom: 5px solid var(--cor-secundaria);
@@ -1250,7 +1252,7 @@ section h2 {
 .extensao-banner h1,
 .internacional-banner h1 {
     font-size: var(--fs-3xl);
-    color: white;
+    color: var(--cor-texto-banner);
     margin-bottom: var(--sp-4);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
@@ -1613,14 +1615,14 @@ section h2 {
 .contato-banner {
     background: linear-gradient(rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/cont.png") center/cover no-repeat;
     text-align: center;
-    color: white;
+    color: var(--cor-texto-banner);
     padding: 8rem 2rem;
     border-bottom: 5px solid var(--cor-secundaria);
     margin-bottom: var(--sp-8);
 }
 
 .contato-banner h1 {
-    color: white;
+    color: var(--cor-texto-banner);
     font-size: var(--fs-3xl);
     margin-bottom: var(--sp-4);
     text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
@@ -2137,7 +2139,7 @@ section h2 {
 }
 
 .pesquisa-banner h1 {
-    color: white;
+    color: var(--cor-texto-banner);
     font-size: var(--fs-3xl);
     text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
 }
@@ -2728,7 +2730,7 @@ body.dark-mode .cabecalho_nav_ancoras:hover {
     }
 
     body.dark-mode .cabecalho_nav {
-        background-color: #1e1e1e;
+        background-color: var(--transparencia-cabecalho);
     }
 
     .cabecalho_nav.ativo {
