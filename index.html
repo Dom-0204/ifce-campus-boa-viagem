@@ -13,42 +13,108 @@
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo-removebg-preview.png" alt="Logo IFCE" width="90">
-            </a>
-        </div>
-        <button class="menu-toggle" id="menu-toggle">
-            ☰
-        </button>
 
+        <div class="logo-area">
+
+            <a href="index.html">
+                <img src="images/logo-removebg-preview.png" alt="Logo IFCE" width="65">
+            </a>
+
+            <span class="separador"></span>
+
+            <span class="pagina-atual">
+                HOME
+            </span>
+
+        </div>
 
         <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras ativo" href="index.html">Início</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
-            
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Ensino
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="Paginas/ads.html">Sobre o Curso</a>
+                    <a href="Paginas/professores.html">Professores</a>
+                    <a href="#">Matriz Curricular</a>
+                    <a href="#">Mercado de Trabalho</a>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Pesquisa
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="Paginas/cidts.html">CIDTS</a>
+                    <a href="Paginas/pesquisas.html">Projetos</a>
+                    <a href="#">Iniciação Científica</a>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Extensão
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">Centro Acadêmico</a>
+                    <a href="Paginas/extensao.html">Projetos</a>
+                    <a href="Paginas/contato.html">Contato</a>
+                </div>
+
+            </div>
+
         </nav>
+
     </header>
+
+    <section class="hero">
+
+        <div class="hero-conteudo">
+
+            <h1>
+                Análise e Desenvolvimento de Sistemas
+            </h1>
+
+            <p>
+                Desenvolva soluções digitais, crie sistemas inovadores
+                e prepare-se para o mercado de tecnologia.
+            </p>
+
+            <div class="hero-info">
+
+                <span>Desenvolvimento Web</span>
+
+                <span>Banco de Dados</span>
+
+                <span>Engenharia de Software</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <main class="main">
-        <section class="hero">
 
-            <p class="hero_selo">IFCE Campus Boa Viagem</p>
+        <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
 
-            <img src="images/iffrente.png" alt="Imagem do IFCE">
+            <span class="theme-btn-icon">
+                🌙
+            </span>
 
-            <h1>Construa seu futuro no <strong>IFCE Campus Boa Viagem</strong></h1>
+        </button>
 
-            <p>Ensino público, gratuito e de excelência. Desenvolva seu potencial por meio de cursos técnicos e
-                superiores, projetos de pesquisa, extensão e inovação.</p>
-
-            <a class="botao" href="Paginas/cursos.html">Conheça os Cursos</a>
-            <a class="botao-2" href="Paginas/extensao.html">Saiba Mais</a>
-
-        </section>
         <section class="formas_ingresso">
 
             <h2><strong>Formas de Ingresso</strong></h2>
@@ -189,62 +255,21 @@
             </div>
         </section>
 
-        <section class="noticias-home">
-            <div class="container">
+        <section class="noticias">
 
-                <h2>Notícias e Eventos</h2>
+            <svg class="icone-noticias" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                <path
+                    d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
+            </svg>
 
-                <p class="descricao-home">
-                    Fique por dentro das novidades do curso de Análise e Desenvolvimento de Sistemas.
-                </p>
+            <h2>Fique por Dentro</h2>
+            <p>
+                Acompanhe notícias, editais, eventos e oportunidades disponíveis para estudantes e comunidade.
+            </p>
 
-                <div class="noticias-grid">
+            <a class="botao" href="/Paginas/noticias.html">Ver Notícias</a>
 
-                    <article class="noticia-card">
-                        <img src="images/evento1.jpg" alt="Evento ADS">
-
-                        <div class="conteudo">
-                            <span>Evento</span>
-
-                            <h3>Palestra sobre Desenvolvimento Web</h3>
-
-                            <p>
-                                Estudantes participaram de uma palestra sobre as tendências do mercado de tecnologia.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-card">
-                        <img src="images/evento2.jpg" alt="Hackathon">
-
-                        <div class="conteudo">
-                            <span>Projeto</span>
-
-                            <h3>Alunos participam de Hackathon</h3>
-
-                            <p>
-                                Equipes do curso desenvolveram soluções inovadoras durante competição tecnológica.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-card">
-                        <img src="images/evento3.jpg" alt="Mercado">
-
-                        <div class="conteudo">
-                            <span>Mercado</span>
-
-                            <h3>Oportunidades para Desenvolvedores</h3>
-
-                            <p>
-                                Empresas parceiras divulgam novas vagas para estudantes da área de tecnologia.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-
-            </div>
         </section>
     </main>
     <footer class="rodape">
