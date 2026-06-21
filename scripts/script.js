@@ -74,3 +74,116 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// ==========================================
+// BUSCA DO PORTAL - autocomplete client-side
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+
+    const buscaInput = document.getElementById("busca-portal");
+    const buscaSugestoes = document.getElementById("busca-sugestoes");
+    const buscaBtn = document.getElementById("busca-btn");
+
+    if (!buscaInput || !buscaSugestoes) return;
+
+    // Índice simples das páginas do portal.
+    // Adicione novas páginas aqui conforme forem criadas.
+    const indicePortal = [
+        { titulo: "Sobre o Curso de ADS", url: "Paginas/ads.html" },
+        { titulo: "Formas de Ingresso", url: "Paginas/ingresso.html" },
+        { titulo: "Bolsas", url: "Paginas/bolsas.html" },
+        { titulo: "CIDTS", url: "Paginas/cidts.html" },
+        { titulo: "Projetos de Pesquisa", url: "Paginas/pesquisas.html" },
+        { titulo: "Extensão", url: "Paginas/extensao.html" },
+        { titulo: "IFCE Internacional", url: "Paginas/ifinternacional.html" },
+        { titulo: "Institucional", url: "Paginas/institucional.html" },
+        { titulo: "Cursos", url: "Paginas/cursos.html" },
+        { titulo: "Notícias", url: "Paginas/noticias.html" },
+        { titulo: "Contato", url: "Paginas/contato.html" },
+    ];
+
+    function buscar(termoOriginal) {
+        const termo = termoOriginal.trim().toLowerCase();
+
+        if (!termo) {
+            buscaSugestoes.hidden = true;
+            buscaSugestoes.innerHTML = "";
+            return;
+        }
+
+        const resultados = indicePortal.filter((item) =>
+            item.titulo.toLowerCase().includes(termo)
+        );
+
+        if (resultados.length === 0) {
+            buscaSugestoes.innerHTML = `<span class="busca-vazio">Nenhum resultado encontrado</span>`;
+        } else {
+            buscaSugestoes.innerHTML = resultados
+                .map((r) => `<a href="${r.url}">${r.titulo}</a>`)
+                .join("");
+        }
+
+        buscaSugestoes.hidden = false;
+    }
+
+    buscaInput.addEventListener("input", () => buscar(buscaInput.value));
+
+    buscaInput.addEventListener("focus", () => {
+        if (buscaInput.value.trim()) buscar(buscaInput.value);
+    });
+
+    buscaBtn.addEventListener("click", () => {
+        const termo = buscaInput.value.trim().toLowerCase();
+        const primeiro = indicePortal.find((item) =>
+            item.titulo.toLowerCase().includes(termo)
+        );
+        if (primeiro) window.location.href = primeiro.url;
+    });
+
+    buscaInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") buscaBtn.click();
+        if (e.key === "Escape") {
+            buscaSugestoes.hidden = true;
+            buscaInput.blur();
+        }
+    });
+
+    // Fecha as sugestões ao clicar fora da barra de busca
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".cabecalho-busca")) {
+            buscaSugestoes.hidden = true;
+        }
+    });
+});
+
+const botao = document.getElementById("menu-toggle");
+const menu = document.querySelector(".cabecalho_nav");
+
+botao.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+
+    if (menu.classList.contains("ativo")) {
+        botao.innerHTML = "✕";
+        botao.style.transform = "rotate(180deg)";
+    } else {
+        botao.innerHTML = "☰";
+        botao.style.transform = "rotate(0deg)";
+    }
+});
+
+const botao = document.getElementById("menu-toggle");
+const menu = document.querySelector(".cabecalho_nav");
+
+if (botao && menu) {
+    botao.addEventListener("click", () => {
+        menu.classList.toggle("ativo");
+
+        if (menu.classList.contains("ativo")) {
+            botao.innerHTML = "✕";
+            botao.style.transform = "rotate(180deg)";
+        } else {
+            botao.innerHTML = "☰";
+            botao.style.transform = "rotate(0deg)";
+        }
+    });
+}

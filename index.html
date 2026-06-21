@@ -28,61 +28,67 @@
 
         </div>
 
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
         <nav class="cabecalho_nav">
 
-            <div class="dropdown">
+            <div class="cabecalho_links">
 
-                <a class="menu-title" href="#">
-                    Ensino
-                </a>
+                <div class="dropdown">
 
-                <div class="dropdown-menu">
+                    <a class="menu-title" href="#">
+                        Ensino
+                    </a>
 
-                    <a href="Paginas/ads.html">Sobre o Curso</a>
-                    <a href="Paginas/professores.html">Professores</a>
-                    <a href="#">Matriz Curricular</a>
-                    <a href="#">Mercado de Trabalho</a>
+                    <div class="dropdown-menu">
+
+                        <a href="Paginas/ads.html">Sobre o Curso</a>
+                        <a href="Paginas/professores.html">Professores</a>
+                        <a href="#areas-atuacao">Mercado de Trabalho</a>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+
+                    <a class="menu-title" href="#">
+                        Pesquisa
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a href="Paginas/cidts.html">CIDTS</a>
+                        <a href="Paginas/pesquisas.html">Projetos</a>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+
+                    <a class="menu-title" href="#">
+                        Extensão
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a href="Paginas/extensao.html">Projetos</a>
+                        <a href="Paginas/contato.html">Contato</a>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="dropdown">
-
-                <a class="menu-title" href="#">
-                    Pesquisa
-                </a>
-
-                <div class="dropdown-menu">
-                    <a href="Paginas/cidts.html">CIDTS</a>
-                    <a href="Paginas/pesquisas.html">Projetos</a>
-                    <a href="#">Iniciação Científica</a>
-                </div>
-
-            </div>
-
-            <div class="dropdown">
-
-                <a class="menu-title" href="#">
-                    Extensão
-                </a>
-
-                <div class="dropdown-menu">
-                    <a href="#">Centro Acadêmico</a>
-                    <a href="Paginas/extensao.html">Projetos</a>
-                    <a href="Paginas/contato.html">Contato</a>
-                </div>
-
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input"
+                    placeholder="Buscar cursos, editais, notícias..." autocomplete="off" aria-label="Buscar no portal">
+                <button class="busca-btn" type="button" aria-label="Pesquisar" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
             </div>
 
         </nav>
-
-        <form id="pesquisa" class="barra-de-pesquisa">
-            <input type="search" id="inputpesquisa" placeholder="O que você procura?">
-
-            <label for="inputpesquisa">
-                <span class="icon"></span>
-            </label>
-        </form>
 
     </header>
 
@@ -91,12 +97,13 @@
         <div class="hero-conteudo">
 
             <h1>
-                Análise e Desenvolvimento de Sistemas
+                Construa o futuro da tecnologia.
+                <span class="hero-curso">Análise e Desenvolvimento de Sistemas — IFCE</span>
             </h1>
 
             <p>
-                Desenvolva soluções digitais, crie sistemas inovadores
-                e prepare-se para o mercado de tecnologia.
+                Curso técnico gratuito e público. Programação, banco de dados e
+                engenharia de software para entrar no mercado de tecnologia.
             </p>
 
             <div class="hero-info">
@@ -108,6 +115,8 @@
                 <span>Engenharia de Software</span>
 
             </div>
+
+            <a href="#ingresso" class="botao hero-cta">Ver formas de ingresso</a>
 
         </div>
 
@@ -123,7 +132,128 @@
 
         </button>
 
-        <section class="formas_ingresso">
+        <div class="selos-confianca">
+            <span><i class="fa-solid fa-circle-check"></i> Instituição pública federal</span>
+            <span><i class="fa-solid fa-circle-check"></i> 100% gratuito</span>
+            <span><i class="fa-solid fa-circle-check"></i> Reconhecido pelo MEC</span>
+        </div>
+
+        <section id="areas-atuacao" class="areas-atuacao secao-home">
+
+            <h2>Onde você pode <strong>atuar</strong></h2>
+            <p>
+                O curso técnico em ADS prepara você para áreas em alta demanda
+                no mercado de tecnologia.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 10.5zM1.5 1a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+                        <path d="M0 12.5h16v1H0z" />
+                    </svg>
+
+                    <h3><strong>Desenvolvimento Web</strong></h3>
+                    <p>
+                        Front-end, back-end e aplicações completas para empresas,
+                        startups e órgãos públicos.
+                    </p>
+                </div>
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M3.5 0h9A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0M5 4.5A1.5 1.5 0 0 1 6.5 3h3A1.5 1.5 0 0 1 11 4.5v3A1.5 1.5 0 0 1 9.5 9h-3A1.5 1.5 0 0 1 5 7.5z" />
+                    </svg>
+
+                    <h3><strong>Banco de Dados</strong></h3>
+                    <p>
+                        Modelagem, administração e otimização de dados
+                        para sistemas reais.
+                    </p>
+                </div>
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M9.5 1.5a.5.5 0 0 1 1 0v1h.5a2 2 0 0 1 2 2v.5h1a.5.5 0 0 1 0 1h-1v2h1a.5.5 0 0 1 0 1h-1v.5a2 2 0 0 1-2 2h-.5v1a.5.5 0 0 1-1 0v-1h-2v1a.5.5 0 0 1-1 0v-1h-.5a2 2 0 0 1-2-2v-.5h-1a.5.5 0 0 1 0-1h1v-2h-1a.5.5 0 0 1 0-1h1v-.5a2 2 0 0 1 2-2h.5v-1a.5.5 0 0 1 1 0v1h2zM7 5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z" />
+                    </svg>
+
+                    <h3><strong>Engenharia de Software</strong></h3>
+                    <p>
+                        Arquitetura de sistemas, qualidade e gestão de
+                        projetos de TI.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vantagens secao-home">
+
+            <h2>Por que estudar no <strong>IFCE</strong>?</h2>
+            <p>
+                Conheça os diferenciais que fazem do IFCE uma referência em educação pública, pesquisa e extensão.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                    </svg>
+
+                    <h3>Ensino de Qualidade</h3>
+                    <p>
+                        O IFCE é referência em educação profissional, tecnológica e superior,
+                        oferecendo formação alinhada às necessidades da sociedade e do mercado de trabalho.
+                    </p>
+                </div>
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                    </svg>
+
+                    <h3>Pesquisa e Inovação</h3>
+                    <p>
+                        Os estudantes participam de projetos de pesquisa, desenvolvimento tecnológico
+                        e iniciativas inovadoras que contribuem para o crescimento regional.
+                    </p>
+                </div>
+
+                <div class="card">
+
+                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg>
+
+                    <h3>Extensão e Comunidade</h3>
+                    <p>
+                        O instituto desenvolve ações que aproximam a comunidade acadêmica da sociedade,
+                        promovendo transformação social e compartilhamento de conhecimento.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ingresso" class="formas_ingresso secao-home">
 
             <h2><strong>Formas de Ingresso</strong></h2>
             <p>
@@ -186,64 +316,7 @@
             </div>
         </section>
 
-        <section class="vantagens">
-
-            <h2>Por que estudar no <strong>IFCE</strong>?</h2>
-            <p>
-                Conheça os diferenciais que fazem do IFCE uma referência em educação pública, pesquisa e extensão.
-            </p>
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                    </svg>
-
-                    <h3>Ensino de Qualidade</h3>
-                    <p>
-                        O IFCE é referência em educação profissional, tecnológica e superior,
-                        oferecendo formação alinhada às necessidades da sociedade e do mercado de trabalho.
-                    </p>
-                </div>
-
-                <div class="card">
-
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
-                    </svg>
-
-                    <h3>Pesquisa e Inovação</h3>
-                    <p>
-                        Os estudantes participam de projetos de pesquisa, desenvolvimento tecnológico
-                        e iniciativas inovadoras que contribuem para o crescimento regional.
-                    </p>
-                </div>
-
-                <div class="card">
-
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-
-                    <h3>Extensão e Comunidade</h3>
-                    <p>
-                        O instituto desenvolve ações que aproximam a comunidade acadêmica da sociedade,
-                        promovendo transformação social e compartilhamento de conhecimento.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="campus">
+        <section class="campus secao-home">
 
             <div class="campus-conteudo">
 
@@ -263,7 +336,7 @@
             </div>
         </section>
 
-        <section class="noticias">
+        <section class="noticias secao-home">
 
             <svg class="icone-noticias" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                 class="bi bi-megaphone-fill" viewBox="0 0 16 16">
@@ -277,6 +350,21 @@
             </p>
 
             <a class="botao" href="/Paginas/noticias.html">Ver Notícias</a>
+
+        </section>
+
+        <section class="captura-interesse secao-home">
+
+            <h2>Pronto para <strong>começar</strong>?</h2>
+            <p>
+                Fale com a coordenação do curso e tire suas dúvidas sobre inscrição,
+                matriz curricular e bolsas.
+            </p>
+
+            <div class="captura-botoes">
+                <a class="botao" href="Paginas/contato.html">Falar com a Coordenação</a>
+                <a class="botao-2" href="Paginas/ingresso.html">Ver Formas de Ingresso</a>
+            </div>
 
         </section>
     </main>
@@ -318,6 +406,7 @@
     </footer>
     <script src="scripts/script.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/busca.js"></script>
 </body>
 
 </html>
