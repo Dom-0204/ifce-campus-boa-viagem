@@ -32,65 +32,67 @@
             ☰
         </button>
 
-        <nav class="cabecalho_nav">
-
-            <div class="cabecalho_links">
-
-                <div class="dropdown">
-
-                    <a class="menu-title" href="#">
-                        Ensino
-                    </a>
-
-                    <div class="dropdown-menu">
-
-                        <a href="Paginas/ads.html">Sobre o Curso</a>
-                        <a href="Paginas/professores.html">Professores</a>
-                        <a href="#areas-atuacao">Mercado de Trabalho</a>
-                    </div>
-
-                </div>
-
-                <div class="dropdown">
-
-                    <a class="menu-title" href="#">
-                        Pesquisa
-                    </a>
-
-                    <div class="dropdown-menu">
-                        <a href="Paginas/cidts.html">CIDTS</a>
-                        <a href="Paginas/pesquisas.html">Projetos</a>
-                    </div>
-
-                </div>
-
-                <div class="dropdown">
-
-                    <a class="menu-title" href="#">
-                        Extensão
-                    </a>
-
-                    <div class="dropdown-menu">
-                        <a href="Paginas/extensao.html">Projetos</a>
-                        <a href="Paginas/contato.html">Contato</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="cabecalho-busca">
-                <input type="search" id="busca-portal" class="busca-input"
-                    placeholder="Buscar cursos, editais, notícias..." autocomplete="off" aria-label="Buscar no portal">
-                <button class="busca-btn" type="button" aria-label="Pesquisar" id="busca-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
-            </div>
-
-        </nav>
-
     </header>
+
+    <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+    <nav class="cabecalho_nav">
+
+        <div class="cabecalho_links">
+
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Ensino
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="Paginas/ads.html">Sobre o Curso</a>
+                    <a href="Paginas/professores.html">Professores</a>
+                    <a href="#areas-atuacao">Mercado de Trabalho</a>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Pesquisa
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="Paginas/cidts.html">CIDTS</a>
+                    <a href="Paginas/pesquisas.html">Projetos</a>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+
+                <a class="menu-title" href="#">
+                    Extensão
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="Paginas/extensao.html">Projetos</a>
+                    <a href="Paginas/contato.html">Contato</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cabecalho-busca">
+            <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar cursos, editais, notícias..."
+                autocomplete="off" aria-label="Buscar no portal">
+            <button class="busca-btn" type="button" aria-label="Pesquisar" id="busca-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+        </div>
+
+    </nav>
 
     <section class="hero">
 
@@ -148,50 +150,59 @@
 
             <div class="cards">
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 10.5zM1.5 1a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
-                        <path d="M0 12.5h16v1H0z" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 10.5zM1.5 1a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+                            <path d="M0 12.5h16v1H0z" />
+                        </svg>
+                    </div>
 
                     <h3><strong>Desenvolvimento Web</strong></h3>
                     <p>
                         Front-end, back-end e aplicações completas para empresas,
                         startups e órgãos públicos.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ads.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M3.5 0h9A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0M5 4.5A1.5 1.5 0 0 1 6.5 3h3A1.5 1.5 0 0 1 11 4.5v3A1.5 1.5 0 0 1 9.5 9h-3A1.5 1.5 0 0 1 5 7.5z" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M3.5 0h9A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0M5 4.5A1.5 1.5 0 0 1 6.5 3h3A1.5 1.5 0 0 1 11 4.5v3A1.5 1.5 0 0 1 9.5 9h-3A1.5 1.5 0 0 1 5 7.5z" />
+                        </svg>
+                    </div>
 
                     <h3><strong>Banco de Dados</strong></h3>
                     <p>
                         Modelagem, administração e otimização de dados
                         para sistemas reais.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ads.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M9.5 1.5a.5.5 0 0 1 1 0v1h.5a2 2 0 0 1 2 2v.5h1a.5.5 0 0 1 0 1h-1v2h1a.5.5 0 0 1 0 1h-1v.5a2 2 0 0 1-2 2h-.5v1a.5.5 0 0 1-1 0v-1h-2v1a.5.5 0 0 1-1 0v-1h-.5a2 2 0 0 1-2-2v-.5h-1a.5.5 0 0 1 0-1h1v-2h-1a.5.5 0 0 1 0-1h1v-.5a2 2 0 0 1 2-2h.5v-1a.5.5 0 0 1 1 0v1h2zM7 5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M9.5 1.5a.5.5 0 0 1 1 0v1h.5a2 2 0 0 1 2 2v.5h1a.5.5 0 0 1 0 1h-1v2h1a.5.5 0 0 1 0 1h-1v.5a2 2 0 0 1-2 2h-.5v1a.5.5 0 0 1-1 0v-1h-2v1a.5.5 0 0 1-1 0v-1h-.5a2 2 0 0 1-2-2v-.5h-1a.5.5 0 0 1 0-1h1v-2h-1a.5.5 0 0 1 0-1h1v-.5a2 2 0 0 1 2-2h.5v-1a.5.5 0 0 1 1 0v1h2zM7 5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z" />
+                        </svg>
+                    </div>
 
                     <h3><strong>Engenharia de Software</strong></h3>
                     <p>
                         Arquitetura de sistemas, qualidade e gestão de
                         projetos de TI.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ads.html">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -205,49 +216,61 @@
 
             <div class="cards">
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                        </svg>
+                    </div>
 
                     <h3>Ensino de Qualidade</h3>
                     <p>
                         O IFCE é referência em educação profissional, tecnológica e superior,
                         oferecendo formação alinhada às necessidades da sociedade e do mercado de trabalho.
                     </p>
+                    <a class="saiba-mais" href="Paginas/institucional.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </div>
 
                     <h3>Pesquisa e Inovação</h3>
                     <p>
                         Os estudantes participam de projetos de pesquisa, desenvolvimento tecnológico
                         e iniciativas inovadoras que contribuem para o crescimento regional.
                     </p>
+                    <a class="saiba-mais" href="Paginas/pesquisas.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                        </svg>
+                    </div>
 
                     <h3>Extensão e Comunidade</h3>
                     <p>
                         O instituto desenvolve ações que aproximam a comunidade acadêmica da sociedade,
                         promovendo transformação social e compartilhamento de conhecimento.
                     </p>
+                    <a class="saiba-mais" href="Paginas/extensao.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -264,30 +287,36 @@
 
             <div class="cards">
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
-                        <path
-                            d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
+                            <path
+                                d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
+                        </svg>
+                    </div>
 
                     <h3><strong>Ensino Técnico</strong></h3>
                     <p>
                         Cursos voltados para estudantes que desejam adquirir formação profissional de qualidade,
                         desenvolvendo competências técnicas alinhadas às demandas do mercado de trabalho.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ingresso.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                        fill="currentColor" viewBox="0 0 16 16">
-                        <path
-                            d="M6.5 15.5v-2h3v2zm7-14v14H10v-3.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v3.5H2.5v-14zm-11 1v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm-8 3v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm-8 3v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1z" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 15.5v-2h3v2zm7-14v14H10v-3.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v3.5H2.5v-14zm-11 1v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm-8 3v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm-8 3v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1zm2 0v1h1v-1z" />
+                        </svg>
+                    </div>
 
                     <h3><strong>Superior</strong></h3>
                     <p>
@@ -295,16 +324,20 @@
                         preparando os estudantes para atuar em diversas áreas e contribuir para o desenvolvimento da
                         sociedade.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ingresso.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <div class="card">
+                <div class="card card-apple">
 
-                    <svg class="icone-card" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z"
-                            clip-rule="evenodd" />
-                    </svg>
+                    <div class="icone-wrap">
+                        <svg class="icone-card" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
 
 
                     <h3><strong>Cursos para a Comunidade</strong></h3>
@@ -312,6 +345,8 @@
                         Programas de formação destinados à comunidade em geral, promovendo qualificação
                         profissional,atualização de conhecimentos e oportunidades de crescimento pessoal e profissional.
                     </p>
+                    <a class="saiba-mais" href="Paginas/ingresso.html">Saiba mais <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -369,71 +404,102 @@
         </section>
     </main>
     <footer class="rodape">
-        <div class="rodape-container">
 
-            <!-- Coluna 1: marca institucional -->
-            <div class="rodape-col rodape-col-marca">
-                <img src="images/Logo-IFCE.png" alt="Logo IFCE Campus Boa Viagem" width="70">
-                <h3>IFCE — Campus Boa Viagem</h3>
-                <p>Instituto Federal de Educação, Ciência e Tecnologia do Ceará. Ensino público, gratuito e de
-                    excelência.</p>
-                <div class="rodape-sociais">
-                    <a href="https://instagram.com/ifce.boaviagem" aria-label="Instagram" target="_blank"
-                        rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com/ifce.boaviagem" aria-label="Facebook" target="_blank"
-                        rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://youtube.com/@ifceoficial" aria-label="YouTube" target="_blank" rel="noopener"><i
-                            class="fa-brands fa-youtube"></i></a>
-                    <a href="https://linkedin.com/school/ifce" aria-label="LinkedIn" target="_blank" rel="noopener"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
+        <div class="rodape-conteudo">
+
+            <div class="rodape_sobre">
+
+                <img src="images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
+
+                <h3>IFCE Campus Boa Viagem</h3>
+
+                <p>
+                    Ensino público, gratuito e de excelência em educação
+                    profissional, científica e tecnológica.
+                </p>
+
+                <div class="rodape_redes">
+                    <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
+                        aria-label="Instagram do IFCE Campus Boa Viagem">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
+                        aria-label="Facebook do IFCE Campus Boa Viagem">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
+                        aria-label="Portal institucional do IFCE">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
                 </div>
+
             </div>
 
-            <!-- Coluna 2: navegação -->
-            <div class="rodape-col">
-                <h4>Navegação</h4>
+            <div class="rodape_coluna">
+                <h4>Ensino</h4>
                 <ul>
-                    <li><a href="Paginas/ads.html">Ensino</a></li>
-                    <li><a href="Paginas/pesquisas.html">Pesquisa</a></li>
-                    <li><a href="Paginas/extensao.html">Extensão</a></li>
-                    <li><a href="Paginas/noticias.html">Notícias</a></li>
-                    <li><a href="Paginas/contato.html">Contato</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: curso ADS -->
-            <div class="rodape-col">
-                <h4>Curso ADS</h4>
-                <ul>
-                    <li><a href="Paginas/ads.html">Sobre o curso</a></li>
+                    <li><a href="Paginas/ads.html">Sobre o Curso</a></li>
                     <li><a href="Paginas/professores.html">Professores</a></li>
-                    <li><a href="Paginas/ads.html#matriz">Matriz curricular</a></li>
-                    <li><a href="Paginas/ingresso.html">Formas de ingresso</a></li>
+                    <li><a href="Paginas/ingresso.html">Formas de Ingresso</a></li>
+                    <li><a href="Paginas/cursos.html">Cursos</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Pesquisa e Extensão</h4>
+                <ul>
                     <li><a href="Paginas/cidts.html">CIDTS</a></li>
+                    <li><a href="Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
+                    <li><a href="Paginas/extensao.html">Extensão</a></li>
+                    <li><a href="Paginas/bolsas.html">Bolsas</a></li>
                 </ul>
             </div>
 
-            <!-- Coluna 4: contato -->
-            <div class="rodape-col">
+            <div class="rodape_coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="Paginas/institucional.html">Conheça o IFCE</a></li>
+                    <li><a href="Paginas/ifinternacional.html">IFCE Internacional</a></li>
+                    <li><a href="Paginas/noticias.html">Notícias</a></li>
+                    <li><a href="https://www.ifce.edu.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna rodape_contato">
                 <h4>Contato</h4>
-                <ul class="rodape-contato">
-                    <li><i class="fa-solid fa-location-dot"></i><span>Rodovia BR-020, Km 209<br>Boa Viagem — Ceará,
-                            63870-000</span></li>
-                    <li><i class="fa-solid fa-phone"></i><a href="tel:+5588000000000">(88) 0000-0000</a></li>
-                    <li><i class="fa-solid fa-envelope"></i><a
-                            href="mailto:gabinete.boaviagem@ifce.edu.br">gabinete.boaviagem@ifce.edu.br</a></li>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        (85) 3401-2313
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
+                    </li>
                 </ul>
+                <a class="botao-2 rodape_botao-contato" href="Paginas/contato.html">Fale com a gente</a>
             </div>
+
         </div>
 
-        <div class="rodape-rodape">
-            <p>© 2026 IFCE Campus Boa Viagem. Todos os direitos reservados.</p>
-            <p>Desenvolvido pela <strong>Equipe Madalena</strong> · <a href="https://ifce.edu.br" target="_blank"
-                    rel="noopener">Portal IFCE</a> · <a href="https://gov.br" target="_blank" rel="noopener">gov.br</a>
+        <div class="rodape_copia">
+
+            <p>
+                © 2026 IFCE Campus Boa Viagem |
+                Desenvolvido pela Equipe Madalena
             </p>
+
+            <p class="rodape_copia-secundaria">
+                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
+            </p>
+
         </div>
+
     </footer>
-    
     <script src="scripts/script.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/busca.js"></script>
