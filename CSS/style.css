@@ -1050,7 +1050,6 @@ body.dark-mode .card-apple {
     flex-direction: column;
     gap: var(--sp-8);
     padding: 0;
-    margin-top: 3rem;
 }
 
 body.dark-mode .main {
