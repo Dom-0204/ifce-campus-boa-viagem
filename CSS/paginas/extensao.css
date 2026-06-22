@@ -1,0 +1,472 @@
+/* ==========================================================
+   EXTENSÃO E IFCE INTERNACIONAL
+   Usado por: extensao.html, ifinternacional.html
+   ========================================================== */
+
+/* =========================
+    EXTENSÃO E IFCEINTERNACIONAL
+========================= */
+.extensao-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/extensaoo.png") center/cover no-repeat;
+    text-align: center;
+    color: var(--cor-texto-banner);
+    padding: 6rem var(--sp-4);
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.internacional-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url(../images/ifintertnacionaal.png) center/cover no-repeat;
+    text-align: center;
+    color: var(--cor-texto-banner);
+    padding: 5rem var(--sp-4);
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.extensao-banner h1,
+.internacional-banner h1 {
+    font-size: var(--fs-3xl);
+    color: var(--cor-texto-banner);
+    margin-bottom: var(--sp-4);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.extensao-banner p,
+.internacional-banner p {
+    display: inline-block;
+    max-width: 800px;
+    font-size: var(--fs-lg);
+    background: rgba(0, 0, 0, 0.18);
+    padding: 10px 18px;
+    border-radius: var(--raio-md);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.extensao_card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #ffffff, #f7faf8);
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    border-top: 6px solid var(--cor-primaria);
+    position: relative;
+    overflow: hidden;
+}
+
+.tag-internacional {
+    display: inline-block;
+    background: rgba(25, 135, 84, .12);
+    color: var(--cor-primaria);
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.internacional-info {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    padding: 4rem 3rem;
+    background: linear-gradient(180deg, #fff, #f7faf8);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    border-top: 5px solid var(--cor-primaria);
+    text-align: center;
+    transition: .3s ease;
+}
+
+.internacional-info:hover {
+    transform: translateY(-3px);
+}
+
+.internacional-info strong {
+    color: var(--cor-primaria);
+}
+
+.internacional-info h2 {
+    color: var(--cor-primaria-hover);
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.internacional-info h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    width: 120px;
+    height: 5px;
+
+    background: var(--cor-primaria);
+    border-radius: 999px;
+}
+
+.internacional-info p {
+    max-width: 700px;
+    margin: 1.8rem auto;
+    line-height: 2;
+    font-size: 1.08rem;
+    color: var(--cor-texto-secundario);
+}
+
+.internacional-info p+p {
+    margin-top: 2.5rem;
+}
+
+.internacional-cards {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.internacional-cards .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    transition: .3s ease;
+
+}
+
+.internacional-cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+}
+
+.internacional-beneficios {
+    background: linear-gradient(180deg, #ffffff, #f5f9f7);
+    padding: 5rem 3rem;
+    border-radius: 24px;
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    text-align: center;
+}
+
+.internacional-beneficios h2 {
+    color: var(--cor-primaria);
+}
+
+.internacional-beneficios .cards {
+    color: var(--cor-primaria-hover);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.internacional-final {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    padding: 5rem 3rem;
+    text-align: center;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, .95),
+            rgba(20, 108, 67, .95));
+    color: white;
+}
+
+.internacional-final h2 {
+    color: white;
+}
+
+.icone-card {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.impacto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.impacto-topo span {
+    font-size: 2rem;
+}
+
+.impacto-topo small {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(25, 135, 84, .15);
+}
+
+.internacional-cards .card h3 {
+    margin-bottom: 1rem;
+    min-height: auto;
+    color: var(--cor-primaria-hover);
+}
+
+.extensao_card .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border-top: 5px solid var(--cor-primaria);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+}
+
+.extensao_card .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+    border-top-color: #1fa15f;
+}
+
+.extensao_card .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.extensao_card .card h3 {
+    font-size: 1.35rem;
+    color: var(--cor-primaria-hover);
+    margin-bottom: 1rem;
+}
+
+.extensao_card>p {
+    max-width: 750px;
+}
+
+.extensao_card .card p {
+    line-height: 1.8;
+    color: var(--cor-texto-secundario);
+}
+
+.impacto_extensao {
+    background: linear-gradient(100deg, #ffffff, #f5f9f7);
+    padding: 5rem 3rem;
+    border-radius: 24px;
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    text-align: center;
+}
+
+.impacto_extensao .card {
+    text-align: left;
+}
+
+.impacto_extensao .card p {
+    text-align: left;
+    line-height: 1.8;
+}
+
+.impacto_extensao h2,
+.projetos_extensao h2 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-3);
+    display: inline-block;
+}
+
+.impacto_extensao .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+    max-width: 1100px;
+    margin: 3rem auto 0;
+}
+
+.projetos_extensao {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+    text-align: center;
+}
+
+.projetos_extensao .card {
+    background: #fff;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s ease;
+}
+
+.projetos_extensao .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.8rem;
+}
+
+.cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.cards-projetos .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 380px;
+}
+
+.cards-projetos .card:hover {
+    transform: translateY(-8px);
+}
+
+.cards-projetos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: .4s ease;
+}
+
+.cards-projetos .card:hover img {
+    transform: scale(1.05);
+}
+
+.card-conteudo {
+    padding: var(--sp-2);
+}
+
+.projetos_extensao .card:first-child {
+    border-top: 4px solid var(--cor-primaria);
+}
+
+.projetos_extensao .card a {
+    margin-top: auto;
+    align-self: center;
+}
+
+.titulo-centralizado {
+    text-align: center;
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-4);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.titulo-centralizado::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 120px;
+    height: 5px;
+    background-color: var(--cor-primaria);
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+
+    .extensao_card .cards,
+    .impacto_extensao .cards,
+    .cards-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   DARK MODE — Extensão
+   ========================================================== */
+
+/* ==================================================
+   CORREÇÃO DEFINITIVA DO MODO ESCURO NA ABA EXTENSÃO
+   ================================================== */
+body.dark-mode .extensao_card,
+body.dark-mode .impacto_extensao {
+    background: #1e1e1e !important;
+    /* Remove o gradiente branco e bota o fundo escuro padrão */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .extensao_card .card,
+body.dark-mode .impacto_extensao .card,
+body.dark-mode .projetos_extensao .card {
+    background-color: #252525 !important;
+    /* Deixa os mini-cards internos ligeiramente mais claros que o fundo */
+    color: var(--cor-texto) !important;
+    border-top-color: var(--cor-primaria) !important;
+}
+
+body.dark-mode .extensao_card .card p,
+body.dark-mode .impacto_extensao .card p,
+body.dark-mode .extensao_card h3,
+body.dark-mode .impacto_extensao h2,
+body.dark-mode .projetos_extensao h2 {
+    color: var(--cor-texto) !important;
+    /* Garante que as letras fiquem claras e visíveis */
+}
+
+body.dark-mode .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+    /* Suaviza os números "01, 02..." no fundo escuro */
+}
+
+/* ==========================================================
+   DARK MODE — Intercâmbio (IFCE Internacional)
+   ========================================================== */
+
+/* ==================================================
+   DARK MODE PARA INTERCÂMBIO (DESIGN CENTRALIZADO ORIGINAL)
+   ================================================== */
+body.dark-mode .internacional-info,
+body.dark-mode .internacional-beneficios {
+    background: #1e1e1e !important;
+    /* Remove o fundo branco/gradiente claro */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .internacional-info p,
+body.dark-mode .internacional-beneficios p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Ajusta os mini-cards dessa página */
+body.dark-mode .internacional-cards .card,
+body.dark-mode .internacional-beneficios .cards .card {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-top-color: var(--cor-primaria) !important;
+}
+
+body.dark-mode .internacional-cards .card h3,
+body.dark-mode .internacional-beneficios .cards .card h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .internacional-cards .card p,
+body.dark-mode .internacional-beneficios .cards .card p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Suaviza o selo do topo e os números decorativos */
+body.dark-mode .tag-internacional {
+    background: rgba(38, 162, 105, 0.15) !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+}
+
