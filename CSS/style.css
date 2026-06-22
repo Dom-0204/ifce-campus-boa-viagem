@@ -107,12 +107,30 @@ strong {
     color: var(--cor-primaria-hover);
     font-weight: 800;
 }
-
+section h1 {
+    font-size: var(--fs-3xl);
+    margin-bottom: var(--sp-4);
+}
 section h2 {
     font-size: var(--fs-2xl);
     margin-bottom: var(--sp-4);
 }
+section h3 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--sp-4);
+}
+dialog::backdrop{
+background-color: rgb(0, 0, 0, 0.5);
+}
 
+dialog{
+    margin: auto;
+    border: none;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0, 0, 0 / 0.2);
+    width: 80%;
+}
 /* =========================
    HEADER
 ========================= */
@@ -230,7 +248,9 @@ section h2 {
 /* =========================
    COMPONENTES
 ========================= */
-.botao {
+.botao,
+.botao-pop-up,
+.botao-fechar {
     display: inline-block;
     background-color: var(--cor-primaria);
     color: var(--cor-icone);
@@ -323,6 +343,13 @@ section h2 {
     font-size: var(--fs-base);
     line-height: 1.8;
 }
+.foto-pessoa {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /* =========================
    CARDS ESTILO APPLE (Home)
@@ -1023,6 +1050,7 @@ body.dark-mode .card-apple {
     flex-direction: column;
     gap: var(--sp-8);
     padding: 0;
+    margin-top: 3rem;
 }
 
 body.dark-mode .main {
@@ -2022,7 +2050,29 @@ body.dark-mode .main {
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+    DOCENTES
+========================= */
+.card-coordenador {
+    text-align: center;
+}
 
+.card-coordenador .foto-pessoa {
+    display: block;
+    margin: 0 auto;
+}
+.card-professor {
+    text-align: center;
+}
+.cards-coordenador {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-coordenador .card {
+    max-width: 320px;
+    width: 100%;
+}
 /* =========================
     CONTATO
 ========================= */
