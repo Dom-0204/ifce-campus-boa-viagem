@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisas ADS - IFCE Campus Boa Viagem</title>
-    <meta name="description"
-        content="Projetos de pesquisa e inovação tecnológica desenvolvidos pelo curso de Análise e Desenvolvimento de Sistemas (ADS) no IFCE Boa Viagem.">
+    <title>Pesquisas - IFCE Campus Boa Viagem</title>
+    <meta name="description" content="Pesquisas do IFCE Campus Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/pesquisas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -20,7 +22,7 @@
             </a>
         </div>
 
-        <button class="menu-toggle" id="menu-toggle">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
             ☰
         </button>
 
@@ -36,6 +38,7 @@
             <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
             <a class="cabecalho_nav_ancoras ativo" href="pesquisas.html">Pesquisas</a>
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
+            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
             <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
@@ -46,9 +49,12 @@
 
     <section class="pesquisa-banner">
         <div class="pesquisa-banner-filtro">
-            <h1>Pesquisa & Inovação em ADS</h1>
-            <p>Projetos tecnológicos aplicados que transformam linhas de código em soluções reais para Boa Viagem e
-                região.</p>
+
+            <h1>Pesquisas Realizadas</h1>
+
+            <p>Projetos de pesquisa que transformam ideias em soluções, fortalecendo a ciência, a tecnologia e o
+                desenvolvimento da comunidade.
+            </p>
         </div>
     </section>
 
@@ -57,142 +63,110 @@
         <aside class="universal-sidebar">
             <h3>Navegação</h3>
             <ul>
-                <li><a href="#sobre-pesquisa">Inovação em ADS</a></li>
-                <li><a href="#projetos-destaque">Projetos em Foco</a></li>
-                <li><a href="#linhas-pesquisa">Linhas de Estudo</a></li>
+                <li><a href="#sobre-pesquisa">O pilar</a></li>
+                <li><a href="#linhas-pesquisa">Modalidades</a></li>
                 <li><a href="#oportunidades-pesquisa">Oportunidades</a></li>
             </ul>
             <div class="sidebar-badge">
-                <strong>Pesquisas & Projetos</strong>
-                <span>ADS</span>
+                <strong>Pesquisa &</strong>
+                <span>Inovação</span>
             </div>
         </aside>
 
         <div class="cidts-conteudo">
 
             <section class="universal-painel-card" id="sobre-pesquisa">
-                <h2 class="institucional_titulo">A Pesquisa Aplicada em Computação</h2>
+                <h2 class="institucional_titulo">Pesquisa no IFCE</h2>
                 <p class="institucional_texto">
-                    No curso de Tecnologia em Análise e Desenvolvimento de Sistemas (ADS) do IFCE Campus Boa Viagem, a
-                    pesquisa científica funciona como um conector direto entre a teoria de software e as demandas do
-                    arranjo produtivo e social local.
+                    A pesquisa é um dos pilares fundamentais da formação acadêmica no
+                    Instituto Federal do Ceará. Por meio dela, estudantes e servidores
+                    desenvolvem soluções inovadoras, ampliam a produção científica e
+                    contribuem diretamente para o desenvolvimento social e tecnológico
+                    da região.
                 </p>
                 <p class="institucional_texto" style="margin-bottom: 0;">
-                    Estudantes e professores trabalham lado a lado no desenvolvimento de algoritmos, sistemas
-                    inteligentes, plataformas web e aplicativos móveis voltados à resolução de problemas complexos,
-                    gerando tecnologia proprietária com forte impacto acadêmico e regional.
+                    No Campus Boa Viagem, a pesquisa está integrada ao ensino e à
+                    extensão, possibilitando experiências práticas, desenvolvimento de
+                    projetos e participação activa em grupos de investigação científica.
                 </p>
-            </section>
-
-            <section class="universal-painel-card" id="projetos-destaque">
-                <h2 class="institucional_titulo">Projetos de Pesquisa em Destaque</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Conheça algumas das principais iniciativas científicas lideradas por pesquisadores e alunos do curso
-                    de ADS em nosso campus:
-                </p>
-
-                <div class="assistencia_grid">
-                    <div class="assistencia_item">
-                        <h4><i class="fa-solid fa-cow"
-                                style="color: var(--cor-primaria); margin-right: 8px;"></i><strong>Leite do
-                                Futuro</strong></h4>
-                        <p>Pesquisa voltada à automação e controle na pecuária leiteira local. Consiste no
-                            desenvolvimento de sistemas de monitoramento e análise de dados produtivos, visando o
-                            mapeamento e genotipagem de vacas A2, conectando a TI
-                            ao campo para otimizar processos e tomadas de decisão de produtores rurais.</p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><i class="fa-solid fa-bug"
-                                style="color: var(--cor-primaria); margin-right: 8px;"></i><strong>BeeWeb</strong></h4>
-                        <p>Projeto de IoT e computação aplicada que automatiza a apicultura local em três fases:
-                            <strong>Coleta</strong> de dados em tempo real (temperatura, umidade e peso das colmeias);
-                            <strong>Transmissão</strong> via rádio para uma central receptora; e
-                            <strong>Monitoramento</strong> em uma plataforma web dedicada, permitindo aos apicultores
-                            acompanhar a saúde das colônias e tomar decisões precisas.
-                        </p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><i class="fa-solid fa-shield-halved"
-                                style="color: var(--cor-primaria); margin-right: 8px;"></i><strong>Cibersegurança e
-                                Privacidade de Dados</strong></h4>
-                        <p>Pesquisas voltadas à segurança digital contemporânea, abordando os riscos do rastreamento
-                            online, vazamento de dados por cookies de terceiros e simulação de vulnerabilidades em
-                            ambientes web para conscientização e criação de mecanismos de defesa ao usuário.</p>
-                    </div>
-                </div>
             </section>
 
             <section class="universal-painel-card" id="linhas-pesquisa">
-                <h2 class="institucional_titulo">Eixos de Desenvolvimento Tecnológico</h2>
+                <h2 class="institucional_titulo">Linhas de Pesquisa Aplicada</h2>
 
                 <div class="pesquisa-cards">
                     <div class="card">
-                        <h3>Sistemas Inteligentes e IoT</h3>
+                        <h3>Iniciação Científica</h3>
                         <p>
-                            Integração de hardware e software com o uso de sensores, microcontroladores e inteligência
-                            artificial aplicada ao monitoramento agrícola e urbano.
+                            Incentivo à participação de estudantes em projetos orientados por
+                            professores pesquisadores, promovendo a formação científica e
+                            acadêmica.
                         </p>
                     </div>
 
                     <div class="card">
-                        <h3>Engenharia de Software Aplicada</h3>
+                        <h3>Inovação Tecnológica</h3>
                         <p>
-                            Estudo de metodologias ágeis, arquiteturas de sistemas escaláveis e desenvolvimento
-                            web/mobile focados na melhoria da experiência de usuário (UX).
+                            Desenvolvimento de soluções tecnológicas voltadas para demandas
+                            sociais, empresariais e institucionais da região.
                         </p>
                     </div>
 
                     <div class="card">
-                        <h3>Ciência de Dados e Segurança</h3>
+                        <h3>Pesquisa Aplicada</h3>
                         <p>
-                            Extração, mineração e tratamento de grandes volumes de dados de forma segura, com ênfase em
-                            conformidade regulatória e proteção digital.
+                            Estudos e investigações que buscam solucionar problemas reais por
+                            meio da ciência, tecnologia e inovação.
                         </p>
                     </div>
                 </div>
             </section>
 
             <section class="universal-painel-card" id="oportunidades-pesquisa">
-                <h2 class="institucional_titulo">Oportunidades no Ecossistema Científico</h2>
+                <h2 class="institucional_titulo">Oportunidades para os Estudantes</h2>
 
                 <div class="pesquisa-destaques">
                     <div class="grid">
                         <div class="item">
-                            <h3>Bolsas de IC e Desenvolvimento</h3>
+                            <h3>Bolsas de Pesquisa</h3>
                             <p>
-                                Auxílios financeiros via PIBITI, PIBIC e editais da FUNCAP para alunos que se dedicam a
-                                projetos de pesquisa e inovação tecnológica.
+                                Participação em programas institucionais de incentivo à
+                                pesquisa científica e tecnológica.
                             </p>
                         </div>
 
                         <div class="item">
-                            <h3>Grupos de Investigação</h3>
+                            <h3>Grupos de Pesquisa</h3>
                             <p>
-                                Participação ativa em grupos certificados pelo CNPq, atuando diretamente em laboratórios
-                                modernos de programação e redes de computadores.
+                                Integração com equipes de pesquisa cadastradas e projetos
+                                desenvolvidos pelo campus.
                             </p>
                         </div>
 
                         <div class="item">
-                            <h3>Artigos e Produção Acadêmica</h3>
+                            <h3>Eventos Científicos</h3>
                             <p>
-                                Submissão de resultados em congressos renomados da SBC (Sociedade Brasileira de
-                                Computação), simpósios e periódicos de tecnologia.
+                                Participação em seminários, congressos, feiras e encontros
+                                voltados à divulgação científica.
                             </p>
                         </div>
+
                     </div>
                 </div>
             </section>
 
             <section class="universal-painel-card">
-                <h2 class="institucional_titulo">Inovação que move o Sertão Central</h2>
+                <h2 class="institucional_titulo">Pesquisa que gera impacto</h2>
                 <p class="institucional_texto" style="margin-bottom: 20px;">
-                    O curso de ADS do IFCE Boa Viagem reafirma continuamente seu compromisso com a produção de
-                    conhecimento técnico de ponta, preparando profissionais para liderar e transformar o cenário digital
-                    regional.
+                    O IFCE Campus Boa Viagem incentiva a construção do conhecimento,
+                    a investigação científica e a criação de soluções inovadoras que
+                    contribuam para o desenvolvimento sustentável da região e da sociedade.
                 </p>
+                <div class="cidts-ecossistema-botoes">
+                    <a href="https://ifce.edu.br" class="botao" target="_blank" style="margin: 0;">
+                        Saiba Mais
+                    </a>
+                </div>
             </section>
 
         </div>
@@ -222,6 +196,14 @@
                         aria-label="Facebook do IFCE Campus Boa Viagem">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
+                    <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
+                        aria-label="YouTube do IFCE">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn do IFCE">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
                         aria-label="Portal institucional do IFCE">
                         <i class="fa-solid fa-globe"></i>
@@ -233,30 +215,40 @@
             <div class="rodape_coluna">
                 <h4>Ensino</h4>
                 <ul>
-                    <li><a href="Paginas/ads.html">Sobre o Curso</a></li>
-                    <li><a href="Paginas/professores.html">Professores</a></li>
-                    <li><a href="Paginas/ingresso.html">Formas de Ingresso</a></li>
-                    <li><a href="Paginas/cursos.html">Cursos</a></li>
+                    <li><a href="../Paginas/ads.html">Sobre o Curso</a></li>
+                    <li><a href="../Paginas/professores.html">Professores</a></li>
+                    <li><a href="../Paginas/ingresso.html">Formas de Ingresso</a></li>
+                    <li><a href="../Paginas/cursos.html">Cursos</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Pesquisa e Extensão</h4>
                 <ul>
-                    <li><a href="Paginas/cidts.html">CIDTS</a></li>
-                    <li><a href="Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
-                    <li><a href="Paginas/extensao.html">Extensão</a></li>
-                    <li><a href="Paginas/bolsas.html">Bolsas</a></li>
+                    <li><a href="../Paginas/cidts.html">CIDTS</a></li>
+                    <li><a href="../Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
+                    <li><a href="../Paginas/extensao.html">Extensão</a></li>
+                    <li><a href="../Paginas/bolsas.html">Bolsas</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Institucional</h4>
                 <ul>
-                    <li><a href="Paginas/institucional.html">Conheça o IFCE</a></li>
-                    <li><a href="Paginas/ifinternacional.html">IFCE Internacional</a></li>
-                    <li><a href="Paginas/noticias.html">Notícias</a></li>
+                    <li><a href="../Paginas/institucional.html">Conheça o IFCE</a></li>
+                    <li><a href="../Paginas/ifinternacional.html">IFCE Internacional</a></li>
+                    <li><a href="../Paginas/noticias.html">Notícias</a></li>
                     <li><a href="https://www.ifce.edu.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="../Paginas/links-uteis.html">Ver todos os links</a></li>
+                    <li><a href="https://qacademico.ifce.edu.br" target="_blank" rel="noopener">Q-Acadêmico</a></li>
+                    <li><a href="https://suap.ifce.edu.br" target="_blank" rel="noopener">SUAP</a></li>
+                    <li><a href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">Biblioteca Virtual</a></li>
                 </ul>
             </div>
 
@@ -276,7 +268,7 @@
                         <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
                     </li>
                 </ul>
-                <a class="botao-2 rodape_botao-contato" href="Paginas/contato.html">Fale com a gente</a>
+                <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
 
         </div>
@@ -295,9 +287,9 @@
         </div>
 
     </footer>
-    <script src="scripts/script.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/busca.js"></script>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

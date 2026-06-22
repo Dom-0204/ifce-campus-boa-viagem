@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações institucionais - IFCE Campus Boa Viagem</title>
-    <meta name="description" content="Informações institucionais sobre o IFCE Campus Boa Viagem.">
+    <title>Links Úteis - IFCE Campus Boa Viagem</title>
+    <meta name="description"
+        content="Acesso rápido aos principais sistemas e portais do IFCE: Q-Acadêmico, SUAP, Biblioteca Virtual, calendário acadêmico e editais.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/universal.css">
     <link rel="stylesheet" href="../CSS/paginas/institucional.css">
+    <link rel="stylesheet" href="../CSS/paginas/links-uteis.css">
 </head>
 
 <body>
@@ -27,7 +30,7 @@
         </button>
         <nav class="cabecalho_nav">
             <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras ativo" href="institucional.html">Conheça o IFCE</a>
+            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
             <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
             <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
             <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
@@ -37,23 +40,21 @@
             <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
             <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
+            <a class="cabecalho_nav_ancoras ativo" href="links-uteis.html">Links Úteis</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
             <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
                 <span class="theme-btn-icon">🌙</span>
             </button>
         </nav>
     </header>
 
-
     <section class="institucional-banner">
         <div class="institucional-banner-filtro">
-            <h1>Conheça o IFCE Campus Boa Viagem</h1>
+            <h1>Links Úteis</h1>
             <p>
-                Instituição pública de ensino, pesquisa e extensão comprometida com a formação profissional, científica
-                e tecnológica.
+                Acesso rápido aos principais sistemas, portais e serviços que você vai usar
+                durante toda a sua trajetória no IFCE.
             </p>
         </div>
     </section>
@@ -63,123 +64,144 @@
         <aside class="universal-sidebar">
             <h3>Navegação</h3>
             <ul>
-                <li><a href="#sobre-campus">O Campus</a></li>
-                <li><a href="#infraestrutura">Infraestrutura</a></li>
-                <li><a href="#assistencia">Apoio ao Aluno</a></li>
-                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#sistemas-academicos">Sistemas Acadêmicos</a></li>
+                <li><a href="#biblioteca">Biblioteca</a></li>
+                <li><a href="#documentos">Documentos e Editais</a></li>
+                <li><a href="#suporte">Suporte ao Aluno</a></li>
             </ul>
             <div class="sidebar-badge">
-                <strong>IFCE</strong>
-                <span>Sertão Central</span>
+                <strong>Acesso Rápido</strong>
+                <span>Portal do Aluno</span>
             </div>
         </aside>
 
         <div class="universal-conteudo">
 
-            <section class="universal-painel-card" id="sobre-campus">
-                <h2 class="institucional_titulo">Sobre o IFCE Campus Boa Viagem</h2>
-                <p class="institucional_texto">
-                    O IFCE Campus Boa Viagem é uma instituição pública federal dedicada à formação técnica, tecnológica
-                    e superior, contribuindo para o desenvolvimento educacional e econômico da Região do Sertão Central.
-                    Com ensino gratuito e de qualidade, o campus promove atividades de ensino, pesquisa e extensão,
-                    preparando estudantes para os desafios do mercado de trabalho e da vida acadêmica.
-                </p>
-            </section>
-
-            <section class="universal-painel-card" id="infraestrutura">
-                <h2 class="institucional_titulo">Infraestrutura Acadêmica</h2>
+            <section class="universal-painel-card" id="sistemas-academicos">
+                <h2 class="institucional_titulo">Sistemas Acadêmicos</h2>
                 <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Para garantir a excelência dos cursos ofertados, o IFCE Campus Boa Viagem dispõe de uma estrutura
-                    moderna voltada ao ensino, pesquisa e inovação.
+                    Plataformas oficiais do IFCE para matrícula, notas, frequência, e-mail
+                    institucional e demais serviços acadêmicos.
                 </p>
 
                 <div class="infraestrutura_grid">
                     <div class="infraestrutura_item">
-                        <h4><strong>Laboratórios de Informática</strong></h4>
-                        <p>Ambientes equipados com computadores e softwares atualizados para atividades práticas,
-                            desenvolvimento de projetos e apoio às disciplinas técnicas.</p>
+                        <h4><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <strong>Q-Acadêmico</strong>
+                        </h4>
+                        <p>Matrícula em disciplinas, notas, frequência, histórico escolar e horários de turma.</p>
+                        <a class="link-externo" href="https://qacademico.ifce.edu.br" target="_blank"
+                            rel="noopener">
+                            Acessar Q-Acadêmico <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
                     </div>
 
                     <div class="infraestrutura_item">
-                        <h4><strong>Biblioteca</strong></h4>
-                        <p>Espaço destinado ao estudo e à pesquisa, com acervo físico e digital voltado às diversas
-                            áreas do conhecimento.</p>
+                        <h4><i class="fa-solid fa-server" aria-hidden="true"></i> <strong>SUAP</strong></h4>
+                        <p>Sistema Unificado de Administração Pública: e-mail institucional, documentos e
+                            requerimentos.</p>
+                        <a class="link-externo" href="https://suap.ifce.edu.br" target="_blank" rel="noopener">
+                            Acessar SUAP <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
                     </div>
 
                     <div class="infraestrutura_item">
-                        <h4><strong>Salas Climatizadas</strong></h4>
-                        <p>Ambientes confortáveis equipados com recursos multimídia que favorevem o processo de ensino e
-                            aprendizagem.</p>
+                        <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> <strong>SisAE</strong>
+                        </h4>
+                        <p>Sistema de Assistência Estudantil: auxílios, bolsas e benefícios para alunos.</p>
+                        <a class="link-externo" href="https://sisae.ifce.edu.br" target="_blank" rel="noopener">
+                            Acessar SisAE <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
                     </div>
 
                     <div class="infraestrutura_item">
-                        <h4><strong>Áreas de Convivência</strong></h4>
-                        <p>Espaços destinados à integração entre estudantes, servidores e comunidade acadêmica.</p>
+                        <h4><i class="fa-solid fa-house-laptop" aria-hidden="true"></i> <strong>Portal do
+                                Aluno</strong></h4>
+                        <p>Informações gerais sobre calendário, horários e o Regulamento da Organização Didática.</p>
+                        <a class="link-externo" href="https://portal.ifce.edu.br" target="_blank" rel="noopener">
+                            Acessar Portal IFCE <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section class="universal-painel-card" id="assistencia">
-                <h2 class="institucional_titulo">Apoio e Assistência Estudantil</h2>
-                <p class="institucional_texto">
-                    A permanência e o sucesso acadêmico dos estudantes são prioridades do IFCE Campus Boa Viagem. Por
-                    meio da Coordenadoria de Assuntos Estudantis (CAE), os alunos contam com diversos serviços de apoio
-                    durante sua trajetória acadêmica.
+            <section class="universal-painel-card" id="biblioteca">
+                <h2 class="institucional_titulo">Biblioteca</h2>
+                <p class="institucional_texto" style="margin-bottom: 20px;">
+                    Acervo físico e digital disponível gratuitamente para toda a comunidade acadêmica.
                 </p>
 
-                <div class="assistencia_grid" style="margin-top: 20px;">
-                    <div class="assistencia_item">
-                        <h4><strong>Acompanhamento Pedagógico</strong></h4>
-                        <p>Orientação e suporte ao processo de aprendizagem.</p>
+                <div class="infraestrutura_grid">
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-book" aria-hidden="true"></i> <strong>SIBI</strong></h4>
+                        <p>Sistema de Bibliotecas do IFCE: consulta ao acervo, normalização de trabalhos acadêmicos e
+                            ferramentas de pesquisa.</p>
+                        <a class="link-externo" href="https://biblioteca.ifce.edu.br" target="_blank"
+                            rel="noopener">
+                            Acessar SIBI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
                     </div>
 
-                    <div class="assistencia_item">
-                        <h4><strong>Assistência Estudantil</strong></h4>
-                        <p>Ações voltadas à permanência e ao sucesso acadêmico.</p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><strong>Apoio Psicológico</strong></h4>
-                        <p>Atendimento e orientação para promoção do bem-estar.</p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><strong>Orientação Social</strong></h4>
-                        <p>Auxílio e encaminhamento para demandas sociais.</p>
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-book-open" aria-hidden="true"></i> <strong>Biblioteca
+                                Virtual</strong></h4>
+                        <p>Milhares de livros digitais para consulta gratuita. Login com matrícula e senha do SUAP.
+                        </p>
+                        <a class="link-externo" href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">
+                            Acessar Biblioteca Virtual <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
+            </section>
+
+            <section class="universal-painel-card" id="documentos">
+                <h2 class="institucional_titulo">Documentos e Editais</h2>
+                <p class="institucional_texto" style="margin-bottom: 20px;">
+                    Acesso a documentos oficiais, calendário acadêmico e editais vigentes.
+                </p>
+
+                <div class="infraestrutura_grid">
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <strong>Calendário
+                                Acadêmico</strong></h4>
+                        <p>Datas de matrícula, ajuste, provas e demais prazos do semestre letivo.</p>
+                        <a class="link-externo" href="https://portal.ifce.edu.br" target="_blank" rel="noopener">
+                            Consultar Calendário <i class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-file-signature" aria-hidden="true"></i> <strong>Editais e
+                                Processos Seletivos</strong></h4>
+                        <p>Editais de ingresso, bolsas, monitoria e demais seleções abertas no campus.</p>
+                        <a class="link-externo" href="ingresso.html">
+                            Ver Formas de Ingresso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <strong>Documentos
+                                Acadêmicos</strong></h4>
+                        <p>Projeto Pedagógico de Curso (PPC), matriz curricular e regulamentos institucionais.</p>
+                        <a class="link-externo" href="ads.html">
+                            Ver na página do Curso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="universal-painel-card" id="suporte">
+                <h2 class="institucional_titulo">Suporte ao Aluno</h2>
+                <p class="institucional_texto">
+                    Em caso de dúvidas sobre qualquer um dos sistemas acima, a Coordenadoria de
+                    Tecnologia da Informação (CTI) e a Secretaria Acadêmica do campus podem ajudar.
+                </p>
 
                 <div class="institucional_botao">
-                    <a href="cursos.html" class="botao">Conheça Nossos Cursos</a>
-                </div>
-            </section>
-
-            <section class="universal-painel-card" id="destaques">
-                <h2 class="institucional_titulo">Estrutura e Destaques do Campus</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Alguns dos principais recursos e diferenciais do IFCE Campus Boa Viagem.
-                </p>
-
-                <div class="institucional_numeros">
-                    <div class="numero_card">
-                        <h3>Ensino Público</h3>
-                        <p>Qualidade e Excelência</p>
-                    </div>
-
-                    <div class="numero_card">
-                        <h3>10+</h3>
-                        <p>Laboratórios Modernos</p>
-                    </div>
-
-                    <div class="numero_card">
-                        <h3>Biblioteca</h3>
-                        <p>Acervo Atualizado</p>
-                    </div>
-
-                    <div class="numero_card">
-                        <h3>Cursos</h3>
-                        <p>Técnicos e Superiores</p>
-                    </div>
+                    <a href="contato.html" class="botao">Falar com a Coordenação</a>
                 </div>
             </section>
 

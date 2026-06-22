@@ -10,7 +10,10 @@
     <link rel="icon" href="../images/favicon1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/universal.css">
 </head>
 
 <body>
@@ -20,7 +23,7 @@
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
             </a>
         </div>
-        <button class="menu-toggle" id="menu-toggle">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
             ☰
         </button>
         <nav class="cabecalho_nav">
@@ -35,6 +38,7 @@
             <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
             <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
+            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
             <!-- BOTÃO DO MODO ESCURO AQUI -->
@@ -73,11 +77,11 @@
             <div class="universal-painel-card" id="sobre-o-proj">
                 <h2 class="institucional_titulo">O que é o CIDTS?</h2>
                 <p class="institucional_texto">
-                    O <strong>Centro de Inovação e Difusão de Tecnologias para o Semiárido – CIDTS</strong> é
-                    fruto de uma parceria entre o IFCE e o Ministério da Integração e do Desenvolvimento
-                    Regional (MIDR), por meio do programa Rotas da Integração Nacional. Nós atendemos aos
-                    diversos eixos estratégicos pertencentes às rotas do leite, mel, cordeiro e fruticultura
-                    através da extensão tecnológica, capacitação técnica e reciclagem, suporte aos produtores
+                    O <strong>Centro de Inovação e Difusão de Tecnologias para o Semiárido – CIDTS</strong> é 
+                    fruto de uma parceria entre o IFCE e o Ministério da Integração e do Desenvolvimento 
+                    Regional (MIDR), por meio do programa Rotas da Integração Nacional. Nós atendemos aos 
+                    diversos eixos estratégicos pertencentes às rotas do leite, mel, cordeiro e fruticultura 
+                    através da extensão tecnológica, capacitação técnica e reciclagem, suporte aos produtores 
                     e geração de um espaço dinâmico de negócios e startups.
                 </p>
             </div>
@@ -217,6 +221,14 @@
                         aria-label="Facebook do IFCE Campus Boa Viagem">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
+                    <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
+                        aria-label="YouTube do IFCE">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn do IFCE">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
                         aria-label="Portal institucional do IFCE">
                         <i class="fa-solid fa-globe"></i>
@@ -228,30 +240,40 @@
             <div class="rodape_coluna">
                 <h4>Ensino</h4>
                 <ul>
-                    <li><a href="Paginas/ads.html">Sobre o Curso</a></li>
-                    <li><a href="Paginas/professores.html">Professores</a></li>
-                    <li><a href="Paginas/ingresso.html">Formas de Ingresso</a></li>
-                    <li><a href="Paginas/cursos.html">Cursos</a></li>
+                    <li><a href="../Paginas/ads.html">Sobre o Curso</a></li>
+                    <li><a href="../Paginas/professores.html">Professores</a></li>
+                    <li><a href="../Paginas/ingresso.html">Formas de Ingresso</a></li>
+                    <li><a href="../Paginas/cursos.html">Cursos</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Pesquisa e Extensão</h4>
                 <ul>
-                    <li><a href="Paginas/cidts.html">CIDTS</a></li>
-                    <li><a href="Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
-                    <li><a href="Paginas/extensao.html">Extensão</a></li>
-                    <li><a href="Paginas/bolsas.html">Bolsas</a></li>
+                    <li><a href="../Paginas/cidts.html">CIDTS</a></li>
+                    <li><a href="../Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
+                    <li><a href="../Paginas/extensao.html">Extensão</a></li>
+                    <li><a href="../Paginas/bolsas.html">Bolsas</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Institucional</h4>
                 <ul>
-                    <li><a href="Paginas/institucional.html">Conheça o IFCE</a></li>
-                    <li><a href="Paginas/ifinternacional.html">IFCE Internacional</a></li>
-                    <li><a href="Paginas/noticias.html">Notícias</a></li>
+                    <li><a href="../Paginas/institucional.html">Conheça o IFCE</a></li>
+                    <li><a href="../Paginas/ifinternacional.html">IFCE Internacional</a></li>
+                    <li><a href="../Paginas/noticias.html">Notícias</a></li>
                     <li><a href="https://www.ifce.edu.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="../Paginas/links-uteis.html">Ver todos os links</a></li>
+                    <li><a href="https://qacademico.ifce.edu.br" target="_blank" rel="noopener">Q-Acadêmico</a></li>
+                    <li><a href="https://suap.ifce.edu.br" target="_blank" rel="noopener">SUAP</a></li>
+                    <li><a href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">Biblioteca Virtual</a></li>
                 </ul>
             </div>
 
@@ -271,7 +293,7 @@
                         <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
                     </li>
                 </ul>
-                <a class="botao-2 rodape_botao-contato" href="Paginas/contato.html">Fale com a gente</a>
+                <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
 
         </div>
@@ -290,9 +312,8 @@
         </div>
 
     </footer>
-    <script src="scripts/script.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/busca.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

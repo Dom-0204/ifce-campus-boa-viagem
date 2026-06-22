@@ -1,0 +1,104 @@
+/* ==========================================================
+   PROFESSORES
+   Usado por: professores.html
+   ========================================================== */
+
+.professores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sp-6);
+}
+
+.professor-card {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-xl);
+    padding: var(--sp-6);
+    text-align: center;
+    transition: var(--transicao-rapida);
+}
+
+.professor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-lg);
+    border-color: transparent;
+}
+
+.professor-avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto var(--sp-4);
+    border-radius: 50%;
+    background-color: var(--cor-primaria-clara);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-primaria-hover);
+    font-size: 2.4rem;
+}
+
+.professor-card h3 {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: var(--sp-1);
+}
+
+.professor-cargo {
+    color: var(--cor-primaria-hover);
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    margin-bottom: var(--sp-4);
+}
+
+.professor-info {
+    text-align: left;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: var(--sp-4);
+    margin-top: var(--sp-2);
+}
+
+.professor-info dt {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-top: var(--sp-3);
+}
+
+.professor-info dt:first-child {
+    margin-top: 0;
+}
+
+.professor-info dt i {
+    color: var(--cor-primaria);
+    margin-right: 6px;
+    width: 14px;
+}
+
+.professor-info dd {
+    color: var(--cor-texto-secundario);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.professor-aviso {
+    background-color: var(--cor-fundo-mini-card);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: var(--raio-md);
+    padding: var(--sp-5);
+    margin-top: var(--sp-2);
+    color: var(--cor-texto-secundario);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+}
+
+.professor-aviso strong {
+    color: var(--cor-texto);
+}
+
+@media (max-width: 768px) {
+    .professores-grid {
+        grid-template-columns: 1fr;
+    }
+}

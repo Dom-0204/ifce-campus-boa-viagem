@@ -1,0 +1,341 @@
+/* ==========================================================
+   PÁGINAS COM SIDEBAR UNIVERSAL
+   Usado por: cidts.html, bolsas.html, cursos.html, ingresso.html
+   ========================================================== */
+
+/* ==========================================================
+   ESTILO BASE — CIDTS, BOLSAS, CURSOS, INGRESSO
+   ========================================================== */
+
+/* ===============================================
+   ESTILO - CIDTS, BOLSAS, CURSOS, INGRESSO
+================================================== */
+.cidts-banner,
+.bolsas-banner,
+.cursos-banner,
+.ingresso-banner,
+.extensao-banner,
+.ads-banner {
+    padding: 6rem var(--sp-4);
+    text-align: center;
+    color: var(--cor-texto-banner);
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.cidts-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.60), rgba(20, 108, 67, 0.90)), url("../images/cidts.png") no-repeat center/cover;
+}
+
+.bolsas-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.30), rgba(20, 108, 67, 0.30)), url("../images/Bolsas.png") no-repeat center/cover;
+}
+
+.cursos-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.60), rgba(20, 108, 67, 0.90)), url("../images/Sala\ do\ If.jpeg") no-repeat center/cover;
+}
+
+.ingresso-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.20), rgba(20, 108, 67, 0.50)), url("../images/ifingresso.png") no-repeat center/cover;
+}
+
+.cidts-banner h1,
+.bolsas-banner h1,
+.cursos-banner h1,
+.ingresso-banner h1,
+.ads-banner h1,
+.pesquisa-banner h1 {
+    max-width: 1000px;
+    margin: 0 auto 1.5rem auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    color: var(--cor-texto-banner);
+    font-size: var(--fs-3xl);
+}
+
+.cidts-banner h1 strong,
+.bolsas-banner h1 strong,
+.cursos-banner h1 strong,
+.ingresso-banner h1 strong,
+.contato-banner h1 strong,
+.ads-banner h1 strong,
+.pesquisa-banner h1 strong {
+    color: var(--cor-texto-banner);
+}
+
+.cidts-banner p,
+.bolsas-banner p,
+.cursos-banner p,
+.ingresso-banner p,
+.ads-banner p,
+.pesquisa-banner p {
+    color: var(--cor-texto-banner-secundario);
+    display: inline-block;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   SIDEBAR UNIVERSAL (barra lateral fixa)
+   ========================================================== */
+
+/* ===============================================
+   ESTILO AJUSTADO: BARRA LATERAL À ESQUERDA NA BORDA
+================================================== */
+.universal-container {
+    display: flex !important;
+    flex-direction: row;
+    gap: var(--sp-6);
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: var (--sp-4);
+    margin-right: auto;
+    padding: 0 var(--sp-4);
+}
+
+.universal-sidebar {
+    width: 260px;
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-5);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border-top: 4px solid var(--cor-primaria);
+    position: sticky;
+    top: 132px;
+    margin-top: var(--sp-1);
+    /* Alinhamento correto com o scroll */
+    flex-shrink: 0;
+    /* Impede deformação */
+}
+
+.universal-sidebar h3 {
+    font-size: var(--fs-md);
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.universal-sidebar ul {
+    list-style: none;
+}
+
+.universal-sidebar ul li {
+    margin-bottom: var(--sp-3);
+}
+
+.universal-sidebar ul li a {
+    font-size: var(--fs-base);
+    color: var(--cor-texto-secundario);
+    transition: var(--transicao-rapida);
+    display: block;
+    padding: var(--sp-2) 0;
+}
+
+.universal-sidebar ul li a:hover {
+    color: var(--cor-primaria);
+    padding-left: var(--sp-2);
+}
+
+.sidebar-badge {
+    margin-top: var(--sp-8);
+    background-color: var(--cor-fundo-secao);
+    padding: var(--sp-3);
+    border-radius: var(--raio-md);
+    text-align: center;
+}
+
+.sidebar-badge strong {
+    display: block;
+    color: var(--cor-primaria-hover);
+}
+
+.sidebar-badge span {
+    font-size: var(--fs-sm);
+    color: var(--cor-texto-secundario);
+}
+
+/* Conteúdos esticando para aproveitar o espaço horizontal */
+.universal-conteudo,
+.cidts-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+    width: 100%;
+    margin-right: auto;
+}
+
+.universal-painel-card {
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-8);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border: 1px solid var(--cor-borda);
+    scroll-margin-top: 132px;
+}
+
+.cidts-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-5);
+    margin-top: var(--sp-4);
+}
+
+.cidts-timeline-item {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+}
+
+.cidts-timeline-numero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-icone);
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--sombra-sm);
+}
+
+.cidts-timeline-texto h4 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: 4px;
+}
+
+.cidts-setores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--sp-4);
+    margin-top: var(--sp-5);
+}
+
+.cidts-setor-item {
+    background-color: var(--cor-fundo-mini-card);
+    padding: var(--sp-5);
+    border-radius: var(--raio-md);
+    border-bottom: 4px solid var(--cor-secundaria);
+    transition: var(--transicao-rapida);
+}
+
+.cidts-setor-item:hover {
+    transform: scale(1.02);
+    background-color: white;
+    box-shadow: var(--sombra-sm);
+}
+
+.cidts-setor-tag {
+    display: inline-block;
+    background-color: var(--cor-primaria-hover);
+    color: var(--cor-icone);
+    padding: 3px 10px;
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+}
+
+.cidts-conexoes-container {
+    margin-top: var(--sp-6);
+    padding: var(--sp-4) var(--sp-5);
+    background-color: var(--cor-fundo-mini-card);
+    border-radius: var(--raio-md);
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.cidts-conexoes-titulo {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--sp-3);
+}
+
+.cidts-conexoes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+}
+
+.cidts-conexao-tag {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-primaria-hover);
+    border: 1px solid var(--cor-borda);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-base);
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: var(--transicao-rapida);
+}
+
+.cidts-conexao-tag:hover {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-secao);
+    transform: translateY(-2px);
+}
+
+.cidts-ecossistema-botoes {
+    margin-top: var(--sp-6);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cidts-ecossistema-botoes .botao {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .universal-container {
+        flex-direction: column !important;
+    }
+
+    .universal-sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-bottom: var(--sp-4);
+    }
+
+    .universal-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--sp-4);
+    }
+
+    .universal-sidebar ul li {
+        margin: 0;
+    }
+
+    .cidts-conexoes-grid {
+        justify-content: flex-start;
+        gap: var(--sp-2);
+    }
+}
+
+/* ==========================================================
+   LINK ATIVO DA SIDEBAR (scroll-spy)
+   ========================================================== */
+
+.universal-sidebar ul li a.sidebar-link-ativo {
+    color: var(--cor-primaria) !important;
+    font-weight: 700;
+    padding-left: var(--sp-3) !important;
+    border-left: 3px solid var(--cor-primaria);
+    transition: var(--transicao-rapida);
+}
+
