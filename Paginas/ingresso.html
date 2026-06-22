@@ -8,7 +8,10 @@
     <meta name="description" content="Formas de ingresso, processos seletivos e editais do IFCE Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/universal.css">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
             </a>
         </div>
-        <button class="menu-toggle" id="menu-toggle">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
             ☰
         </button>
         <nav class="cabecalho_nav">
@@ -33,6 +36,7 @@
             <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
             <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
             <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
+            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
             <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
             <!-- BOTÃO DO MODO ESCURO AQUI -->
@@ -58,7 +62,9 @@
                 <li><a href="#processos-regulares">Seleção Regular</a></li>
                 <li><a href="#vagas-remanescentes">Vagas Ociosas</a></li>
                 <li><a href="#outras-formas">Diplomados e Especiais</a></li>
+                <li><a href="#documentacao">Documentação Necessária</a></li>
                 <li><a href="#cronogramas">Editais e Prazos</a></li>
+                <li><a href="#faq-ingresso">Perguntas Frequentes</a></li>
             </ul>
             <div class="sidebar-badge">
                 <strong>Controle Acadêmico</strong>
@@ -169,6 +175,51 @@
                 </div>
             </section>
 
+            <section class="universal-painel-card" id="documentacao">
+                <h2 class="institucional_titulo">Documentação Necessária</h2>
+                <p class="institucional_texto" style="margin-bottom: 20px;">
+                    A lista abaixo reúne os documentos mais solicitados nos processos de ingresso.
+                    Documentos específicos de cada edital sempre prevalecem sobre esta lista geral.
+                </p>
+
+                <div class="infraestrutura_grid">
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-id-card" aria-hidden="true"></i> <strong>Documentos
+                                Pessoais</strong></h4>
+                        <p>RG, CPF, Certidão de Nascimento ou Casamento e comprovante de residência atualizado.</p>
+                    </div>
+
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-school" aria-hidden="true"></i> <strong>Escolaridade</strong></h4>
+                        <p>Histórico escolar e certificado/declaração de conclusão do Ensino Fundamental ou Médio,
+                            conforme o curso pretendido.</p>
+                    </div>
+
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> <strong>Foto 3x4</strong></h4>
+                        <p>Foto recente, utilizada para confecção da carteira estudantil e cadastro no sistema
+                            acadêmico.</p>
+                    </div>
+
+                    <div class="infraestrutura_item">
+                        <h4><i class="fa-solid fa-file-shield" aria-hidden="true"></i> <strong>Documentos
+                                Militares</strong></h4>
+                        <p>Certificado de Reservista ou comprovante de alistamento, quando aplicável (candidatos do
+                            sexo masculino).</p>
+                    </div>
+                </div>
+
+                <div class="cidts-conexoes-container" style="margin-top: 20px;">
+                    <span class="cidts-conexoes-titulo">Importante:</span>
+                    <p class="institucional_texto"
+                        style="font-size: var(--fs-sm); margin: 0; color: var(--cor-texto-secundario);">
+                        A lista oficial e definitiva de documentos é sempre publicada no edital do
+                        processo seletivo correspondente. Confira atentamente antes de comparecer
+                        para matrícula.
+                    </p>
+                </div>
+            </section>
+
             <section class="universal-painel-card" id="cronogramas">
                 <h2 class="institucional_titulo">Acompanhamento e Cronogramas</h2>
                 <p class="institucional_texto">
@@ -199,6 +250,85 @@
                 </div>
             </section>
 
+            <section class="universal-painel-card" id="faq-ingresso">
+                <h2 class="institucional_titulo">Perguntas Frequentes</h2>
+                <p class="institucional_texto" style="margin-bottom: 20px;">
+                    As dúvidas mais comuns de quem está se preparando para ingressar no IFCE
+                    Campus Boa Viagem.
+                </p>
+
+                <div class="faq-lista">
+                    <div class="faq-item">
+                        <button class="faq-pergunta" type="button">
+                            Como faço para me inscrever no SiSU para o curso de ADS?
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                A inscrição é feita diretamente no site do SiSU (sisu.mec.gov.br) durante
+                                o período de inscrições, usando a nota do ENEM. Não é necessário se inscrever
+                                separadamente no site do IFCE para essa modalidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta" type="button">
+                            Posso me matricular sem ter documentação alguma pendente?
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                Não. A matrícula só é efetivada com a apresentação de toda a documentação
+                                exigida no edital. Documentação incompleta pode resultar na perda da vaga
+                                e convocação do próximo candidato da lista.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta" type="button">
+                            Existe processo seletivo próprio do IFCE, além do SiSU?
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                Sim. O IFCE realiza processos seletivos próprios (vestibulares e seleções
+                                simplificadas) para preencher vagas remanescentes e turmas específicas.
+                                Acompanhe os editais na seção de Notícias do portal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta" type="button">
+                            Quem já tem um diploma técnico ou superior pode entrar direto no ADS?
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                Portadores de diploma podem concorrer a vagas remanescentes através do
+                                processo de Ingresso de Diplomados, mediante análise de créditos
+                                aproveitáveis, entrevista ou prova, conforme definido em edital específico.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-pergunta" type="button">
+                            O curso de ADS é gratuito?
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>
+                                Sim. Por ser uma instituição pública federal, todos os cursos do IFCE,
+                                incluindo o de Análise e Desenvolvimento de Sistemas, são 100% gratuitos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 
@@ -226,6 +356,14 @@
                         aria-label="Facebook do IFCE Campus Boa Viagem">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
+                    <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
+                        aria-label="YouTube do IFCE">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn do IFCE">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
                         aria-label="Portal institucional do IFCE">
                         <i class="fa-solid fa-globe"></i>
@@ -237,30 +375,40 @@
             <div class="rodape_coluna">
                 <h4>Ensino</h4>
                 <ul>
-                    <li><a href="Paginas/ads.html">Sobre o Curso</a></li>
-                    <li><a href="Paginas/professores.html">Professores</a></li>
-                    <li><a href="Paginas/ingresso.html">Formas de Ingresso</a></li>
-                    <li><a href="Paginas/cursos.html">Cursos</a></li>
+                    <li><a href="../Paginas/ads.html">Sobre o Curso</a></li>
+                    <li><a href="../Paginas/professores.html">Professores</a></li>
+                    <li><a href="../Paginas/ingresso.html">Formas de Ingresso</a></li>
+                    <li><a href="../Paginas/cursos.html">Cursos</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Pesquisa e Extensão</h4>
                 <ul>
-                    <li><a href="Paginas/cidts.html">CIDTS</a></li>
-                    <li><a href="Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
-                    <li><a href="Paginas/extensao.html">Extensão</a></li>
-                    <li><a href="Paginas/bolsas.html">Bolsas</a></li>
+                    <li><a href="../Paginas/cidts.html">CIDTS</a></li>
+                    <li><a href="../Paginas/pesquisas.html">Projetos de Pesquisa</a></li>
+                    <li><a href="../Paginas/extensao.html">Extensão</a></li>
+                    <li><a href="../Paginas/bolsas.html">Bolsas</a></li>
                 </ul>
             </div>
 
             <div class="rodape_coluna">
                 <h4>Institucional</h4>
                 <ul>
-                    <li><a href="Paginas/institucional.html">Conheça o IFCE</a></li>
-                    <li><a href="Paginas/ifinternacional.html">IFCE Internacional</a></li>
-                    <li><a href="Paginas/noticias.html">Notícias</a></li>
+                    <li><a href="../Paginas/institucional.html">Conheça o IFCE</a></li>
+                    <li><a href="../Paginas/ifinternacional.html">IFCE Internacional</a></li>
+                    <li><a href="../Paginas/noticias.html">Notícias</a></li>
                     <li><a href="https://www.ifce.edu.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="../Paginas/links-uteis.html">Ver todos os links</a></li>
+                    <li><a href="https://qacademico.ifce.edu.br" target="_blank" rel="noopener">Q-Acadêmico</a></li>
+                    <li><a href="https://suap.ifce.edu.br" target="_blank" rel="noopener">SUAP</a></li>
+                    <li><a href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">Biblioteca Virtual</a></li>
                 </ul>
             </div>
 
@@ -280,7 +428,7 @@
                         <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
                     </li>
                 </ul>
-                <a class="botao-2 rodape_botao-contato" href="Paginas/contato.html">Fale com a gente</a>
+                <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
 
         </div>
@@ -299,9 +447,9 @@
         </div>
 
     </footer>
-    <script src="scripts/script.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/busca.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/faq.js"></script>
 </body>
 
 </html>

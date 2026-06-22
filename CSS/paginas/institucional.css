@@ -1,0 +1,198 @@
+/* ==========================================================
+   INSTITUCIONAL
+   Usado por: institucional.html
+   ========================================================== */
+
+/* =========================
+   INSTITUCIONAL
+========================= */
+.institucional-banner {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.60), rgba(20, 108, 67, 0.90)), url("../images/iffrente.png") no-repeat center/cover;
+    padding: 6rem var(--sp-4);
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--sp-8);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+.institucional-banner h1 {
+    max-width: 1000px;
+    margin: 0 auto 1.5rem auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    color: var(--cor-texto-banner);
+    font-size: var(--fs-3xl);
+}
+
+.institucional-banner p {
+    display: inline-block;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    color: var(--cor-texto-banner);
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .institucional-banner h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    .institucional-banner p {
+        font-size: var(--fs-base);
+    }
+
+    .institucional-banner {
+        padding: var(--sp-8) var(--sp-3);
+    }
+}
+
+.institucional_card {
+    margin-top: var(--sp-8);
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-6);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border-top: 4px solid var(--cor-primaria);
+}
+
+.institucional_card p {
+    line-height: 1.9;
+    color: var(--cor-texto-secundario);
+}
+
+.institucional_titulo {
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-4);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.institucional_titulo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    border-radius: 999px;
+}
+
+.institucional_subtitulo {
+    font-size: var(--fs-xl);
+    margin-top: var(--sp-5);
+    margin-bottom: var(--sp-4);
+}
+
+.institucional_texto {
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--sp-3);
+    line-height: 1.8;
+}
+
+.institucional_lista {
+    list-style-position: inside;
+    margin-left: var(--sp-2);
+    line-height: 1.8;
+}
+
+.institucional_botao {
+    text-align: center;
+    margin-top: var(--sp-8);
+    margin-bottom: var(--sp-2);
+}
+
+.institucional_numeros_secao {
+    margin-top: var(--sp-8);
+}
+
+.institucional_numeros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--sp-6);
+}
+
+.institucional_numeros_titulo {
+    text-align: center;
+    font-size: var(--fs-xl);
+    margin-bottom: var(--sp-6);
+    color: var(--cor-primaria-hover)
+}
+
+.institucional_numeros_descricao {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--sp-6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infraestrutura_grid,
+.assistencia_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: var(--sp-5);
+    margin-top: var(--sp-4);
+}
+
+.infraestrutura_item,
+.assistencia_item {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-mini-card);
+    padding: var(--sp-4);
+    border-radius: var(--raio-md);
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.infraestrutura_item h4 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: var(--sp-2);
+    font-size: var(--fs-md);
+}
+
+.infraestrutura_item p {
+    font-size: var(--fs-base);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.assistencia_item h4 {
+    font-size: var(--fs-md);
+    line-height: 1.4;
+}
+
+.numero_card {
+    background-color: var(--cor-fundo-card);
+    padding: var(--sp-8);
+    border-radius: var(--raio-lg);
+    text-align: center;
+    box-shadow: var(--sombra-sm);
+    border-top: 4px solid var(--cor-primaria);
+    transition: var(--transicao-rapida);
+}
+
+.numero_card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-md);
+}
+
+.numero_card h3 {
+    color: var(--cor-primaria);
+    font-size: var(--fs-xl);
+    margin-bottom: var(--sp-2);
+}
+
+.numero_card p {
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+}
+

@@ -1,0 +1,40 @@
+/* ==========================================================
+   LINKS ÚTEIS
+   Usado por: links-uteis.html
+   Reutiliza grids e títulos de institucional.css — aqui só o
+   componente novo desta página: o link de saída para sistemas externos.
+   ========================================================== */
+
+.infraestrutura_item {
+    gap: var(--sp-2);
+}
+
+.infraestrutura_item h4 i {
+    color: var(--cor-primaria);
+    margin-right: 6px;
+}
+
+.link-externo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: var(--sp-2);
+    color: var(--cor-primaria-hover);
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    transition: var(--transicao-rapida);
+}
+
+.link-externo i {
+    font-size: .7rem;
+    transition: transform 0.2s ease;
+}
+
+.link-externo:hover {
+    color: var(--cor-primaria);
+}
+
+.link-externo:hover i {
+    transform: translate(2px, -2px);
+}

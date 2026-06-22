@@ -1,0 +1,402 @@
+/* ==========================================================
+   ADS (Análise e Desenvolvimento de Sistemas)
+   Usado por: ads.html
+   ========================================================== */
+
+/* =========================
+    ADS
+========================= */
+
+.ads-banner {
+    background:
+        linear-gradient(135deg,
+            rgba(25, 135, 84, .88),
+            rgba(20, 108, 67, .92)),
+        url("/images/ads.png") center/cover no-repeat;
+
+    text-align: center;
+    color: white;
+
+    padding: 8rem 2rem;
+
+    border-bottom: 5px solid var(--cor-secundaria);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-banner::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    top: -250px;
+    right: -200px;
+}
+
+.ads-introducao {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    padding: 4rem;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            #f7faf8);
+
+    border-radius: 24px;
+
+    border-top: 6px solid var(--cor-primaria);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-introducao::after {
+    content: "</>";
+    position: absolute;
+
+    right: 40px;
+    bottom: 20px;
+
+    font-size: 5rem;
+    font-weight: 700;
+
+    color: rgba(25, 135, 84, .08);
+}
+
+.tag-ads {
+    display: inline-block;
+    background: rgba(25, 135, 84, .12);
+    color: var(--cor-primaria);
+    padding: .8rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.ads-areas {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.ads-areas .card {
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    border-top: 5px solid var(--cor-primaria);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+
+    transition: .35s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-areas .card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.ads-diferenciais {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+
+    background:
+        linear-gradient(180deg,
+            #fff,
+            #f5f9f7);
+
+    padding: 5rem 3rem;
+
+    border-radius: 24px;
+}
+
+.ads-diferenciais .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.ads-carreira {
+    max-width: 1200px;
+    margin: var(--sp-8) auto;
+}
+
+.ads-carreira .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ==========================================================
+   ADS — Responsivo
+   ========================================================== */
+
+/* =========================
+    ADS RESPONSIVO
+========================= */
+
+@media (max-width: 1024px) {
+
+    .ads-banner {
+        padding: 6rem 2rem;
+    }
+
+    .ads-banner::before {
+        width: 350px;
+        height: 350px;
+        top: -180px;
+        right: -150px;
+    }
+
+    .ads-areas,
+    .ads-carreira .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ads-diferenciais .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ads-banner {
+        padding: 4rem 1.5rem;
+    }
+
+    .ads-banner h1 {
+        font-size: 2rem;
+    }
+
+    .ads-banner p {
+        font-size: .95rem;
+    }
+
+    .ads-introducao {
+        padding: 2rem 1.5rem;
+    }
+
+    .ads-introducao::after {
+        display: none;
+    }
+
+    .ads-areas,
+    .ads-carreira .cards,
+    .ads-diferenciais .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .ads-diferenciais {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .ads-areas .card,
+    .ads-diferenciais .card,
+    .ads-carreira .card {
+        padding: 1.5rem;
+    }
+
+    .tag-ads {
+        font-size: .9rem;
+        padding: .7rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ads-banner {
+        padding: 3rem 1rem;
+    }
+
+    .ads-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .ads-introducao {
+        padding: 1.5rem 1rem;
+    }
+
+    .ads-diferenciais {
+        padding: 2rem 1rem;
+    }
+
+    .ads-banner::before {
+        display: none;
+    }
+}
+
+/* ==========================================================
+   DARK MODE — ADS
+   ========================================================== */
+
+/* ==================================================
+   DARK MODE PARA ADS (DESIGN CENTRALIZADO ORIGINAL)
+   ================================================== */
+body.dark-mode .ads-introducao,
+body.dark-mode .ads-diferenciais {
+    background: #1e1e1e !important;
+    /* Arranca o gradiente claro e bota o cinza padrão */
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .ads-introducao p,
+body.dark-mode .ads-introducao h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Evita que as seções formem blocos ou linhas verdes gigantes de fundo */
+body.dark-mode .ads-areas,
+body.dark-mode .ads-carreira,
+body.dark-mode .ads-final {
+    background-color: #121212 !important;
+    background: #121212 !important;
+}
+
+body.dark-mode .ads-carreira h2 {
+    color: var(--cor-texto) !important;
+}
+
+/* Estiliza TODOS os cards da página (Áreas, Diferenciais e Carreira) */
+body.dark-mode .ads-areas .card,
+body.dark-mode .ads-diferenciais .cards .card,
+body.dark-mode .ads-carreira .cards .card {
+    background-color: #252525 !important;
+    /* Tom cinza ligeiramente mais claro */
+    color: var(--cor-texto) !important;
+    border-top: 5px solid var(--cor-primaria) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .ads-areas .card h3,
+body.dark-mode .ads-diferenciais .cards .card h3,
+body.dark-mode .ads-carreira .cards .card h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .ads-areas .card p,
+body.dark-mode .ads-diferenciais .cards .card p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* Ajusta os detalhes visuais do topo do card e tags */
+body.dark-mode .tag-ads {
+    background: rgba(38, 162, 105, 0.15) !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .ads-areas .impacto-topo small {
+    color: rgba(255, 255, 255, 0.1) !important;
+    /* Suaviza os números 01, 02... */
+}
+
+/* Deixa a marca d'água "</>" do fundo discretamente visível no escuro */
+body.dark-mode .ads-introducao::after {
+    color: rgba(46, 194, 126, 0.05) !important;
+}
+
+/* Garante que os cards internos caibam perfeitamente na nova estrutura com sidebar */
+.universal-painel-card .internacional-cards,
+.universal-painel-card .internacional-beneficios .cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Garante o alinhamento em grid nativo de Pesquisas dentro do painel lateral */
+.universal-painel-card .pesquisa-cards,
+.universal-painel-card .pesquisa-destaques .grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+
+}
+
+/* ==========================================================
+   ADS — Correção visual definitiva (claro e escuro)
+   ========================================================== */
+
+/* ==================================================
+   CORREÇÃO VISUAL DEFINITIVA PARA ADS (MODO CLARO E ESCURO)
+   ================================================== */
+
+/* --- AJUSTES PARA O MODO CLARO (Nativo / Padrão) --- */
+/* Força os novos ícones e títulos a usarem o verde institucional do IFCE no modo claro */
+.universal-painel-card .card .impacto-topo span i,
+.universal-painel-card .ads-diferenciais .card h3 i {
+    color: var(--cor-primaria) !important;
+}
+
+.universal-painel-card .ads-areas .card h3,
+.universal-painel-card .ads-diferenciais .card h3,
+.universal-painel-card .ads-carreira .card h3 {
+    color: var(--cor-primaria) !important;
+}
+
+
+/* --- AJUSTES PARA O MODO ESCURO (dark-mode ativo) --- */
+/* Arranca de vez qualquer fundo preto absoluto de dentro dos painéis adaptáveis */
+body.dark-mode .universal-painel-card .ads-areas,
+body.dark-mode .universal-painel-card .ads-diferenciais,
+body.dark-mode .universal-painel-card .ads-carreira {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Garante que os cards internos herdem o cinza correto de painel, sem manchas pretas */
+body.dark-mode .universal-painel-card .card {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-top: 4px solid var(--cor-primaria) !important;
+}
+
+/* Altera os títulos e ícones internos para o verde com brilho ideal no escuro */
+body.dark-mode .universal-painel-card .card h3,
+body.dark-mode .universal-painel-card .card .impacto-topo span i,
+body.dark-mode .universal-painel-card .ads-diferenciais .card h3 i {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .universal-painel-card .card p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+/* --- CORES DOS ÍCONES VETORIAIS DO TEMA --- */
+
+/* Cor da Lua no Modo Claro (Cinza grafite para dar ótimo contraste) */
+.theme-btn-icon .fa-moon {
+    color: #495057 !important;
+}
+
+/* Cor do Sol no Modo Escuro (Totalmente BRANCO como você pediu) */
+body.dark-mode .theme-btn-icon .fa-sun {
+    color: #ffffff !important;
+}

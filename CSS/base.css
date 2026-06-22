@@ -1,0 +1,146 @@
+/* ==========================================================
+   BASE — Reset, Variáveis (Design Tokens) e Tipografia
+   Compartilhado por TODAS as páginas do portal.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* ===== CORES INSTITUCIONAIS ===== */
+    --cor-primaria: #198754;
+    /* Verde IF */
+    --cor-primaria-hover: #146c43;
+    /* Verde mais escuro */
+    --cor-primaria-clara: #d1f2e0;
+    /* Verde suave */
+
+    --cor-secundaria: #dc3545;
+    /* Vermelho do logo IF */
+    --cor-secundaria-hover: #b02a37;
+
+    --cor-fundo: #f8f9fa;
+    /* Fundo geral */
+    --cor-fundo-secao: #eef7f1;
+    /* Fundo da seção */
+    --cor-fundo-card: #ffffff;
+    /* Cards */
+    --cor-fundo-mini-card: #f8f8f8;
+    /* Mini Cards */
+
+    --cor-texto: #212529;
+    /* Texto principal */
+    --cor-texto-secundario: #6c757d;
+    /* Texto auxiliar */
+    --cor-texto-banner: #ffffff;
+    /*--------------*/
+    --cor-texto-banner-secundario: #FFF0F0;
+    /*--------------*/
+    --cor-icone: #ffffff;
+    --cor-borda: #dee2e6;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --transparencia-cabecalho: rgba(0, 0, 0, .25);
+    --transparencia-dropdown: rgba(18, 18, 22, .85);
+    /* ===== TIPOGRAFIA ===== */
+    --fonte-principal: 'Poppins', sans-serif;
+
+    /* Font Size */
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.375rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2.25rem;
+    --fs-3xl: 3rem;
+
+    /* ===== ESPAÇAMENTOS ===== */
+    --sp-2: 0.5rem;
+    --sp-3: 0.75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.25rem;
+    --sp-6: 1.5rem;
+    --sp-8: 2rem;
+    --sp-10: 2.5rem;
+    --sp-12: 3rem;
+    --sp-16: 4rem;
+
+    /* ===== BORDAS ===== */
+    --raio-sm: 4px;
+    --raio-md: 8px;
+    --raio-lg: 12px;
+    --raio-xl: 20px;
+    --raio-pill: 999px;
+
+    /* ===== SOMBRAS ===== */
+    --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --sombra-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --sombra-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    /* ===== TRANSIÇÕES ===== */
+    --transicao-rapida: 0.3s ease;
+    --transicao: 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+strong {
+    color: var(--cor-primaria-hover);
+    font-weight: 800;
+}
+
+section h2 {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--sp-4);
+}
+
+
+/* ==========================================================
+   DARK MODE — Redefinição das variáveis (design tokens)
+   ========================================================== */
+
+/* ==================================================
+   REGRAS COMPLEMENTARES: MODO ESCURO E MENU ATIVO
+   ================================================== */
+body.dark-mode {
+    --cor-fundo: #121212;
+    --cor-fundo-secao: #1a231e;
+    --cor-fundo-card: #1e1e1e;
+    --cor-fundo-mini-card: #252525;
+    --cor-texto: #e9ecefcd;
+    --cor-texto-secundario: #a8b2bae1;
+    --cor-texto-banner: #ebdfdf;
+    --cor-texto-banner-secundario: #e0cfcf;
+    --cor-icone: #f4f3f3e1;
+    --cor-borda: #333a40;
+    --cor-sombra: rgba(0, 0, 0, 0.5);
+
+    --cor-primaria: #22925e;
+    --cor-primaria-hover: #2eb576;
+    --cor-primaria-clara: #123d28;
+}
+

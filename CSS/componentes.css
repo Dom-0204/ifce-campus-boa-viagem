@@ -1,0 +1,302 @@
+/* ==========================================================
+   COMPONENTES — Cards, Botões, Dropdowns, Tema
+   Reutilizáveis em múltiplas páginas.
+   ========================================================== */
+
+/* ==========================================================
+   COMPONENTES GERAIS (botões, dropdowns, cards base)
+   ========================================================== */
+
+/* =========================
+   COMPONENTES
+========================= */
+.botao {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-icone);
+    padding: var(--sp-3) var(--sp-6);
+    border-radius: var(--raio-md);
+    margin: var(--sp-4) auto;
+    transition: var(--transicao-rapida);
+    font-weight: 600;
+}
+
+.botao-2 {
+    display: inline-block;
+    padding: var(--sp-3) var(--sp-6);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-md);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    position: relative;
+    transition: var(--transicao);
+}
+
+.botao:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.botao-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s cubic-bezier(0.5, 1.4, 0.4, 0.7);
+}
+
+.botao-2:hover::before {
+    transform: scaleX(1);
+}
+
+.botao-2:hover {
+    color: var(--cor-fundo);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: var(--sp-8);
+    padding: 15px;
+    align-items: stretch;
+}
+
+.card {
+    padding: var(--sp-6);
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-sm);
+    border-top: 5px solid var(--cor-primaria);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-lg);
+}
+
+.card:hover .icone-card {
+    transform: scale(1.1);
+}
+
+.icone-card {
+    color: var(--cor-primaria);
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--sp-6);
+    transition: var(--transicao);
+}
+
+.card h3 {
+    margin-bottom: var(--sp-4);
+    font-size: var(--fs-lg);
+}
+
+.card p {
+    color: var(--cor-texto-secundario);
+    font-size: var(--fs-base);
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   CARDS ESTILO APPLE (com 'Saiba mais')
+   ========================================================== */
+
+/* =========================
+   CARDS ESTILO APPLE (Home)
+   Variante mais minimalista, com link "Saiba mais"
+========================= */
+
+.card-apple {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: var(--sp-8);
+    border-top: none;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-xl);
+    box-shadow: none;
+}
+
+.card-apple .icone-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria-clara);
+    margin-bottom: var(--sp-6);
+}
+
+.card-apple .icone-card {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 0;
+    color: var(--cor-primaria-hover);
+}
+
+.card-apple h3 {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+    color: var(--cor-texto);
+}
+
+.card-apple h3 strong {
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+.card-apple p {
+    flex-grow: 1;
+    margin-bottom: var(--sp-6);
+}
+
+.card-apple .saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--cor-primaria-hover);
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    transition: var(--transicao-rapida);
+}
+
+.card-apple .saiba-mais i {
+    transition: transform 0.25s ease;
+    font-size: .75rem;
+}
+
+.card-apple:hover .saiba-mais {
+    color: var(--cor-primaria);
+}
+
+.card-apple:hover .saiba-mais i {
+    transform: translateX(4px);
+}
+
+.card-apple:hover {
+    transform: translateY(-6px);
+    border-color: transparent;
+    box-shadow: var(--sombra-lg);
+}
+
+body.dark-mode .card-apple {
+    border-color: var(--cor-borda);
+}
+
+/* ==========================================================
+   BOTÃO ALTERNADOR DE TEMA (dark mode toggle)
+   ========================================================== */
+
+.theme-btn {
+    position: fixed;
+    bottom: 32px;
+    /* Subimos um pouco mais para desgrudar totalmente do rodapé */
+    right: 32px;
+    z-index: 9999;
+    background-color: var(--cor-fundo-card) !important;
+    /* Herda o fundo branco ou cinza escuro */
+    border: 2px solid var(--cor-primaria) !important;
+    padding: 0;
+    width: 54px;
+    /* Aumentamos um pouquinho para dar mais área de clique */
+    height: 54px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    /* Ícone ligeiramente maior e centralizado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra marcante para flutuar de verdade */
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse */
+.theme-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--cor-fundo-mini-card) !important;
+}
+
+/* Ajuste de contraste para o emoji da lua no modo claro */
+.theme-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.15));
+    /* Ajuda a dar contorno na lua amarela */
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--cor-primaria-clara);
+}
+
+
+/* ==========================================================
+   FAQ — Accordion de Perguntas Frequentes
+   Reutilizável em qualquer página (ex: Formas de Ingresso).
+   ========================================================== */
+
+.faq-item {
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-md);
+    margin-bottom: var(--sp-3);
+    overflow: hidden;
+    background-color: var(--cor-fundo-card);
+}
+
+.faq-pergunta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    padding: var(--sp-4) var(--sp-5);
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--fonte-principal);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.faq-pergunta i {
+    color: var(--cor-primaria);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.faq-ativo .faq-pergunta i {
+    transform: rotate(180deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-resposta p {
+    padding: 0 var(--sp-5) var(--sp-4);
+    color: var(--cor-texto-secundario);
+    line-height: 1.7;
+    font-size: var(--fs-sm);
+}
+
+.faq-item.faq-ativo .faq-resposta {
+    max-height: 320px;
+}
