@@ -18,33 +18,66 @@
 
 <body>
 
-    <header class="cabecalho">
-        <div class="logo">
+        <header class="cabecalho">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">ADS</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
@@ -52,7 +85,7 @@
         <div class="institucional-banner-filtro">
             <h1>Professores do Curso de ADS</h1>
             <p>
-                Conheça o corpo docente responsável pela formação dos estudantes de
+                Conheça o corpo docente responsável pela Grau de Formação dos estudantes de
                 Análise e Desenvolvimento de Sistemas no IFCE Campus Boa Viagem.
             </p>
         </div>
@@ -66,7 +99,7 @@
                 <h2 class="institucional_titulo">Corpo Docente</h2>
                 <p class="institucional_texto" style="margin-bottom: var(--sp-6);">
                     Os professores do curso de ADS atuam em diferentes áreas da computação,
-                    combinando experiência acadêmica e de mercado para oferecer uma formação
+                    combinando experiência acadêmica e de mercado para oferecer uma Grau de Formação
                     técnica sólida e atualizada.
                 </p>
 
@@ -76,16 +109,73 @@
                         <div class="professor-avatar">
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                         </div>
-                        <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Coordenador do Curso de ADS</p>
+                        <h3>Johnny Rocha</h3>
+                        <p class="professor-cargo">Professor e Coordenador do Curso</p>
                         <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
+                            <dd>Especialista</dd>
+                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
+                            <dd>A defi</dd>
+                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
+                            <dd>A definir</dd>
+                        </dl>
+                        <button class="botao-pop-up">Saiba mais</button>
+                        <dialog>
+                            <h2><strong>Johnny Rocha</strong></h2>
+                            <p>Docente efetivo do Instituto Federal do Ceará (IFCE), Campus Boa Viagem, na subárea de Sistemas de Computação. Mestrando em Ciências da Computação, (IFCE) graduado em Redes de Computadores (IFCE) e pós-graduado em Engenharia da Computação e em Desenvolvimento Full Stack. Possui formação complementar em Interface Humano-Computador. Atua no ensino superior em disciplinas como Interface Humano-Computador, Tecnologias Web, Programação para Dispositivos Móveis e DevOps. Seus interesses de pesquisa envolvem inteligência articial para tecnologias assistivas, visão computacional, design da informação, usabilidade, experiência do usuário e interação humano-computador.
+                            </p>
+                            <button class="botao-fechar">Fechar</button>
+
+                        </dialog>
+                    </div>
+
+                    <div class="professor-card">
+                        <div class="professor-avatar">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        </div>
+                        <h3>Nome do Professor (a definir)</h3>
+                        <p class="professor-cargo">Docente</p>
+                        <dl class="professor-info">
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
                             <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
+                            
+                        </dl>
+                    </div>
+
+                    <div class="professor-card">
+                        <div class="professor-avatar">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        </div>
+                        <h3>Nome do Professor (a definir)</h3>
+                        <p class="professor-cargo">Docente</p>
+                        <dl class="professor-info">
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
+                            <dd>A definir</dd>
+                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
+                            <dd>A definir</dd>
+                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
+                            <dd>A definir</dd>
+                            
+                        </dl>
+                        <button class="botao-pop-up">Saiba mais</button>
+                    </div>
+
+                    <div class="professor-card">
+                        <div class="professor-avatar">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        </div>
+                        <h3>Nome do Professor (a definir)</h3>
+                        <p class="professor-cargo">Docente</p>
+                        <dl class="professor-info">
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
+                            <dd>A definir</dd>
+                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
+                            <dd>A definir</dd>
+                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
                             <dd>A definir</dd>
                         </dl>
                     </div>
@@ -95,15 +185,13 @@
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                         </div>
                         <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Docente — Desenvolvimento de Software</p>
+                        <p class="professor-cargo">Docente</p>
                         <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
                             <dd>A definir</dd>
                         </dl>
                     </div>
@@ -113,81 +201,18 @@
                             <i class="fa-solid fa-user" aria-hidden="true"></i>
                         </div>
                         <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Docente — Banco de Dados</p>
+                        <p class="professor-cargo">Docente</p>
                         <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
+                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Grau de Formação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
                             <dd>A definir</dd>
                             <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
                             <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
-                            <dd>A definir</dd>
+                            
                         </dl>
                     </div>
 
-                    <div class="professor-card">
-                        <div class="professor-avatar">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                        </div>
-                        <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Docente — Engenharia de Software</p>
-                        <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
-                            <dd>A definir</dd>
-                        </dl>
-                    </div>
-
-                    <div class="professor-card">
-                        <div class="professor-avatar">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                        </div>
-                        <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Docente — Redes e Infraestrutura</p>
-                        <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
-                            <dd>A definir</dd>
-                        </dl>
-                    </div>
-
-                    <div class="professor-card">
-                        <div class="professor-avatar">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                        </div>
-                        <h3>Nome do Professor (a definir)</h3>
-                        <p class="professor-cargo">Docente — Matemática e Fundamentos</p>
-                        <dl class="professor-info">
-                            <dt><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Formação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Área de Atuação</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-book" aria-hidden="true"></i>Disciplinas</dt>
-                            <dd>A definir</dd>
-                            <dt><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projetos Vinculados</dt>
-                            <dd>A definir</dd>
-                        </dl>
-                    </div>
-
-                </div>
-
-                <div class="professor-aviso">
-                    <strong>Nota para a equipe do campus:</strong> os cards acima são um modelo
-                    pronto para preenchimento. Substitua "Nome do Professor (a definir)" e os
-                    campos "A definir" pelas informações reais de cada docente. A foto pode ser
-                    adicionada trocando o ícone dentro de <code>.professor-avatar</code> por uma
-                    tag <code>&lt;img&gt;</code>.
                 </div>
 
             </section>
@@ -312,6 +337,7 @@
     </footer>
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="../js/popup.js"></script>
 </body>
 
 </html>

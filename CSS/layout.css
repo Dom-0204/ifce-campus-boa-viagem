@@ -743,7 +743,6 @@
 .main {
     position: relative;
     z-index: 3;
-    background: linear-gradient(to bottom, #0a0c0a 0%, var(--cor-fundo) 320px);
     display: flex;
     width: 100%;
     max-width: none;
@@ -752,7 +751,9 @@
     gap: var(--sp-8);
     padding: 0;
 }
-
+.main-gradiente{
+    background: linear-gradient(to bottom, #0a0c0a 0%, var(--cor-fundo) 320px);
+}
 body.dark-mode .main {
     background: linear-gradient(to bottom, #0a0c0a 0%, var(--cor-fundo) 200px);
 }
