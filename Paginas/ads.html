@@ -7,6 +7,7 @@
     <title>Análise e Desenvolvimento de Sistemas - IFCE Campus Boa Viagem</title>
     <meta name="description" content="Informações sobre o curso de ADS do IFCE Campus Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
+
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="stylesheet" href="../CSS/componentes.css">
@@ -16,399 +17,257 @@
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">ADS</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras ativo" href="ads.html">ADS</a>
 
-            <!-- BOTÃO ATUALIZADO COM OS DOIS ÍCONES EMBUTIDOS -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">
-                    <i class="fa-solid fa-moon icone-lua"></i>
-                    <i class="fa-solid fa-sun icone-sol"></i>
-                </span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
-    <section class="ads-banner">
-        <div class="ads-banner-filtro">
-            <h1>Análise e Desenvolvimento de Sistemas</h1>
-            <p>
-                Formação tecnológica voltada para inovação, desenvolvimento de software
-                e soluções digitais para os desafios da sociedade.
-            </p>
-        </div>
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">🌙</span>
+    </button>
+
+    <section class="ads-hero-header">
+        <h1>Análise e Desenvolvimento de Sistemas</h1>
+        <p>Formação tecnológica voltada para inovação, desenvolvimento de software e soluções digitais para os desafios
+            da sociedade.</p>
     </section>
 
-    <main class="main universal-container">
+    <main class="main-pagina-interna"
+        style="max-width: 1200px; width: 100%; margin: var(--sp-12) auto var(--sp-16); padding: 0 20px; display: flex; flex-direction: column; gap: var(--sp-8); position: relative; z-index: 10;">
+        <section class="universal-painel-card" id="sobre-ads" style="scroll-margin-top: 90px;">
+            <div class="card-tag">Tecnologia e Inovação</div>
+            <h2>O Curso de ADS</h2>
+            <p>O curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas do IFCE Campus Boa Viagem forma
+                profissionais capazes de analisar, projetar, desenvolver, testar e manter sistemas computacionais para
+                diferentes áreas de atuação.</p>
+            <p style="margin-top: var(--sp-3);">A formação combina conhecimentos teóricos e práticos, preparando os
+                estudantes para atuar no mercado de tecnologia por meio do desenvolvimento de soluções inovadoras e
+                alinhadas às demandas da transformação digital.</p>
+        </section>
 
-        <aside class="universal-sidebar">
-            <h3>Navegação</h3>
-            <ul>
-                <li><a href="#sobre-ads">O Curso</a></li>
-                <li><a href="#pilares-ads">Eixos Acadêmicos</a></li>
-                <li><a href="#disciplinas-ads">Disciplinas</a></li>
-                <li><a href="#diferenciais-ads">Diferenciais</a></li>
-                <li><a href="#carreira-ads">Mercado</a></li>
-            </ul>
-            <div class="sidebar-badge">
-                <strong>Coordenação</strong>
-                <span>ADS Boa Viagem</span>
+        <!-- Painel: Eixos Disciplinares -->
+        <section class="universal-painel-card" id="pilares-ads" style="scroll-margin-top: 90px;">
+            <h2>Eixos Disciplinares</h2>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--sp-5); margin-top: var(--sp-4);">
+                <div class="card card-interno">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);"><i
+                            class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Desenvolvimento de Software</h3>
+                    <p>Criação de aplicações web, desktop e mobile utilizando linguagens, frameworks e ferramentas
+                        modernas.</p>
+                </div>
+
+                <div class="card card-interno">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);"><i
+                            class="fa-solid fa-database"></i></div>
+                    <h3>Banco de Dados</h3>
+                    <p>Modelagem, implementação e gerenciamento de bancos de dados para armazenamento e processamento de
+                        informações.</p>
+                </div>
+
+                <div class="card card-interno">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);"><i
+                            class="fa-solid fa-gears"></i></div>
+                    <h3>Engenharia de Software</h3>
+                    <p>Aplicação de metodologias, processes e boas práticas para o desenvolvimento de sistemas de
+                        qualidade.</p>
+                </div>
             </div>
-        </aside>
+        </section>
 
-        <div class="cidts-conteudo">
+        <!-- Painel: Matriz Curricular (Accordion) -->
+        <section class="universal-painel-card" id="disciplinas-ads" style="scroll-margin-top: 90px;">
+            <h2>Disciplinas do Curso</h2>
+            <p class="subtitulo-painel" style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-5);">Conheça
+                o objetivo e as competências desenvolvidas em algumas das principais disciplinas da matriz curricular do
+                curso. Clique em cada uma para ver os detalhes.</p>
 
-            <section class="universal-painel-card" id="sobre-ads">
-                <span class="tag-ads">
-                    <i class="fa-solid fa-code" style="margin-right: 6px;"></i> Tecnologia e Inovação
-                </span>
-
-                <h2 class="institucional_titulo" style="margin-top: 15px;">O Curso de ADS</h2>
-                <p class="institucional_texto">
-                    O curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas
-                    do IFCE Campus Boa Viagem forma profissionais capazes de analisar,
-                    projetar, desenvolver, testar e manter sistemas computacionais para
-                    diferentes áreas de atuação.
-                </p>
-                <p class="institucional_texto" style="margin-bottom: 0;">
-                    A formação combina conhecimentos teóricos e práticos, preparando os
-                    estudantes para atuar no mercado de tecnologia por meio do desenvolvimento
-                    de soluções inovadoras e alinhadas às demandas da transformação digital.
-                </p>
-            </section>
-
-            <section class="universal-painel-card" id="pilares-ads">
-                <h2 class="institucional_titulo">Eixos Disciplinares</h2>
-
-                <div class="ads-areas" style="margin-top: 20px; padding: 0;">
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span><i class="fa-solid fa-laptop-code"></i></span>
-                            <small>01</small>
-                        </div>
-                        <h3>Desenvolvimento de Software</h3>
-                        <p>
-                            Criação de aplicações web, desktop e mobile utilizando linguagens,
-                            frameworks e ferramentas modernas.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span><i class="fa-solid fa-database"></i></span>
-                            <small>02</small>
-                        </div>
-                        <h3>Banco de Dados</h3>
-                        <p>
-                            Modelagem, implementação e gerenciamento de bancos de dados para
-                            armazenamento e processamento de informações.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span><i class="fa-solid fa-gears"></i></span>
-                            <small>03</small>
-                        </div>
-                        <h3>Engenharia de Software</h3>
-                        <p>
-                            Aplicação de metodologias, processos e boas práticas para o
-                            desenvolvimento de sistemas de qualidade.
+            <div class="faq-lista">
+                <div class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
+                        Programação Orientada a Objetos
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p><strong>Objetivo:</strong> desenvolver a capacidade de modelar e implementar sistemas usando
+                            os conceitos de classes, herança, polimorfismo e encapsulamento.<br>
+                            <strong>Competências:</strong> organização de código, reuso e manutenção de software.
                         </p>
                     </div>
                 </div>
-            </section>
 
-            <section class="universal-painel-card" id="disciplinas-ads">
-                <h2 class="institucional_titulo">Disciplinas do Curso</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Conheça o objetivo e as competências desenvolvidas em algumas das
-                    principais disciplinas da matriz curricular do curso. Clique em cada uma
-                    para ver os detalhes.
-                </p>
-
-                <div class="faq-lista">
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Programação Orientada a Objetos
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> desenvolver a capacidade de modelar e
-                                implementar sistemas usando os conceitos de classes, herança,
-                                polimorfismo e encapsulamento.<br>
-                                <strong>Competências:</strong> lógica de programação avançada,
-                                organização de código, reuso e manutenção de software.<br>
-                                <strong>Área relacionada:</strong> Desenvolvimento de Software.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Banco de Dados I e II
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> capacitar o estudante a modelar,
-                                projetar e implementar bancos de dados relacionais eficientes
-                                e seguros.<br>
-                                <strong>Competências:</strong> modelagem entidade-relacionamento,
-                                normalização, SQL e administração de SGBDs.<br>
-                                <strong>Área relacionada:</strong> Banco de Dados.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Engenharia de Software
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> apresentar processos, metodologias
-                                ágeis e boas práticas para o planejamento e a gestão do ciclo
-                                de vida de sistemas de software.<br>
-                                <strong>Competências:</strong> levantamento de requisitos,
-                                gestão de projetos, trabalho em equipe e qualidade de software.<br>
-                                <strong>Área relacionada:</strong> Engenharia de Software.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Desenvolvimento Web
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> formar profissionais aptos a criar
-                                aplicações web completas, do front-end ao back-end.<br>
-                                <strong>Competências:</strong> HTML, CSS, JavaScript, frameworks
-                                modernos, APIs e integração com bancos de dados.<br>
-                                <strong>Área relacionada:</strong> Desenvolvimento de Software.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Redes de Computadores
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> compreender os fundamentos de
-                                comunicação de dados, protocolos e arquitetura de redes.<br>
-                                <strong>Competências:</strong> configuração de redes, segurança
-                                básica da informação e infraestrutura de TI.<br>
-                                <strong>Área relacionada:</strong> Infraestrutura e Redes.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Estrutura de Dados
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> estudar formas eficientes de
-                                organizar e manipular dados na memória do computador.<br>
-                                <strong>Competências:</strong> listas, pilhas, filas, árvores,
-                                grafos e análise de complexidade de algoritmos.<br>
-                                <strong>Área relacionada:</strong> Fundamentos da Computação.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Gestão de Projetos de TI
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> desenvolver habilidades de
-                                planejamento, execução e controle de projetos tecnológicos.<br>
-                                <strong>Competências:</strong> metodologias ágeis (Scrum, Kanban),
-                                gestão de equipes, prazos e riscos.<br>
-                                <strong>Área relacionada:</strong> Engenharia de Software.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-pergunta" type="button">
-                            Inteligência Artificial Aplicada
-                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-resposta">
-                            <p>
-                                <strong>Objetivo:</strong> introduzir conceitos de aprendizado
-                                de máquina e suas aplicações práticas no desenvolvimento de
-                                sistemas inteligentes.<br>
-                                <strong>Competências:</strong> análise de dados, algoritmos de
-                                classificação e introdução a bibliotecas de IA.<br>
-                                <strong>Área relacionada:</strong> Desenvolvimento de Software.
-                            </p>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
+                        Banco de Dados I e II
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p><strong>Objetivo:</strong> capacitar o estudante a modelar, projetar e implementar bancos de
+                            dados relacionais eficientes e seguros.<br>
+                            <strong>Competências:</strong> modelagem entidade-relacionamento, normalização e linguagem
+                            SQL.
+                        </p>
                     </div>
                 </div>
 
-                <div class="cidts-conexoes-container" style="margin-top: 20px;">
-                    <span class="cidts-conexoes-titulo">Matriz Curricular Completa:</span>
-                    <p class="institucional_texto"
-                        style="font-size: var(--fs-sm); margin: 0; color: var(--cor-texto-secundario);">
-                        A relação completa de disciplinas, com carga horária e ementa detalhada,
-                        está disponível no Projeto Pedagógico de Curso (PPC), acessível na
-                        <a href="links-uteis.html">página de Links Úteis</a>.
+                <div class="faq-item">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
+                        Desenvolvimento Web
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-resposta">
+                        <p><strong>Objetivo:</strong> formar profissionais aptos a criar aplicações web completas, do
+                            front-end ao back-end.<br>
+                            <strong>Competências:</strong> HTML, CSS, JavaScript, APIs e integração com servidores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="informativo-ppc"
+                style="margin-top: var(--sp-6); padding: var(--sp-4); background: var(--cor-fundo-secao); border-left: 4px solid var(--cor-primaria); border-radius: var(--raio-sm); font-size: var(--fs-sm);">
+                <strong>Matriz Curricular Completa:</strong> A relação completa de disciplinas, com carga horária e
+                ementa detalhada, está disponível no Projeto Pedagógico de Curso (PPC), acessível na <a
+                    href="links-uteis.html" style="color: var(--cor-primaria-hover); font-weight: 700;">página de Links
+                    Úteis</a>.
+            </div>
+        </section>
+
+        <!-- Painel: Diferenciais do Curso -->
+        <section class="universal-painel-card" id="diferenciais-ads" style="scroll-margin-top: 90px;">
+            <h2>Diferenciais do Curso</h2>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4);">
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <h3><i class="fa-solid fa-flask-vial" style="color: var(--cor-primaria); margin-right: 8px;"></i>
+                        Laboratórios</h3>
+                    <p>Estrutura voltada para atividades práticas e desenvolvimento de projetos tecnológicos modernos.
                     </p>
                 </div>
-            </section>
-
-            <section class="universal-painel-card" id="diferenciais-ads">
-                <h2 class="institucional_titulo">Diferenciais do Curso</h2>
-
-                <div class="ads-diferenciais" style="padding: 0; margin-top: 20px; background: transparent;">
-                    <div class="cards" style="margin-top: 0; padding: 0;">
-                        <div class="card">
-                            <h3><i class="fa-solid fa-flask-vial"
-                                    style="color: var(--cor-primaria); margin-right: 8px;"></i> Laboratórios</h3>
-                            <p>Estrutura voltada para atividades práticas e desenvolvimento de projetos tecnológicos.
-                            </p>
-                        </div>
-
-                        <div class="card">
-                            <h3><i class="fa-solid fa-rocket"
-                                    style="color: var(--cor-primaria); margin-right: 8px;"></i> Projetos</h3>
-                            <p>Participação em projetos de pesquisa, extensão e inovação acadêmica.</p>
-                        </div>
-
-                        <div class="card">
-                            <h3><i class="fa-solid fa-book-bookmark"
-                                    style="color: var(--cor-primaria); margin-right: 8px;"></i> Formação Atualizada</h3>
-                            <p>Conteúdos programáticos alinhados às tendências atuais do mercado de tecnologia.</p>
-                        </div>
-
-                        <div class="card">
-                            <h3><i class="fa-solid fa-user-tie"
-                                    style="color: var(--cor-primaria); margin-right: 8px;"></i> Integração Profissional
-                            </h3>
-                            <p>Desenvolvimento de soft skills e competências técnicas altamente valorizadas.</p>
-                        </div>
-                    </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <h3><i class="fa-solid fa-rocket" style="color: var(--cor-primaria); margin-right: 8px;"></i>
+                        Projetos</h3>
+                    <p>Participação ativa em projetos de pesquisa, inovação tecnológica e extensão universitária
+                        comunitária.</p>
                 </div>
-            </section>
-
-            <section class="universal-painel-card" id="carreira-ads">
-                <h2 class="institucional_titulo">Áreas de Atuação</h2>
-
-                <div class="ads-carreira" style="margin-top: 20px; padding: 0;">
-                    <div class="cards" style="margin-top: 0; padding: 0;">
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-globe"
-                                    style="margin-right: 10px;"></i>Desenvolvedor Web</h3>
-                        </div>
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-mobile-screen-button"
-                                    style="margin-right: 10px;"></i>Desenvolvedor Mobile</h3>
-                        </div>
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-diagram-project"
-                                    style="margin-right: 10px;"></i>Analista de Sistemas</h3>
-                        </div>
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-server"
-                                    style="margin-right: 10px;"></i>Admin de Banco de Dados</h3>
-                        </div>
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-bug-slash"
-                                    style="margin-right: 10px;"></i>Analista de Qualidade (QA)</h3>
-                        </div>
-                        <div class="card" style="min-height: auto; padding: 1.5rem;">
-                            <h3 style="margin:0; font-size: 1.1rem;"><i class="fa-solid fa-lightbulb"
-                                    style="margin-right: 10px;"></i>Empreendedor em TI</h3>
-                        </div>
-                    </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <h3><i class="fa-solid fa-user-tie" style="color: var(--cor-primaria); margin-right: 8px;"></i>
+                        Integração</h3>
+                    <p>Desenvolvimento focado em soft skills, metodologias ágeis e competências corporativas de alta
+                        demanda.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="universal-painel-card">
-                <h2 class="institucional_titulo">Tecnologia para Transformar Realidades</h2>
-                <p class="institucional_texto" style="margin-bottom: 0;">
-                    O curso de Análise e Desenvolvimento de Sistemas do IFCE Campus Boa
-                    Viagem busca formar profissionais inovadores, éticos e preparados para
-                    contribuir com o desenvolvimento tecnológico da região e do país.
-                </p>
-            </section>
-
-        </div>
+        <!-- Painel: Áreas de Atuação -->
+        <section class="universal-painel-card" id="carreira-ads" style="scroll-margin-top: 90px;">
+            <h2>Áreas de Atuação</h2>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4);">
+                <div class="card card-interno"
+                    style="display: flex; align-items: center; gap: 15px; padding: 15px; border: 1px solid var(--cor-borda);">
+                    <i class="fa-solid fa-globe" style="font-size: 1.5rem; color: var(--cor-primaria);"></i>
+                    <span style="font-weight: 600;">Desenvolvedor Web</span>
+                </div>
+                <div class="card card-interno"
+                    style="display: flex; align-items: center; gap: 15px; padding: 15px; border: 1px solid var(--cor-borda);">
+                    <i class="fa-solid fa-mobile-screen-button"
+                        style="font-size: 1.5rem; color: var(--cor-primaria);"></i>
+                    <span style="font-weight: 600;">Desenvolvedor Mobile</span>
+                </div>
+                <div class="card card-interno"
+                    style="display: flex; align-items: center; gap: 15px; padding: 15px; border: 1px solid var(--cor-borda);">
+                    <i class="fa-solid fa-diagram-project" style="font-size: 1.5rem; color: var(--cor-primaria);"></i>
+                    <span style="font-weight: 600;">Analista de Sistemas</span>
+                </div>
+                <div class="card card-interno"
+                    style="display: flex; align-items: center; gap: 15px; padding: 15px; border: 1px solid var(--cor-borda);">
+                    <i class="fa-solid fa-server" style="font-size: 1.5rem; color: var(--cor-primaria);"></i>
+                    <span style="font-weight: 600;">Admin de Banco de Dados</span>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_sobre">
-
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Ensino público, gratuito e de excelência em educação
-                    profissional, científica e tecnológica.
-                </p>
-
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
                 <div class="rodape_redes">
                     <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
-                        aria-label="Instagram do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
-                        aria-label="Facebook do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
-                        aria-label="YouTube do IFCE">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn do IFCE">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
-                        aria-label="Portal institucional do IFCE">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                        aria-label="Portal institucional do IFCE"><i class="fa-solid fa-globe"></i></a>
                 </div>
-
             </div>
 
             <div class="rodape_coluna">
@@ -451,44 +310,52 @@
                 </ul>
             </div>
 
-            <div class="rodape_coluna rodape_contato">
+            <div class="rodape_coluna r_contato">
                 <h4>Contato</h4>
                 <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        (85) 3401-2313
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
                 </ul>
                 <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
-
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
-            <p class="rodape_copia-secundaria">
-                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
         </div>
-
     </footer>
-    <script src="../scripts/script.js"></script>
+
     <script src="../js/menu.js"></script>
+    <script src="../js/busca.js"></script>
     <script src="../js/faq.js"></script>
+    <script src="../scripts/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const linksSidebar = document.querySelectorAll('.universal-sidebar a[href^="#"]');
+            linksSidebar.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 110;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

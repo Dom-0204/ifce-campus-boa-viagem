@@ -60,8 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resultados.length === 0) {
             buscaSugestoes.innerHTML = `<span class="busca-vazio">Nenhum resultado encontrado</span>`;
         } else {
+            // Verifica se a página atual já está dentro da pasta "Paginas"
+            const estouEmPaginas = window.location.pathname.includes("/Paginas/");
+
             buscaSugestoes.innerHTML = resultados
-                .map((r) => `<a href="${r.url}">${r.titulo}</a>`)
+                .map((r) => {
+                    // Se já estou na pasta Paginas e o link começa com Paginas/, removemos o excesso
+                    let urlCorrigida = r.url;
+                    if (estouEmPaginas && urlCorrigida.startsWith("Paginas/")) {
+                        urlCorrigida = urlCorrigida.replace("Paginas/", "");
+                    } else if (!estouEmPaginas && !urlCorrigida.startsWith("Paginas/") && urlCorrigida !== "index.html") {
+                        // Se estou na raiz e o link não tem Paginas/, adiciona (exceto index)
+                        urlCorrigida = "Paginas/" + urlCorrigida;
+                    }
+                    return `<a href="${urlCorrigida}">${r.titulo}</a>`;
+                })
                 .join("");
         }
 
@@ -87,7 +100,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (primeiro) {
-            window.location.href = primeiro.url;
+            const estouEmPaginas = window.location.pathname.includes("/Paginas/");
+            let urlFinal = primeiro.url;
+
+            if (estouEmPaginas && urlFinal.startsWith("Paginas/")) {
+                urlFinal = urlFinal.replace("Paginas/", "");
+            }
+            window.location.href = urlFinal;
         }
     }
 
