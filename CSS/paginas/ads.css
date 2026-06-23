@@ -18,11 +18,14 @@
 
 /* Banner Hero Interno Premium */
 .ads-hero-header {
-    background-color: var(--cor-primaria-hover);
-    background-image: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-hover) 100%);
+    background:
+        linear-gradient(135deg, rgba(20, 108, 67, 0.88), rgba(25, 135, 84, 0.92)),
+        url("../../images/ads.png") center/cover no-repeat;
+
     padding: 160px var(--sp-5) 120px;
     text-align: center;
     color: var(--cor-texto-banner);
+    position: relative;
 }
 
 .ads-hero-header h1 {
@@ -36,10 +39,11 @@
     font-size: var(--fs-md);
     max-width: 720px;
     margin: 0 auto;
-    color: var(--cor-texto-banner-secundario);
+    color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.6;
-    background-color: var(--cor-primaria-hover);
-    transform: translateY(-6px);
+    background-color: transparent !important;
+    transform: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Componente Corporativo: Barra Lateral Flutuante */
@@ -343,26 +347,30 @@ body.dark-mode .card-interno:hover {
 }
 
 body.dark-mode .ads-hero-header p {
-    text-shadow: none !important;
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.9) !important;
-    background-color: var(--cor-primaria);
+    line-height: 1.6;
+    background-color: transparent !important;
+    transform: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Força o menu mobile a ter um fundo preto translúcido com efeito de vidro fosco */
-body.dark-mode .cabecalho_nav {
-    background: rgba(10, 12, 10, 0.85) !important;
-    /* Preto da identidade com 85% de opacidade */
+body.dark-mode .cabecalho {
+    background: rgba(10, 12, 10, 0.8) !important;
     backdrop-filter: blur(12px) !important;
-    /* Desfoca o conteúdo que passar por baixo */
     -webkit-backdrop-filter: blur(12px) !important;
-    /* Garante compatibilidade com o Safari/iOS */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+body.dark-mode .cabecalho_nav,
 body.dark-mode .cabecalho_links {
     background: transparent !important;
+    background-color: transparent !important;
 }
 
 body.dark-mode .cabecalho_nav_ancoras {
     color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
