@@ -1,15 +1,54 @@
 /* ==========================================================
    LINKS ÚTEIS
    Usado por: links-uteis.html
-   Reutiliza grids e títulos de institucional.css — aqui só o
-   componente novo desta página: o link de saída para sistemas externos.
    ========================================================== */
 
+/* --- BANNER PRINCIPAL (SUAVIZADO) --- */
+.links-banner-hero {
+    background:
+        linear-gradient(135deg, rgba(14, 60, 38, 0.92), rgba(20, 90, 56, 0.95)),
+        url("../../images/noticias.jpeg") center/cover no-repeat !important;
+    /* Reutiliza o fundo institucional padrão */
+    padding: 160px var(--sp-5) 120px !important;
+    text-align: center;
+    position: relative;
+}
+
+.links-banner-hero h1 {
+    font-size: clamp(2.2rem, 5vw, var(--fs-3xl)) !important;
+    margin-bottom: var(--sp-4);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--cor-texto-banner) !important;
+}
+
+.links-banner-hero p {
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.6;
+    background-color: transparent !important;
+    transform: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- GRID DE LARGURA UNIFICADA (1200PX) --- */
+.main-pagina-interna {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: var(--sp-12) auto var(--sp-16) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--sp-8) !important;
+}
+
+/* --- ELEMENTOS DOS LINKS ÚTEIS --- */
 .infraestrutura_item {
     gap: var(--sp-2);
 }
 
-.infraestrutura_item h4 i {
+.card-interno h4 i {
     color: var(--cor-primaria);
     margin-right: 6px;
 }
@@ -19,11 +58,13 @@
     align-items: center;
     gap: 6px;
     margin-top: auto;
-    padding-top: var(--sp-2);
+    /* Empurra o link para o final do card uniformemente */
+    padding-top: var(--sp-4);
     color: var(--cor-primaria-hover);
     font-weight: 600;
     font-size: var(--fs-sm);
     transition: var(--transicao-rapida);
+    text-decoration: none;
 }
 
 .link-externo i {
@@ -37,4 +78,66 @@
 
 .link-externo:hover i {
     transform: translate(2px, -2px);
+}
+
+/* ==========================================================
+   DARK MODE — LINKS ÚTEIS
+   ========================================================== */
+
+body.dark-mode .universal-painel-card {
+    background: #1e1e1e !important;
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .universal-painel-card h2,
+body.dark-mode .universal-painel-card p {
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .card-interno {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-left-color: var(--cor-borda) !important;
+    border-right-color: var(--cor-borda) !important;
+    border-bottom-color: var(--cor-borda) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card-interno[style*="border-top"] {
+    border-top: 4px solid var(--cor-primaria) !important;
+}
+
+body.dark-mode .card-interno h4,
+body.dark-mode .card-interno strong {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card-interno h4 i {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .card-interno p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+body.dark-mode .link-externo {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .link-externo:hover {
+    color: var(--cor-primaria) !important;
+}
+
+@media (max-width: 768px) {
+    header.cabecalho {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+
+    body.dark-mode .cabecalho_nav {
+        background: rgba(15, 18, 15, 0.94) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
 }

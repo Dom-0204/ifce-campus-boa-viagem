@@ -8,244 +8,252 @@
     <meta name="description"
         content="Acesso rápido aos principais sistemas e portais do IFCE: Q-Acadêmico, SUAP, Biblioteca Virtual, calendário acadêmico e editais.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="stylesheet" href="../CSS/componentes.css">
-    <link rel="stylesheet" href="../CSS/paginas/universal.css">
-    <link rel="stylesheet" href="../CSS/paginas/institucional.css">
+    <link rel="stylesheet" href="../CSS/paginas/ads.css">
     <link rel="stylesheet" href="../CSS/paginas/links-uteis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">Links Úteis</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras ativo" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="disciplinas.html">Disciplinas</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras ativo" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
-    <section class="institucional-banner">
-        <div class="institucional-banner-filtro">
-            <h1>Links Úteis</h1>
-            <p>
-                Acesso rápido aos principais sistemas, portais e serviços que você vai usar
-                durante toda a sua trajetória no IFCE.
-            </p>
-        </div>
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">
+            <i class="fa-solid fa-sun" style="font-size: 1.2rem;"></i>
+        </span>
+    </button>
+
+    <section class="ads-hero-header links-banner-hero">
+        <h1>Links Úteis</h1>
+        <p>Acesso rápido aos principais sistemas, portais e serviços que você vai usar durante toda a sua trajetória no
+            IFCE.</p>
     </section>
 
-    <main class="main universal-container">
+    <main class="main-pagina-interna"
+        style="max-width: 1200px; width: 100%; margin: var(--sp-12) auto var(--sp-16); padding: 0 20px; display: flex; flex-direction: column; gap: var(--sp-8); position: relative; z-index: 10;">
 
-        <aside class="universal-sidebar">
-            <h3>Navegação</h3>
-            <ul>
-                <li><a href="#sistemas-academicos">Sistemas Acadêmicos</a></li>
-                <li><a href="#biblioteca">Biblioteca</a></li>
-                <li><a href="#documentos">Documentos e Editais</a></li>
-                <li><a href="#suporte">Suporte ao Aluno</a></li>
-            </ul>
-            <div class="sidebar-badge">
-                <strong>Acesso Rápido</strong>
-                <span>Portal do Aluno</span>
+        <section class="universal-painel-card" id="sistemas-academicos">
+            <div class="card-tag">Plataformas</div>
+            <h2>Sistemas Acadêmicos</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-5);">Plataformas oficiais do IFCE para
+                matrícula, notas, frequência, e-mail institucional e demais serviços acadêmicos.</p>
+
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-5);">
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <strong>Q-Acadêmico</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Matrícula em disciplinas, notas,
+                        frequência, histórico escolar e horários de turma.</p>
+                    <a class="link-externo" href="https://qacademico.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar Q-Acadêmico <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-server" aria-hidden="true"></i> <strong>SUAP</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Sistema Unificado de Administração
+                        Pública: e-mail institucional, documentos e requerimentos.</p>
+                    <a class="link-externo" href="https://suap.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar SUAP <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> <strong>SisAE</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Sistema de Assistência Estudantil:
+                        acompanhamento de auxílios, bolsas e benefícios para alunos.</p>
+                    <a class="link-externo" href="https://sisae.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar SisAE <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-house-laptop" aria-hidden="true"></i> <strong>Portal do Aluno</strong>
+                    </h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Informações gerais sobre calendário,
+                        horários e o Regulamento da Organização Didática.</p>
+                    <a class="link-externo" href="https://portal.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar Portal IFCE <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-        </aside>
+        </section>
 
-        <div class="universal-conteudo">
+        <section class="universal-painel-card" id="biblioteca">
+            <h2>Biblioteca</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-5);">Acervo físico e digital
+                disponível gratuitamente para toda a comunidade acadêmica.</p>
 
-            <section class="universal-painel-card" id="sistemas-academicos">
-                <h2 class="institucional_titulo">Sistemas Acadêmicos</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Plataformas oficiais do IFCE para matrícula, notas, frequência, e-mail
-                    institucional e demais serviços acadêmicos.
-                </p>
-
-                <div class="infraestrutura_grid">
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <strong>Q-Acadêmico</strong>
-                        </h4>
-                        <p>Matrícula em disciplinas, notas, frequência, histórico escolar e horários de turma.</p>
-                        <a class="link-externo" href="https://qacademico.ifce.edu.br" target="_blank"
-                            rel="noopener">
-                            Acessar Q-Acadêmico <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-server" aria-hidden="true"></i> <strong>SUAP</strong></h4>
-                        <p>Sistema Unificado de Administração Pública: e-mail institucional, documentos e
-                            requerimentos.</p>
-                        <a class="link-externo" href="https://suap.ifce.edu.br" target="_blank" rel="noopener">
-                            Acessar SUAP <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> <strong>SisAE</strong>
-                        </h4>
-                        <p>Sistema de Assistência Estudantil: auxílios, bolsas e benefícios para alunos.</p>
-                        <a class="link-externo" href="https://sisae.ifce.edu.br" target="_blank" rel="noopener">
-                            Acessar SisAE <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-house-laptop" aria-hidden="true"></i> <strong>Portal do
-                                Aluno</strong></h4>
-                        <p>Informações gerais sobre calendário, horários e o Regulamento da Organização Didática.</p>
-                        <a class="link-externo" href="https://portal.ifce.edu.br" target="_blank" rel="noopener">
-                            Acessar Portal IFCE <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </div>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--sp-5);">
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-book" aria-hidden="true"></i> <strong>SIBI</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Sistema de Bibliotecas do IFCE:
+                        consulta ao acervo físico, normalização de trabalhos acadêmicos e ferramentas de pesquisa.</p>
+                    <a class="link-externo" href="https://biblioteca.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar SIBI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
-            </section>
 
-            <section class="universal-painel-card" id="biblioteca">
-                <h2 class="institucional_titulo">Biblioteca</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Acervo físico e digital disponível gratuitamente para toda a comunidade acadêmica.
-                </p>
-
-                <div class="infraestrutura_grid">
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-book" aria-hidden="true"></i> <strong>SIBI</strong></h4>
-                        <p>Sistema de Bibliotecas do IFCE: consulta ao acervo, normalização de trabalhos acadêmicos e
-                            ferramentas de pesquisa.</p>
-                        <a class="link-externo" href="https://biblioteca.ifce.edu.br" target="_blank"
-                            rel="noopener">
-                            Acessar SIBI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-book-open" aria-hidden="true"></i> <strong>Biblioteca
-                                Virtual</strong></h4>
-                        <p>Milhares de livros digitais para consulta gratuita. Login com matrícula e senha do SUAP.
-                        </p>
-                        <a class="link-externo" href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">
-                            Acessar Biblioteca Virtual <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </div>
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-book-open" aria-hidden="true"></i> <strong>Biblioteca Virtual</strong>
+                    </h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Milhares de livros digitais técnicos
+                        para consulta gratuita em e-books. Autenticação com matrícula e senha do SUAP.</p>
+                    <a class="link-externo" href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">
+                        Acessar Biblioteca Virtual <i class="fa-solid fa-arrow-up-right-from-square"
+                            aria-hidden="true"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="universal-painel-card" id="documentos">
-                <h2 class="institucional_titulo">Documentos e Editais</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    Acesso a documentos oficiais, calendário acadêmico e editais vigentes.
-                </p>
+        <section class="universal-painel-card" id="documentos">
+            <h2>Documentos e Editais</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-5);">Acesso direto a repositórios de
+                documentos oficiais, calendários e editais vigentes.</p>
 
-                <div class="infraestrutura_grid">
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <strong>Calendário
-                                Acadêmico</strong></h4>
-                        <p>Datas de matrícula, ajuste, provas e demais prazos do semestre letivo.</p>
-                        <a class="link-externo" href="https://portal.ifce.edu.br" target="_blank" rel="noopener">
-                            Consultar Calendário <i class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-file-signature" aria-hidden="true"></i> <strong>Editais e
-                                Processos Seletivos</strong></h4>
-                        <p>Editais de ingresso, bolsas, monitoria e demais seleções abertas no campus.</p>
-                        <a class="link-externo" href="ingresso.html">
-                            Ver Formas de Ingresso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div class="infraestrutura_item">
-                        <h4><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <strong>Documentos
-                                Acadêmicos</strong></h4>
-                        <p>Projeto Pedagógico de Curso (PPC), matriz curricular e regulamentos institucionais.</p>
-                        <a class="link-externo" href="ads.html">
-                            Ver na página do Curso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-5);">
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <strong>Calendário
+                            Acadêmico</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Início e Final de Etapa, Feriados,
+                        Matrículas de veteranos, Sabados letivo, Período de Avaliação Final e Férias.</p>
+                    <a class="link-externo" href="../docs/CALENDÁRIO LETIVO.pdf" target="_blank" rel="noopener">
+                        Consultar Calendário <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
-            </section>
 
-            <section class="universal-painel-card" id="suporte">
-                <h2 class="institucional_titulo">Suporte ao Aluno</h2>
-                <p class="institucional_texto">
-                    Em caso de dúvidas sobre qualquer um dos sistemas acima, a Coordenadoria de
-                    Tecnologia da Informação (CTI) e a Secretaria Acadêmica do campus podem ajudar.
-                </p>
-
-                <div class="institucional_botao">
-                    <a href="contato.html" class="botao">Falar com a Coordenação</a>
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-file-signature" aria-hidden="true"></i> <strong>Editais e
+                            Seleções</strong></h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Editais de ingresso, bolsas de estudo,
+                        projetos de monitoria e demais processos seletivos do campus.</p>
+                    <a class="link-externo" href="ingresso.html">
+                        Ver Formas de Ingresso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
-            </section>
 
-        </div>
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); display: flex; flex-direction: column;">
+                    <h4><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <strong>Documento do Curso</strong>
+                    </h4>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Projeto Pedagógico de Curso (PPC) de
+                        Análise e Desenvimento de Sistemas</p>
+                    <a class="link-externo" href="../docs/PPC ADS IFCE BOA VIAGEM.pdf">
+                        Ver Documento <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="universal-painel-card" id="suporte">
+            <h2>Suporte ao Aluno</h2>
+            <p>Em caso de dúvidas técnicas de acesso ou dificuldades com os portais listados, a Coordenadoria de
+                Tecnologia da Informação (CTI) ou a Secretaria Acadêmica do campus Boa Viagem estão disponíveis para
+                suporte.</p>
+            <div style="margin-top: var(--sp-5); text-align: center;">
+                <a href="contato.html" class="botao-2"
+                    style="padding: var(--sp-3) var(--sp-6); display: inline-block; font-weight: 600;">Falar com a
+                    Coordenação</a>
+            </div>
+        </section>
+
     </main>
 
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_sobre">
-
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Ensino público, gratuito e de excelência em educação
-                    profissional, científica e tecnológica.
-                </p>
-
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
                 <div class="rodape_redes">
                     <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
-                        aria-label="Instagram do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
-                        aria-label="Facebook do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
-                        aria-label="YouTube do IFCE">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn do IFCE">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
-                        aria-label="Portal institucional do IFCE">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                        aria-label="Portal institutional do IFCE"><i class="fa-solid fa-globe"></i></a>
                 </div>
-
             </div>
 
             <div class="rodape_coluna">
@@ -288,41 +296,26 @@
                 </ul>
             </div>
 
-            <div class="rodape_coluna rodape_contato">
+            <div class="rodape_coluna r_contato">
                 <h4>Contato</h4>
                 <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        (85) 3401-2313
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
                 </ul>
                 <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
-
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
-            <p class="rodape_copia-secundaria">
-                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
         </div>
-
     </footer>
+
+    <script src="../js/busca.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
 </body>
