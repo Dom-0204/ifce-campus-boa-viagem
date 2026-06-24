@@ -16,12 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Função utilitária para remover acentos e ignorar maiúsculas/minúsculas
-    // Transforma "Extensão" em "extensao"
     const normalizarTexto = (texto) => {
         return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     };
 
-    // Índice do portal com sistema de "tags" invisíveis para deixar a busca mais inteligente.
+    // Índice do portal padronizado
     const indicePortal = [
         { titulo: "Sobre o Curso de ADS", url: "Paginas/ads.html", tags: "tecnologia programacao grade matriz" },
         { titulo: "Professores", url: "Paginas/professores.html", tags: "docentes corpo coordenacao" },
@@ -39,6 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
         { titulo: "Links Úteis", url: "Paginas/links-uteis.html", tags: "suap q-academico biblioteca" },
     ];
 
+    // CORREÇÃO MESTRE: Validação de rota agora ignora se "paginas" está maiúsculo ou minúsculo
+    function obterUrlCorrigida(urlOriginal) {
+        if (urlOriginal.startsWith("#")) return urlOriginal;
+
+        const estouEmPaginas = window.location.pathname.toLowerCase().includes("/paginas/");
+        let urlCorrigida = urlOriginal;
+
+        if (estouEmPaginas) {
+            if (urlCorrigida.startsWith("Paginas/")) {
+                urlCorrigida = urlCorrigida.replace("Paginas/", "");
+            } else if (urlCorrigida === "index.html") {
+                urlCorrigida = "../index.html"; // Garante retorno correto para a raiz de qualquer lugar
+            }
+        } else {
+            if (!urlCorrigida.startsWith("Paginas/") && urlCorrigida !== "index.html") {
+                urlCorrigida = "Paginas/" + urlCorrigida;
+            }
+        }
+        return urlCorrigida;
+    }
+
     function buscar(termoOriginal) {
         const termoOriginalLimpo = termoOriginal.trim();
         const termoNormalizado = normalizarTexto(termoOriginalLimpo);
@@ -49,31 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Filtra comparando o texto normalizado tanto no título quanto nas tags
         const resultados = indicePortal.filter((item) => {
             const tituloNormalizado = normalizarTexto(item.titulo);
             const tagsNormalizadas = normalizarTexto(item.tags || "");
-
             return tituloNormalizado.includes(termoNormalizado) || tagsNormalizadas.includes(termoNormalizado);
         });
 
         if (resultados.length === 0) {
             buscaSugestoes.innerHTML = `<span class="busca-vazio">Nenhum resultado encontrado</span>`;
         } else {
-            // Verifica se a página atual já está dentro da pasta "Paginas"
-            const estouEmPaginas = window.location.pathname.includes("/Paginas/");
-
             buscaSugestoes.innerHTML = resultados
                 .map((r) => {
-                    // Se já estou na pasta Paginas e o link começa com Paginas/, removemos o excesso
-                    let urlCorrigida = r.url;
-                    if (estouEmPaginas && urlCorrigida.startsWith("Paginas/")) {
-                        urlCorrigida = urlCorrigida.replace("Paginas/", "");
-                    } else if (!estouEmPaginas && !urlCorrigida.startsWith("Paginas/") && urlCorrigida !== "index.html") {
-                        // Se estou na raiz e o link não tem Paginas/, adiciona (exceto index)
-                        urlCorrigida = "Paginas/" + urlCorrigida;
-                    }
-                    return `<a href="${urlCorrigida}">${r.titulo}</a>`;
+                    const urlFinal = obterUrlCorrigida(r.url);
+                    return `<a href="${urlFinal}">${r.titulo}</a>`;
                 })
                 .join("");
         }
@@ -100,13 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (primeiro) {
-            const estouEmPaginas = window.location.pathname.includes("/Paginas/");
-            let urlFinal = primeiro.url;
-
-            if (estouEmPaginas && urlFinal.startsWith("Paginas/")) {
-                urlFinal = urlFinal.replace("Paginas/", "");
-            }
-            window.location.href = urlFinal;
+            window.location.href = obterUrlCorrigida(primeiro.url);
         }
     }
 
@@ -123,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Fecha as sugestões ao clicar fora da barra de busca
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".cabecalho-busca")) {
             buscaSugestoes.hidden = true;

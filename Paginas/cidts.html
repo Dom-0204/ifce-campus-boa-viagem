@@ -8,233 +8,246 @@
     <meta name="description"
         content="Laboratório de Inovação e Difusão de Tecnologias para o Semiárido do IFCE Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="stylesheet" href="../CSS/componentes.css">
-    <link rel="stylesheet" href="../CSS/paginas/universal.css">
+    <link rel="stylesheet" href="../CSS/paginas/ads.css">
+    <link rel="stylesheet" href="../CSS/paginas/cidts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">CIDTS</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras ativo" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras ativo" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
-    <div class="cidts-banner">
-        <div class="cidts-banner-filtro">
-            <h1>CIDTS</h1>
-            <p>Centro de Inovação e Difusão de Tecnologias para o Semiárido</p>
-        </div>
-    </div>
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">
+            <i class="fa-solid fa-sun" style="font-size: 1.2rem;"></i>
+        </span>
+    </button>
 
-    <main class="main universal-container">
+    <section class="ads-hero-header cidts-banner-hero">
+        <h1>Centro de Inovação (<strong>CIDTS</strong>)</h1>
+        <p>Centro de Inovação e Difusão de Tecnologias para o Semiárido</p>
+    </section>
 
-        <aside class="universal-sidebar">
-            <h3>Navegação</h3>
-            <ul>
-                <li><a href="#sobre-o-proj">O Projeto</a></li>
-                <li><a href="#ligacao-ads">Ligação com o Curso</a></li>
-                <li><a href="#cadeias-produtivas">Cadeias Atendidas</a></li>
-                <li><a href="#ecossistema">Nosso Ecossistema</a></li>
-                <li><a href="#metricas-cidts">Indicadores</a></li>
-            </ul>
-            <div class="sidebar-badge">
-                <strong>CIDTS</strong>
-                <span>IFCE Boa Viagem</span>
-            </div>
-        </aside>
+    <main class="main-pagina-interna"
+        style="max-width: 1200px; width: 100%; margin: var(--sp-12) auto var(--sp-16); padding: 0 20px; display: flex; flex-direction: column; gap: var(--sp-8); position: relative; z-index: 10;">
 
-        <section class="universal-conteudo">
-
-            <div class="universal-painel-card" id="sobre-o-proj">
-                <h2 class="institucional_titulo">O que é o CIDTS?</h2>
-                <p class="institucional_texto">
-                    O <strong>Centro de Inovação e Difusão de Tecnologias para o Semiárido – CIDTS</strong> é 
-                    fruto de uma parceria entre o IFCE e o Ministério da Integração e do Desenvolvimento 
-                    Regional (MIDR), por meio do programa Rotas da Integração Nacional. Nós atendemos aos 
-                    diversos eixos estratégicos pertencentes às rotas do leite, mel, cordeiro e fruticultura 
-                    através da extensão tecnológica, capacitação técnica e reciclagem, suporte aos produtores 
-                    e geração de um espaço dinâmico de negócios e startups.
-                </p>
-            </div>
-
-            <div class="universal-painel-card" id="ligacao-ads">
-                <h2 class="institucional_titulo">Qual a importancia de ADS no Projeto?</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">Ele, assim como
-                    os outros cursos da instituição, tem atuação direta em todos
-                    os projetos realizados, os alunos tem a liberdade de iniciar ou ingressar
-                    projetos e serem acompanhados por um professor responsável.
-                </p>
-
-                <div class="cidts-timeline">
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">01</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Inovação Aplicada</h4>
-                            <p>Pesquisa tecnológica focada no desenvolvimento de soluções computacionais sob medida para
-                                resolver gargalos operacionais locais.</p>
-                        </div>
-                    </div>
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">02</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Capacitação Tecnológica</h4>
-                            <p>Transferência de conhecimento para o homem do campo, promovendo a apropriação e o uso
-                                prático de novas ferramentas digitais.</p>
-                        </div>
-                    </div>
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">03</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Geração de Negócios</h4>
-                            <p>Aceleração de ideias e fomento ao ecossistema de startups rurais através da nossa
-                                Incubadora de Empresas local.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="universal-painel-card" id="cadeias-produtivas">
-                <h2 class="institucional_titulo">Impacto nas Cadeias Produtivas</h2>
-                <p class="institucional_texto">Desenvolvemos soluções em TIC para gerenciar empreendimentos rurais e
-                    profissionalizar os arranjos econômicos:</p>
-
-                <div class="cidts-setores-grid">
-                    <div class="cidts-setor-item">
-                        <span class="cidts-setor-tag">Leite e Derivados</span>
-                        <p>Automação e controle de dados logísticos de coleta e verificação de padrões de qualidade para
-                            os produtores locais de laticínios.</p>
-                    </div>
-                    <div class="cidts-setor-item">
-                        <span class="cidts-setor-tag">Mel e Apicultura</span>
-                        <p>Rastreabilidade digital e mapeamento georreferenciado de floradas, agregando valor de mercado
-                            ao mel do Sertão Central.</p>
-                    </div>
-                    <div class="cidts-setor-item">
-                        <span class="cidts-setor-tag">Fruticultura</span>
-                        <p>Softwares aplicados ao monitoramento climático do solo, previsão de safras e otimização dos
-                            recursos hídricos.</p>
-                    </div>
-                    <div class="cidts-setor-item">
-                        <span class="cidts-setor-tag">Cadeia do Cordeiro</span>
-                        <p>Sistemas inteligentes voltados à ovinocultura, auxiliando no controle de manejo e
-                            comercialização dos rebanhos.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4: Estrutura Modular Avançada (Sem o bug de colunas) -->
-            <div class="universal-painel-card" id="ecossistema">
-                <h2 class="institucional_titulo">Ecossistema Conectado</h2>
-
-                <p class="institucional_texto">
-                    A infraestrutura física do cidts engloba um <strong>Laboratório de Tecnologia da Informação e
-                        Comunicação</strong> de última geração e espaço planejado para a nossa <strong>Incubadora de
-                        Empresas</strong>. Operamos sob uma governança unificada voltada a levar soluções reais ao
-                    Semiárido cearense.
-                </p>
-
-                <div class="cidts-conexoes-container">
-                    <span class="cidts-conexoes-titulo">Atuação Integrada em Rede:</span>
-                    <div class="cidts-conexoes-grid">
-                        <div class="cidts-conexao-tag">IFCE Crateús</div>
-                        <div class="cidts-conexao-tag">IFCE Tauá</div>
-                        <div class="cidts-conexao-tag">IFCE Iguatu</div>
-                    </div>
-                </div>
-
-                <div class="cidts-ecossistema-botoes">
-                    <a class="botao" href="bolsas.html">Ver Oportunidades de Bolsas</a>
-                </div>
-            </div>
-
-            <div class="universal-painel-card" id="metricas-cidts">
-                <h2 class="institucional_titulo">Recursos Humanos Dedicados</h2>
-                <div class="institucional_numeros" style="margin-top: 20px;">
-                    <div class="numero_card">
-                        <h3>20</h3>
-                        <p>Servidores</p>
-                    </div>
-                    <div class="numero_card">
-                        <h3>18</h3>
-                        <p>Egressos atuantes</p>
-                    </div>
-                    <div class="numero_card">
-                        <h3>17</h3>
-                        <p>Alunos Pesquisadores</p>
-                    </div>
-                </div>
-            </div>
-
+        <section class="universal-painel-card" id="sobre-o-proj">
+            <div class="card-tag">O Projeto</div>
+            <h2>O que é o CIDTS?</h2>
+            <p class="institucional_texto">
+                O <strong>Centro de Inovação e Difusão de Tecnologias para o Semiárido – CIDTS</strong> é
+                fruto de uma parceria entre o IFCE e o Ministério da Integração e do Desenvolvimento
+                Regional (MIDR), por meio do programa Rotas da Integração Nacional. Nós atendemos aos
+                diversos eixos estratégicos pertencentes às rotas do leite, mel, cordeiro e fruticultura
+                através da extensão tecnológica, capacitação técnica e reciclagem, suporte aos produtores
+                e geração de um espaço dinâmico de negócios e startups.
+            </p>
         </section>
+
+        <section class="universal-painel-card" id="ligacao-ads">
+            <h2>Qual a importância de ADS no Projeto?</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-4);">
+                Assim como os demais cursos da instituição, Análise e Desenvolvimento de Sistemas tem atuação direta em
+                todas as iniciativas realizadas. Os alunos têm total autonomia para propor, liderar ou integrar projetos
+                de inovação aplicada sob a mentoria direta do corpo docente do campus.
+            </p>
+
+            <div class="cidts-timeline">
+                <div class="cidts-timeline-item">
+                    <div class="cidts-timeline-numero">01</div>
+                    <div class="cidts-timeline-texto">
+                        <h4>Inovação Aplicada</h4>
+                        <p>Pesquisa tecnológica focada no desenvolvimento de soluções computacionais sob medida para
+                            resolver gargalos operacionais locais.</p>
+                    </div>
+                </div>
+                <div class="cidts-timeline-item">
+                    <div class="cidts-timeline-numero">02</div>
+                    <div class="cidts-timeline-texto">
+                        <h4>Capacitação Tecnológica</h4>
+                        <p>Transferência de conhecimento para o homem do campo, promovendo a apropriação e o uso prático
+                            de novas ferramentas digitais.</p>
+                    </div>
+                </div>
+                <div class="cidts-timeline-item">
+                    <div class="cidts-timeline-numero">03</div>
+                    <div class="cidts-timeline-texto">
+                        <h4>Geração de Negócios</h4>
+                        <p>Aceleração de ideias e fomento ao ecossistema de startups rurais através da nossa Incubadora
+                            de Empresas local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="universal-painel-card" id="cadeias-produtivas">
+            <h2>Impacto nas Cadeias Produtivas</h2>
+            <p style="color: var(--cor-texto-secundario); margin-bottom: var(--sp-2);">Desenvolvemos soluções em TIC
+                para gerenciar empreendimentos rurais e profissionalizar os arranjos econômicos do Sertão Central:</p>
+
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sp-4); margin-top: var(--sp-4);">
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span class="cidts-setor-tag">Leite e Derivados</span>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Automação e controle de dados
+                        logísticos de coleta e verificação de padrões de qualidade para os produtores locais de
+                        laticínios.</p>
+                </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span class="cidts-setor-tag">Mel e Apicultura</span>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Rastreabilidade digital e mapeamento
+                        georreferenciado de floradas, agregando valor de mercado ao mel do Sertão Central.</p>
+                </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span class="cidts-setor-tag">Fruticultura</span>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Softwares aplicados ao monitoramento
+                        climático do solo, previsão de safras e otimização dos recursos hídricos rurais.</p>
+                </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span class="cidts-setor-tag">Cadeia do Cordeiro</span>
+                    <p style="font-size: var(--fs-sm); margin-top: var(--sp-2);">Sistemas inteligentes voltados à
+                        ovinocultura, auxiliando no controle de manejo e comercialização ágil dos rebanhos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="universal-painel-card" id="ecossistema">
+            <h2>Ecossistema Conectado</h2>
+            <p>
+                A infraestrutura física do CIDTS engloba um <strong>Laboratório de Tecnologia da Informação e
+                    Comunicação</strong> de última geração e espaço planejado para a nossa <strong>Incubadora de
+                    Empresas</strong>. Operamos sob uma governança unificada voltada a levar soluções reais ao Semiárido
+                cearense.
+            </p>
+
+            <div class="cidts-conexoes-container">
+                <span class="cidts-conexoes-titulo">Atuação Integrada em Rede:</span>
+                <div class="cidts-conexoes-grid">
+                    <div class="cidts-conexao-tag">IFCE Crateús</div>
+                    <div class="cidts-conexao-tag">IFCE Tauá</div>
+                    <div class="cidts-conexao-tag">IFCE Iguatu</div>
+                </div>
+            </div>
+
+            <div class="cidts-ecossistema-botoes" style="margin-top: var(--sp-5);">
+                <a class="botao-2" href="bolsas.html"
+                    style="padding: var(--sp-3) var(--sp-6); display: inline-block; font-weight: 600;">Ver Oportunidades
+                    de Bolsas</a>
+            </div>
+        </section>
+
+        <section class="universal-painel-card" id="metricas-cidts">
+            <h2>Recursos Humanos Dedicados</h2>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-5); margin-top: var(--sp-4);">
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); text-align: center; padding: var(--sp-6);">
+                    <h3
+                        style="font-size: 3rem; color: var(--cor-primaria); font-weight: 800; margin-bottom: var(--sp-1);">
+                        20</h3>
+                    <p style="font-weight: 600; color: var(--cor-texto);">Servidores Dedicados</p>
+                </div>
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); text-align: center; padding: var(--sp-6);">
+                    <h3
+                        style="font-size: 3rem; color: var(--cor-primaria); font-weight: 800; margin-bottom: var(--sp-1);">
+                        18</h3>
+                    <p style="font-weight: 600; color: var(--cor-texto);">Egressos Atuantes</p>
+                </div>
+                <div class="card card-interno"
+                    style="border-top: 4px solid var(--cor-primaria); text-align: center; padding: var(--sp-6);">
+                    <h3
+                        style="font-size: 3rem; color: var(--cor-primaria); font-weight: 800; margin-bottom: var(--sp-1);">
+                        17</h3>
+                    <p style="font-weight: 600; color: var(--cor-texto);">Alunos Pesquisadores</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_sobre">
-
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Ensino público, gratuito e de excelência em educação
-                    profissional, científica e tecnológica.
-                </p>
-
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
                 <div class="rodape_redes">
                     <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
-                        aria-label="Instagram do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
-                        aria-label="Facebook do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
-                        aria-label="YouTube do IFCE">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn do IFCE">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
-                        aria-label="Portal institucional do IFCE">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                        aria-label="Portal institutional do IFCE"><i class="fa-solid fa-globe"></i></a>
                 </div>
-
             </div>
 
             <div class="rodape_coluna">
@@ -277,41 +290,26 @@
                 </ul>
             </div>
 
-            <div class="rodape_coluna rodape_contato">
+            <div class="rodape_coluna r_contato">
                 <h4>Contato</h4>
                 <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        (85) 3401-2313
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
                 </ul>
                 <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
-
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
-            <p class="rodape_copia-secundaria">
-                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
         </div>
-
     </footer>
+
+    <script src="../js/busca.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
 </body>
