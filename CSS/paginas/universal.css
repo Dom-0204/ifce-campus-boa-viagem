@@ -298,6 +298,57 @@
 .cidts-ecossistema-botoes .botao {
     margin: 0;
 }
+/* Seção de Observações */
+.observacoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--sp-6);
+    margin-top: var(--sp-6);
+}
+
+.observacao-item {
+    display: flex;
+    gap: var(--sp-4);
+    padding: var(--sp-5);
+    background-color: var(--cor-fundo-secao);
+    border-radius: var(--raio-md);
+    border-left: 4px solid var(--cor-primaria);
+    transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
+}
+
+.observacao-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-md);
+}
+
+.observacao-item i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.observacao-item h3 {
+    font-size: var(--fs-base);
+    font-weight: 600;
+    margin-bottom: var(--sp-2);
+    color: var(--cor-texto);
+}
+
+.observacao-item p {
+    font-size: var(--fs-sm);
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.observacao-item a {
+    text-decoration: none;
+    transition: color var(--transicao-rapida);
+}
+
+.observacao-item a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 992px) {
     .universal-container {

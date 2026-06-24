@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciplinas - IFCE Campus Boa Viagem</title>
+    <meta name="description"
+        content="Disciplinas do curso de Análise e Desenvolvimento de Sistemas do IFCE Campus Boa Viagem.">
+    <link rel="icon" href="../images/favicon1.png" type="image/png">
+
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/paginas/universal.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/disciplinas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
+            </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">Disciplinas</span>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="disciplinas.html">Disciplinas</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">🌙</span>
+    </button>
+
+    <section class="disciplinas-hero-header">
+        <h1>Disciplinas</h1>
+        <p>Conheça as disciplinas oferecidas no curso de Análise e Desenvolvimento de Sistemas nos turnos vespertino e
+            noturno.</p>
+    </section>
+
+    <main class="main"
+        style="max-width: 1200px; width: 100%; margin: var(--sp-12) auto var(--sp-16); padding: 0 20px; display: flex; flex-direction: column; gap: var(--sp-8); position: relative; z-index: 10;">
+
+        <!-- TURNO VESPERTINO -->
+        <section class="turno-section" id="turno-vespertino">
+            <div class="turno-header">
+                <h2><i class="fa-solid fa-sun"></i> Turno Vespertino (13h às 17h)</h2>
+                <p>Disciplinas oferecidas no turno vespertino</p>
+            </div>
+
+            <!-- 1º Semestre Vespertino -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">1º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ICA</td>
+                                <td>Introdução ao Curso de ADS</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>CLI</td>
+                                <td>Comunicação e Linguagem</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>LLPR</td>
+                                <td>Lógica e Linguagem de Programação</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>FMAT</td>
+                                <td>Fundamentos de Matemática</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ING</td>
+                                <td>Inglês Instrumental</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>TWEB</td>
+                                <td>Tecnologias Web</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ESA</td>
+                                <td>Ética Socioambiental</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2º Semestre Vespertino -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">2º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PEED</td>
+                                <td>Programação Estruturada e Estrutura de Dados</td>
+                                <td>80h</td>
+                                <td>LLPR</td>
+                            </tr>
+                            <tr>
+                                <td>EMP</td>
+                                <td>Empreendedorismo</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>PE</td>
+                                <td>Probabilidade e Estatística</td>
+                                <td>80h</td>
+                                <td>FMAT</td>
+                            </tr>
+                            <tr>
+                                <td>SOP</td>
+                                <td>Sistemas Operacionais</td>
+                                <td>80h</td>
+                                <td>ICA</td>
+                            </tr>
+                            <tr>
+                                <td>RGCE</td>
+                                <td>Relações de Gênero, Classe e Etnia</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>BDA</td>
+                                <td>Banco de Dados</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 3º Semestre Vespertino -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">3º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>POO</td>
+                                <td>Programação Orientada a Objetos</td>
+                                <td>80h</td>
+                                <td>PEED</td>
+                            </tr>
+                            <tr>
+                                <td>ENS</td>
+                                <td>Engenharia de Software</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>IHC</td>
+                                <td>Interface Humano-Computador</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>RED</td>
+                                <td>Redes de Computadores</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>FSI</td>
+                                <td>Fundamentos de Segurança da Informação</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ARQS</td>
+                                <td>Arquitetura de Sistemas</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>PRSO</td>
+                                <td>Projeto Social</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 4º Semestre Vespertino -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">4º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>APS</td>
+                                <td>Análise e Projeto de Sistemas</td>
+                                <td>80h</td>
+                                <td>ENS</td>
+                            </tr>
+                            <tr>
+                                <td>PDM</td>
+                                <td>Programação para Dispositivos Móveis</td>
+                                <td>80h</td>
+                                <td>POO</td>
+                            </tr>
+                            <tr>
+                                <td>PWEB I</td>
+                                <td>Programação Web I</td>
+                                <td>80h</td>
+                                <td>TWEB</td>
+                            </tr>
+                            <tr>
+                                <td>GEP</td>
+                                <td>Gestão de Projetos</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>CIDA</td>
+                                <td>Ciência de Dados</td>
+                                <td>80h</td>
+                                <td>PE</td>
+                            </tr>
+                            <tr>
+                                <td>OPT I</td>
+                                <td>Optativa I</td>
+                                <td>40h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5º Semestre Vespertino -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">5º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PIN</td>
+                                <td>Projeto Integrador</td>
+                                <td>80h</td>
+                                <td>PWEB I</td>
+                            </tr>
+                            <tr>
+                                <td>DEV</td>
+                                <td>DevOps</td>
+                                <td>80h</td>
+                                <td>SOP</td>
+                            </tr>
+                            <tr>
+                                <td>PWEB II</td>
+                                <td>Programação Web II</td>
+                                <td>80h</td>
+                                <td>PWEB I</td>
+                            </tr>
+                            <tr>
+                                <td>TQS</td>
+                                <td>Teste e Qualidade de Software</td>
+                                <td>80h</td>
+                                <td>ENS</td>
+                            </tr>
+                            <tr>
+                                <td>OPT II</td>
+                                <td>Optativa II</td>
+                                <td>80h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- TURNO NOTURNO -->
+        <!-- TURNO NOTURNO -->
+        <section class="turno-section" id="turno-noturno">
+            <div class="turno-header">
+                <h2><i class="fa-solid fa-moon"></i> Turno Noturno (19h às 23h)</h2>
+                <p>Disciplinas oferecidas no turno noturno - Com 80h de EaD por semestre</p>
+            </div>
+
+            <!-- 1º Semestre Noturno -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">1º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela tabela-noturno">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Carga Horária EAD</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ICA</td>
+                                <td>Introdução ao Curso de ADS</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>CLI</td>
+                                <td>Comunicação e Linguagem</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>LLPR</td>
+                                <td>Lógica e Linguagem de Programação</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>FMAT</td>
+                                <td>Fundamentos de Matemática</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ING</td>
+                                <td>Inglês Instrumental</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>TWEB</td>
+                                <td>Tecnologias Web</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ESA</td>
+                                <td>Ética Socioambiental</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2º Semestre Noturno -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">2º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela tabela-noturno">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Carga Horária EAD</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PEED</td>
+                                <td>Programação Estruturada e Estrutura de Dados</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>LLPR</td>
+                            </tr>
+                            <tr>
+                                <td>EMP</td>
+                                <td>Empreendedorismo</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>PE</td>
+                                <td>Probabilidade e Estatística</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>FMAT</td>
+                            </tr>
+                            <tr>
+                                <td>SOP</td>
+                                <td>Sistemas Operacionais</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>ICA</td>
+                            </tr>
+                            <tr>
+                                <td>RGCE</td>
+                                <td>Relações de Gênero, Classe e Etnia</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>BDA</td>
+                                <td>Banco de Dados</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 3º Semestre Noturno -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">3º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela tabela-noturno">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Carga Horária EAD</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>POO</td>
+                                <td>Programação Orientada a Objetos</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>PEED</td>
+                            </tr>
+                            <tr>
+                                <td>ENS</td>
+                                <td>Engenharia de Software</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>IHC</td>
+                                <td>Interface Humano-Computador</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>RED</td>
+                                <td>Redes de Computadores</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>FSI</td>
+                                <td>Fundamentos de Segurança da Informação</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>ARQS</td>
+                                <td>Arquitetura de Sistemas</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>PRSO</td>
+                                <td>Projeto Social</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 4º Semestre Noturno -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">4º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela tabela-noturno">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Carga Horária EAD</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>APS</td>
+                                <td>Análise e Projeto de Sistemas</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>ENS</td>
+                            </tr>
+                            <tr>
+                                <td>PDM</td>
+                                <td>Programação para Dispositivos Móveis</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>POO</td>
+                            </tr>
+                            <tr>
+                                <td>PWEB I</td>
+                                <td>Programação Web I</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>TWEB</td>
+                            </tr>
+                            <tr>
+                                <td>GEP</td>
+                                <td>Gestão de Projetos</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>CIDA</td>
+                                <td>Ciência de Dados</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>PE</td>
+                            </tr>
+                            <tr>
+                                <td>OPT I</td>
+                                <td>Optativa I</td>
+                                <td>40h</td>
+                                <td>8h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5º Semestre Noturno -->
+            <div class="universal-painel-card" style="scroll-margin-top: 90px;">
+                <h3 class="semestre-titulo">5º Semestre</h3>
+                <div class="tabela-container">
+                    <table class="disciplinas-tabela tabela-noturno">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Carga Horária</th>
+                                <th>Carga Horária EAD</th>
+                                <th>Pré-requisito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PIN</td>
+                                <td>Projeto Integrador</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>PWEB I</td>
+                            </tr>
+                            <tr>
+                                <td>DEV</td>
+                                <td>DevOps</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>SOP</td>
+                            </tr>
+                            <tr>
+                                <td>PWEB II</td>
+                                <td>Programação Web II</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>PWEB I</td>
+                            </tr>
+                            <tr>
+                                <td>TQS</td>
+                                <td>Teste e Qualidade de Software</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>ENS</td>
+                            </tr>
+                            <tr>
+                                <td>OPT II</td>
+                                <td>Optativa II</td>
+                                <td>80h</td>
+                                <td>16h</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Informações -->
+        <section class="universal-painel-card" id="informacoes-disciplinas" style="scroll-margin-top: 90px;">
+            <h2>Informações Importantes</h2>
+            <div class="observacoes-container">
+                <div class="observacao-item">
+                    <i class="fa-solid fa-circle-info" style="color: var(--cor-primaria);"></i>
+                    <div>
+                        <h3>Matriz Curricular</h3>
+                        <p>A matriz curricular completa com ementas detalhadas está disponível no Projeto Pedagógico do
+                            Curso (PPC). Consulte a <a href="links-uteis.html"
+                                style="color: var(--cor-primaria-hover); font-weight: 700;">página de Links Úteis</a>
+                            para acessá-lo.</p>
+                    </div>
+                </div>
+
+                <div class="observacao-item">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--cor-primaria);"></i>
+                    <div>
+                        <h3>Diferença entre Turnos</h3>
+                        <p>Horários:</p>
+                        <p><strong>Vespertino:</strong> 13h às 17h | <strong>Noturno:</strong> 19h às 22h</p>
+                        <p><strong>Carga Horaria EAD:</strong>No noturno, cada disciplina possui uma parte da carga horária em EaD para compensar o menor tempo de aula (50 min vs 60 min).</p>
+                    </div>
+                </div>
+
+                <div class="observacao-item">
+                    <i class="fa-solid fa-calendar-days" style="color: var(--cor-primaria);"></i>
+                    <div>
+                        <h3>Duração</h3>
+                        <p>O curso tem duração de 5 semestres, totalizando aproximadamente 2.000 horas de aulas teóricas
+                            e práticas.</p>
+                    </div>
+                </div>
+                <div class="observacao-item">
+                    <i class="fa-solid fa-calendar-days" style="color: var(--cor-primaria);"></i>
+                    <div>
+                        <h3>Professores</h3>
+                        <p>Caso tenha interesse em conhecer os docentes de cada materia acesse a nossa página:<a style="color: var(--cor-primaria-hover); font-weight: 700;" href="professores.html">Professores</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape_sobre">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
+                <h3>IFCE Campus Boa Viagem</h3>
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
+                <div class="rodape_redes">
+                    <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
+                        aria-label="Portal institucional do IFCE"><i class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Ensino</h4>
+                <ul>
+                    <li><a href="ads.html">Sobre o Curso</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="ingresso.html">Formas de Ingresso</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Pesquisa e Extensão</h4>
+                <ul>
+                    <li><a href="cidts.html">CIDTS</a></li>
+                    <li><a href="pesquisas.html">Projetos de Pesquisa</a></li>
+                    <li><a href="extensao.html">Extensão</a></li>
+                    <li><a href="bolsas.html">Bolsas</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="institucional.html">Conheça o IFCE</a></li>
+                    <li><a href="ifinternacional.html">IFCE Internacional</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="https://www.ifce.edu.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="links-uteis.html">Ver todos os links</a></li>
+                    <li><a href="https://qacademico.ifce.edu.br" target="_blank" rel="noopener">Q-Acadêmico</a></li>
+                    <li><a href="https://suap.ifce.edu.br" target="_blank" rel="noopener">SUAP</a></li>
+                    <li><a href="https://bvu.ifce.edu.br" target="_blank" rel="noopener">Biblioteca Virtual</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna r_contato">
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
+                </ul>
+                <a class="botao-2 rodape_botao-contato" href="contato.html">Fale com a gente</a>
+            </div>
+        </div>
+
+        <div class="rodape_copia">
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/busca.js"></script>
+    <script src="../scripts/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+
+/* ==========================================================
+   PÁGINA DISCIPLINAS — Estilos da tabela de disciplinas
+   ========================================================== */
+
+/* Hero Header */
+.disciplinas-hero-header {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-hover) 100%);
+    color:  var(--cor-texto-banner);
+    padding: var(--sp-12) var(--sp-6);
+    text-align: center;
+    margin-bottom: var(--sp-8);
+}
+
+.disciplinas-hero-header h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    margin-bottom: var(--sp-3);
+}
+
+.disciplinas-hero-header p {
+    font-size: var(--fs-lg);
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Seções de Turno */
+.turno-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+    margin-bottom: var(--sp-12);
+}
+
+.turno-header {
+    text-align: center;
+    margin-bottom: var(--sp-6);
+}
+
+.turno-header h2 {
+    font-size: var(--fs-2xl);
+    color: var(--cor-texto);
+    margin-bottom: var(--sp-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+}
+
+.turno-header h2 i {
+    color: var(--cor-primaria);
+    font-size: var(--fs-3xl);
+}
+
+.turno-header p {
+    color: var(--cor-texto-secundario);
+    font-size: var(--fs-base);
+}
+
+/* Título de Semestre */
+.semestre-titulo {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    border-bottom: 2px solid var(--cor-primaria-clara);
+}
+
+/* Tabela Container */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: var(--sp-4) 0;
+    border-radius: var(--raio-md);
+    box-shadow: var(--sombra-sm);
+}
+
+/* Tabela Base */
+.disciplinas-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-fundo-card);
+}
+
+.disciplinas-tabela thead {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-hover) 100%);
+    color: var(--cor-texto-banner);
+    font-weight: 600;
+}
+
+.disciplinas-tabela th {
+    padding: var(--sp-4) var(--sp-5);
+    text-align: left;
+    font-size: var(--fs-sm);
+    letter-spacing: 0.5px;
+}
+
+/* Alinhar cabeçalhos com as colunas */
+.disciplinas-tabela th:first-child {
+    text-align: center;
+    width: 80px;
+}
+
+.disciplinas-tabela th:nth-child(2) {
+    text-align: left;
+    width: auto;
+}
+
+.disciplinas-tabela th:nth-child(3) {
+    text-align: center;
+    width: 110px;
+}
+
+.disciplinas-tabela th:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+.disciplinas-tabela td {
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: 1px solid var(--cor-borda);
+    font-size: var(--fs-sm);
+}
+
+/* Linhas alternadas */
+.disciplinas-tabela tbody tr:nth-child(even) {
+    background-color: var(--cor-fundo-secao);
+}
+
+.disciplinas-tabela tbody tr:hover {
+    background-color: var(--cor-primaria-clara);
+    transition: background-color var(--transicao-rapida);
+}
+
+/* Coluna Código */
+.disciplinas-tabela td:first-child {
+    font-weight: 700;
+    color: var(--cor-primaria);
+    width: 100px;
+}
+
+/* Coluna Disciplina */
+.disciplinas-tabela td:nth-child(2) {
+    font-weight: 500;
+    color: var(--cor-texto);
+}
+
+/* Coluna Carga Horária */
+.disciplinas-tabela td:nth-child(3) {
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    width: 120px;
+}
+/* ========== ESTILOS ESPECÍFICOS PARA TABELA NOTURNA ========== */
+
+/* Coluna Carga Horária (Noturno) */
+.tabela-noturno td:nth-child(3) {
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    width: 110px;
+}
+
+.tabela-noturno th:nth-child(3) {
+    text-align: center;
+    width: 110px;
+}
+
+/* Coluna Carga Horária EAD (Noturno) */
+.tabela-noturno td:nth-child(4) {
+    text-align: center;
+    font-weight: 600;
+    color: #0288d1;
+    width: 130px;
+}
+
+.tabela-noturno th:nth-child(4) {
+    text-align: center;
+    width: 130px;
+}
+
+/* Coluna Pré-requisito (Noturno) */
+.tabela-noturno td:nth-child(5) {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+    width: 100px;
+}
+
+.tabela-noturno th:nth-child(5) {
+    text-align: center;
+    width: 100px;
+}
+/* Coluna Pré-requisito */
+.disciplinas-tabela td:last-child {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+}
+
+/* Modo Dark */
+body.dark-mode .tabela-container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .disciplinas-tabela tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .disciplinas-tabela tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .disciplinas-hero-header h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    .disciplinas-hero-header p {
+        font-size: var(--fs-base);
+    }
+
+    .turno-header h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .disciplinas-tabela th,
+    .disciplinas-tabela td {
+        padding: var(--sp-3) var(--sp-2);
+        font-size: var(--fs-xs);
+    }
+
+    .disciplinas-tabela th {
+        white-space: normal;
+    }
+
+    .observacoes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tabela-container {
+        margin: var(--sp-3) -20px;
+        border-radius: 0;
+        width: calc(100% + 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .disciplinas-hero-header {
+        padding: var(--sp-8) var(--sp-4);
+    }
+
+    .disciplinas-hero-header h1 {
+        font-size: var(--fs-xl);
+    }
+
+    .turno-header h2 {
+        font-size: var(--fs-lg);
+        flex-direction: column;
+    }
+
+    .disciplinas-tabela th,
+    .disciplinas-tabela td {
+        padding: var(--sp-2) var(--sp-1);
+        font-size: 10px;
+    }
+
+    .disciplinas-tabela td:first-child {
+        width: 60px;
+    }
+
+    .disciplinas-tabela td:nth-child(3) {
+        width: 70px;
+    }
+
+    .semestre-titulo {
+        font-size: var(--fs-lg);
+    }
+}

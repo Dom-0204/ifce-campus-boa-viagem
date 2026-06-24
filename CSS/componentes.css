@@ -356,7 +356,8 @@ body.dark-mode .card-apple {
 }
 
 dialog::backdrop{
-background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 dialog{
