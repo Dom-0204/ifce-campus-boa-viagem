@@ -1,0 +1,175 @@
+/* ==========================================================
+   INGRESSO — ADS
+   Usado por: ingresso.html
+   ========================================================== */
+
+/* --- BANNER PRINCIPAL DA PÁGINA (SUAVIZADO) --- */
+.ingresso-banner-hero {
+    background:
+        linear-gradient(135deg, rgba(57, 97, 77, 0.92), rgba(20, 63, 44, 0.95)),
+        url("../../images/ifingresso.png") center/cover no-repeat !important;
+    padding: 160px var(--sp-5) 120px !important;
+    text-align: center;
+    position: relative;
+}
+
+.ingresso-banner-hero h1 {
+    font-size: clamp(2.2rem, 5vw, var(--fs-3xl)) !important;
+    margin-bottom: var(--sp-4);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff !important;
+}
+
+.ingresso-banner-hero h1 strong {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Garante o mesmo respiro sutil do parágrafo de ADS */
+.ingresso-banner-hero p {
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.6;
+    background-color: transparent !important;
+    transform: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- GRID DE LARGURA UNIFICADA (1200PX) --- */
+.main-pagina-interna {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: var(--sp-12) auto var(--sp-16) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--sp-8) !important;
+}
+
+/* Evita que blocos atropelem o menu flutuante */
+.main-pagina-interna,
+.universal-painel-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- TIMELINE DE TRANSFERÊNCIAS ADAPTADA --- */
+.cidts-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-5);
+    margin-top: var(--sp-4);
+}
+
+.cidts-timeline-item {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+}
+
+.cidts-timeline-numero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-icone);
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--sombra-sm);
+}
+
+.cidts-timeline-texto h4 {
+    color: var(--cor-primaria-hover);
+    margin-bottom: 4px;
+}
+
+/* ==========================================================
+   DARK MODE — INGRESSO
+   ========================================================== */
+
+body.dark-mode .cabecalho {
+    background: rgba(10, 12, 10, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .cabecalho_nav,
+body.dark-mode .cabecalho_links {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+body.dark-mode .cabecalho_nav_ancoras {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Mantém os painéis grandes escuros */
+body.dark-mode .universal-painel-card {
+    background: #1e1e1e !important;
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .universal-painel-card h2,
+body.dark-mode .universal-painel-card p {
+    color: var(--cor-texto) !important;
+}
+
+/* Estiliza e preserva as bordinhas superiores verdes dos cards */
+body.dark-mode .card-interno {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-left-color: var(--cor-borda) !important;
+    border-right-color: var(--cor-borda) !important;
+    border-bottom-color: var(--cor-borda) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card-interno[style*="border-top"] {
+    border-top: 4px solid var(--cor-primaria) !important;
+}
+
+body.dark-mode .card-interno h3,
+body.dark-mode .card-interno span {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .card-interno p {
+    color: var(--cor-texto-secundario) !important;
+}
+
+body.dark-mode .icone-wrap-interno i {
+    color: var(--cor-primaria-hover) !important;
+}
+
+/* ==========================================================
+   MOBILE & COMPATIBILIDADE TERMICA
+   ========================================================== */
+
+@media (max-width: 768px) {
+    header.cabecalho {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+
+    #theme-toggle,
+    .theme-btn {
+        display: none !important;
+    }
+
+    body.dark-mode .cabecalho_nav {
+        background: rgba(15, 18, 15, 0.94) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        z-index: 9998 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
