@@ -36,65 +36,55 @@
 
     </header>
 
-    <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
-
     <nav class="cabecalho_nav">
-
         <div class="cabecalho_links">
-
             <div class="dropdown">
-
-                <a class="menu-title" href="#">
-                    Ensino
-                </a>
-
+                <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
                 <div class="dropdown-menu">
-
-                    <a href="Paginas/ads.html">Sobre o Curso</a>
-                    <a href="Paginas/professores.html">Docentes</a>
-                    <a href="#">Matriz Curricular</a>
-                    <a href="#">Mercado de Trabalho</a>
+                    <span class="menu-title">Cursos e Docentes</span>
+                    <a href="paginas/ads.html">Sobre o Curso ADS</a>
+                    <a href="paginas/disciplinas.html">Disciplinas</a>
+                    <a href="paginas/professores.html">Corpo Docente</a>
                 </div>
-
             </div>
 
             <div class="dropdown">
-
-                <a class="menu-title" href="#">
-                    Pesquisa
-                </a>
-
+                <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
                 <div class="dropdown-menu">
-                    <a href="Paginas/cidts.html">CIDTS</a>
-                    <a href="Paginas/pesquisas.html">Projetos</a>
+                    <span class="menu-title">Inovação e Projetos</span>
+                    <a href="paginas/cidts.html">Conheça o CIDTS</a>
+                    <a href="paginas/pesquisas.html">Projetos de Pesquisa</a>
                 </div>
-
             </div>
 
             <div class="dropdown">
-
-                <a class="menu-title" href="#">
-                    Extensão
-                </a>
-
+                <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
                 <div class="dropdown-menu">
-                    <a href="Paginas/extensao.html">Projetos</a>
-                    <a href="Paginas/contato.html">Contato</a>
+                    <span class="menu-title">Comunidade</span>
+                    <a href="paginas/extensao.html">Projetos de Extensão</a>
+                    <a href="paginas/ifinternacional.html">Intercâmbio</a>
                 </div>
-
             </div>
 
+            <div class="dropdown">
+                <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                <div class="dropdown-menu">
+                    <span class="menu-title">Serviços e Apoio</span>
+                    <a href="paginas/ingresso.html">Formas de Ingresso</a>
+                    <a href="paginas/bolsas.html">Auxílios e Bolsas</a>
+                    <a href="paginas/links-uteis.html">Links Úteis</a>
+                </div>
+            </div>
         </div>
 
         <div class="cabecalho-busca">
-            <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar cursos, editais, notícias..."
-                autocomplete="off" aria-label="Buscar no portal">
-            <button class="busca-btn" type="button" aria-label="Pesquisar" id="busca-btn">
+            <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                autocomplete="off">
+            <button class="busca-btn" type="button" id="busca-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
         </div>
-
     </nav>
 
     <section class="hero">
@@ -130,11 +120,9 @@
     <main class="main main-gradiente">
 
         <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-
             <span class="theme-btn-icon">
-                🌙
+                <i class="fa-solid fa-sun" style="color: #ffffff !important; font-size: 1.2rem;"></i>
             </span>
-
         </button>
 
         <div class="selos-confianca">
