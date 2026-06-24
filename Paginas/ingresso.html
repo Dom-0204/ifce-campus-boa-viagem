@@ -8,239 +8,276 @@
     <meta name="description"
         content="Formas de ingresso, processos seletivos e editais para o curso de Análise e Desenvolvimento de Sistemas (ADS) no IFCE Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/base.css">
-    <link rel="stylesheet" href="../CSS/componentes.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
-    <link rel="stylesheet" href="../CSS/paginas/universal.css">
 
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/componentes.css">
+    <link rel="stylesheet" href="../CSS/paginas/ads.css"> <!-- Reutiliza a base de layout comum -->
+    <link rel="stylesheet" href="../CSS/paginas/ingresso.css"> <!-- Folha de estilo da página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">Ingresso</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras ativo" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras ativo" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
-    <div class="ingresso-banner">
-        <div class="ingresso-banner-filtro">
-            <h1>Ingresso em <strong>ADS</strong></h1>
-            <p>Descubra como entrar no curso de Análise e Desenvolvimento de Sistemas no IFCE Campus Boa Viagem.</p>
-        </div>
-    </div>
+    <!-- Botão do Modo Escuro Original -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">
+            <i class="fa-solid fa-moon icone-lua"></i>
+            <i class="fa-solid fa-sun icone-sol"></i>
+        </span>
+    </button>
 
-    <main class="main universal-container">
+    <!-- Banner Hero Unificado Sem Barra Lateral -->
+    <section class="ads-hero-header ingresso-banner-hero">
+        <h1>Ingresso em <strong>ADS</strong></h1>
+        <p>Descubra como entrar no curso de Análise e Desenvolvimento de Sistemas no IFCE Campus Boa Viagem.</p>
+    </section>
 
-        <aside class="universal-sidebar">
-            <h3>Navegação</h3>
-            <ul>
-                <li><a href="#processos-regulares">Seleção Regular</a></li>
-                <li><a href="#vagas-remanescentes">Vagas Ociosas</a></li>
-                <li><a href="#outras-formas">Diplomados e Especiais</a></li>
-                <li><a href="#cronogramas">Matrícula e Prazos</a></li>
-            </ul>
-            <div class="sidebar-badge">
-                <strong>Controle Acadêmico</strong>
-                <span>Processos Seletivos</span>
+    <!-- Container Otimizado Centralizado (1200px) Sem Sidebar -->
+    <main class="main-pagina-interna"
+        style="max-width: 1200px; width: 100%; margin: var(--sp-12) auto var(--sp-16); padding: 0 20px; display: flex; flex-direction: column; gap: var(--sp-8); position: relative; z-index: 10;">
+
+        <section class="universal-painel-card" id="processos-regulares">
+            <div class="card-tag">Seleção Regular</div>
+            <h2>Processos Seletivos Regulares para ADS</h2>
+            <p style="margin-bottom: var(--sp-5);">O ingresso no curso superior de Tecnologia em Análise e
+                Desenvolvimento de Sistemas é feito de forma pública e gratuita, ofertando <strong>35 vagas</strong>
+                semestrais distribuídas conforme as normas institucionais.</p>
+
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-5);">
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3>Ingresso Regular (SiSU)</h3>
+                    <p>A principal forma de admissão para o curso de ADS ocorre por meio do Sistema de Seleção Unificada
+                        (SiSU), utilizando a melhor nota das últimas três provas do ENEM.</p>
+                    <span
+                        style="font-weight: 700; display: inline-block; margin-top: var(--sp-2); color: var(--cor-primaria);">18
+                        vagas AC</span>
+                </div>
+
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3>Vestibular</h3>
+                    <p>Caso restem vagas não preenchidas pelo SiSU, o IFCE lança editais próprios simplificados,
+                        frequentemente utilizando a nota de edições anteriores do ENEM para classificação.</p>
+                    <span
+                        style="font-weight: 700; display: inline-block; margin-top: var(--sp-2); color: var(--cor-primaria);">Sem
+                        vagas fixas</span>
+                </div>
+
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <div class="icone-wrap-interno"
+                        style="font-size: 2rem; color: var(--cor-primaria); margin-bottom: var(--sp-3);">
+                        <i class="fa-solid fa-users-rectangle"></i>
+                    </div>
+                    <h3>Reserva de Vagas (Cotas)</h3>
+                    <p>O SiSU reserva vagas baseadas em ter estudado em instituições de ensino público, critérios
+                        socioeconômicos de renda, autodeclaração étnico-racial e pessoas com deficiência (PcD).</p>
+                    <span
+                        style="font-weight: 700; display: inline-block; margin-top: var(--sp-2); color: var(--cor-primaria);">17
+                        vagas cotistas</span>
+                </div>
             </div>
-        </aside>
+        </section>
 
-        <div class="cidts-conteudo">
+        <section class="universal-painel-card" id="vagas-remanescentes">
+            <h2>Transferências e Vagas Ociosas</h2>
+            <p>Havendo vagas disponíveis após as chamadas regulares, o campus Boa Viagem disponibiliza editais para
+                preenchimento de vagas remanescentes voltados ao curso de ADS.</p>
 
-            <section class="universal-painel-card" id="processos-regulares">
-                <h2 class="institucional_titulo">Processos Seletivos Regulares para ADS</h2>
-                <p class="institucional_texto" style="margin-bottom: 20px;">
-                    O ingresso no curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas é feito de forma
-                    pública e gratuita, ofertando <strong>35 vagas</strong> semestrais distribuídas conforme as normas
-                    institucionais.
-                </p>
-
-                <div class="assistencia_grid">
-                    <div class="assistencia_item">
-                        <h4><strong>Ingresso Regular (SiSU)</strong></h4>
-                        <p>A principal forma de admissão para o curso de ADS ocorre por meio do Sistema de Seleção
-                            Unificada (SiSU), utilizando a melhor nota das ultimas três provas do ENEM.</p>
-                        <p><strong>18 vagas AC</strong></p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><strong>Vestibular</strong></h4>
-                        <p>Caso restem vagas não preenchidas pelo SiSU, o IFCE lança editais próprios simplificados,
-                            frequentemente utilizando a nota de edições anteriores do ENEM para classificação.</p>
-                        <p><strong>Sem vagas fixas</strong></p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><strong>Reserva de Vagas (Cotas)</strong></h4>
-                        <p>O SiSU reserva vagas para ingressar no curso de ADS, com
-                            subdivisões baseadas em ter estudado em instituições de ensino público, critérios de renda,
-                            autodeclaração
-                            étnico-racial e pessoas com deficiência (PcD).</p>
-                        <p><strong>17 vagas cotistas</strong></p>
-                    </div>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-5); margin-top: var(--sp-4);">
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span
+                        style="font-weight: 700; color: var(--cor-primaria); font-size: 1.2rem; display: block; margin-bottom: var(--sp-2);">01.
+                        Transferência Interna</span>
+                    <p>Destinada a estudantes já vinculados ao IFCE (de outros cursos ou outros campi) que desejam
+                        migrar para o curso de Tecnologia em ADS.</p>
                 </div>
-            </section>
-
-            <section class="universal-painel-card" id="vagas-remanescentes">
-                <h2 class="institucional_titulo">Transferências e Vagas Ociosas</h2>
-                <p class="institucional_texto">
-                    Havendo vagas disponíveis após as chamadas regulares, o campus Boa Viagem disponibiliza editais para
-                    preenchimento de vagas remanescentes voltados ao curso de ADS.
-                </p>
-
-                <div class="cidts-timeline" style="margin-top: 20px;">
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">01</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Transferência Interna</h4>
-                            <p>Destinada a estudantes já vinculados ao IFCE (de outros cursos ou outros campi) que
-                                desejam migrar para o curso de Tecnologia em ADS.</p>
-                        </div>
-                    </div>
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">02</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Transferência Externa</h4>
-                            <p>Permite que alunos de graduações da mesma área ou áreas afins, vindos de outras
-                                instituições de ensino superior credenciadas, continuem seus estudos em ADS no IFCE.</p>
-                        </div>
-                    </div>
-                    <div class="cidts-timeline-item">
-                        <div class="cidts-timeline-numero">03</div>
-                        <div class="cidts-timeline-texto">
-                            <h4>Critérios Acadêmicos</h4>
-                            <p>A classificação final dos candidatos a transferência considera a afinidade de matriz
-                                curricular, créditos aproveitados, Índice de Rendimento Acadêmico (IRA) e a idade.</p>
-                        </div>
-                    </div>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span
+                        style="font-weight: 700; color: var(--cor-primaria); font-size: 1.2rem; display: block; margin-bottom: var(--sp-2);">02.
+                        Transferência Externa</span>
+                    <p>Permite que alunos de graduações da mesma área ou áreas afins, vindos de outras instituições de
+                        ensino superior credenciadas, continuem seus estudos no IFCE.</p>
                 </div>
-            </section>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <span
+                        style="font-weight: 700; color: var(--cor-primaria); font-size: 1.2rem; display: block; margin-bottom: var(--sp-2);">03.
+                        Critérios Acadêmicos</span>
+                    <p>A classificação final dos candidatos considera a afinidade de matriz curricular, créditos
+                        aproveitados, Índice de Rendimento Acadêmico (IRA) e a idade.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="universal-painel-card" id="outras-formas">
-                <h2 class="institucional_titulo">Diplomados e Matrículas Especiais</h2>
-                <p class="institucional_texto" style="margin-bottom: 15px;">
-                    Caminhos alternativos de inserção acadêmica regulamentados para quem busca ADS como segunda
-                    graduação ou deseja cursar componentes curriculares isolados.
-                </p>
+        <section class="universal-painel-card" id="outras-formas">
+            <h2>Diplomados e Matrículas Especiais</h2>
+            <p style="margin-bottom: var(--sp-4);">Caminhos alternativos de inserção acadêmica regulamentados para quem
+                busca ADS como segunda graduação ou deseja cursar componentes curriculares isolados.</p>
 
-                <div class="assistencia_grid">
-                    <div class="assistencia_item">
-                        <h4><strong>Ingresso de Diplomados</strong></h4>
-                        <p>Portadores de diploma de nível superior podem disputar vagas ociosas em ADS sem necessidade
-                            de ENEM. A seleção avalia o histórico e créditos aproveitáveis da graduação anterior.</p>
-                    </div>
-
-                    <div class="assistencia_item">
-                        <h4><strong>Estudante Especial</strong></h4>
-                        <p>Permite cursar de forma isolada até 3 disciplinas do curso de ADS (conforme disponibilidade),
-                            submetendo-se às regras de avaliação e frequência mínima de 75% da instituição.</p>
-                    </div>
+            <div class="cards-grid-interna"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--sp-5);">
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <h3>Ingresso de Diplomados</h3>
+                    <p>Portadores de diploma de nível superior podem disputar vagas ociosas em ADS sem necessidade de
+                        ENEM. A seleção avalia o histórico e créditos aproveitáveis da graduação anterior.</p>
                 </div>
 
-                <div class="cidts-conexoes-container" style="margin-top: 20px;">
-                    <span class="cidts-conexoes-titulo">Observação Importante sobre Matrículas:</span>
-                    <p class="institucional_texto"
-                        style="font-size: var(--fs-sm); margin: 0; color: var(--cor-texto-secundario);">
-                        Em nenhuma hipótese é permitida a entrada ou o vínculo informal de estudantes na condição de
-                        ouvintes nas turmas de ADS. Todo acesso aos componentes exige classificação em edital ou
-                        concessão de matrícula especial homologada pelo Controle Acadêmico.
-                    </p>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                    <h3>Estudante Especial</h3>
+                    <p>Permite cursar de forma isolada até 3 disciplinas do curso de ADS (conforme disponibilidade),
+                        submetendo-se às regras de avaliação e frequência mínima de 75% da instituição.</p>
                 </div>
-            </section>
+            </div>
 
-            <section class="universal-painel-card" id="cronogramas">
-                <h2 class="institucional_titulo">Matrícula e Aproveitamento de Estudos</h2>
-                <p class="institucional_texto">
-                    Todos os prazos para novos ingressantes em ADS são rigorosamente fixados no <strong>Calendário
-                        Acadêmico</strong> oficial do campus Boa Viagem.
-                </p>
+            <div
+                style="margin-top: var(--sp-5); padding: var(--sp-4); background: var(--cor-fundo-secao); border-left: 4px solid var(--cor-primaria); border-radius: var(--raio-sm); font-size: var(--fs-sm);">
+                <strong>Observação Importante sobre Matrículas:</strong> Em nenhuma hipótese é permitida a entrada ou o
+                vínculo informal de estudantes na condição de ouvintes nas turmas de ADS. Todo acesso aos componentes
+                exige classificação em edital ou concessão de matrícula especial homologada pelo Controle Acadêmico.
+            </div>
+        </section>
 
-                <div class="infraestrutura_grid" style="margin-top: 20px;">
-                    <div class="infraestrutura_item">
-                        <h4><strong>Efetivação de Matrícula Inicial</strong></h4>
+        <section class="universal-painel-card" id="cronogramas">
+            <h2>Matrícula e Aproveitamento de Estudos</h2>
+            <p>Todos os prazos para novos ingressantes em ADS são rigorosamente fixados no <strong>Calendário
+                    Acadêmico</strong> oficial do campus Boa Viagem.</p>
+
+            <div class="cards-layout-matricula"
+                style="display: flex; flex-direction: column; gap: var(--sp-5); margin-top: var(--sp-4);">
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-5);">
+                    <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                        <h3>Efetivação de Matrícula Inicial</h3>
                         <p>Candidatos convocados nos editais de ADS devem apresentar a documentação exigida
                             presencialmente (ou via procurador legal) dentro do prazo limite estabelecido.</p>
                     </div>
 
-                    <div class="infraestrutura_item">
-                        <h4><strong>Aproveitamento de Disciplinas</strong></h4>
+                    <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria);">
+                        <h3>Aproveitamento de Disciplinas</h3>
                         <p>Estudantes que já cursaram disciplinas similares em outras graduações têm até 10 dias letivos
                             após o início das aulas para protocolar o pedido de validação e aproveitamento de estudos.
                         </p>
                     </div>
                 </div>
 
-                <div class="cidts-ecossistema-botoes">
-                    <a class="botao" href="noticias.html">Consultar Editais e Calendários</a>
+                <div class="card card-interno" style="border-top: 4px solid var(--cor-primaria); width: 100%;">
+                    <h3 style="margin-top: var(--sp-2);">Documentação exigida para Matrícula</h3>
+                    <ul
+                        style="padding-left: var(--sp-6); margin-top: var(--sp-3); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-2) var(--sp-6); list-style-type: disc;">
+                        <li>Histórico Escolar COMPLETO do Ensino Médio</li>
+                        <li>Certificado de Conclusão do Ensino Médio</li>
+                        <li>Documento oficial de identificação com foto</li>
+                        <li>Cadastro de Pessoa Física (CPF)</li>
+                        <li>Certidão de Registro Civil</li>
+                        <li>Certidão de Quitação Eleitoral</li>
+                        <li>Certificado de Quitação Militar</li>
+                        <li>Duas fotos 3x4 recentes</li>
+                        <li>Ficha de pré-matrícula preenchida</li>
+                    </ul>
                 </div>
-            </section>
 
-        </div>
+            </div>
+
+            <div style="margin-top: var(--sp-6); text-align: center;">
+                <a class="botao-2" href="noticias.html"
+                    style="padding: var(--sp-3) var(--sp-6); display: inline-block; font-weight: 600;">Consultar Editais
+                    e Calendários</a>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Rodapé Padronizado Unificado com ADS -->
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_sobre">
-
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Ensino público, gratuito e de excelência em educação
-                    profissional, científica e tecnológica.
-                </p>
-
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
                 <div class="rodape_redes">
                     <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
-                        aria-label="Instagram do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
-                        aria-label="Facebook do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
-                        aria-label="YouTube do IFCE">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn do IFCE">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
-                        aria-label="Portal institucional do IFCE">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                        aria-label="Portal institutional do IFCE"><i class="fa-solid fa-globe"></i></a>
                 </div>
-
             </div>
 
             <div class="rodape_coluna">
@@ -283,44 +320,28 @@
                 </ul>
             </div>
 
-            <div class="rodape_coluna rodape_contato">
+            <div class="rodape_coluna r_contato">
                 <h4>Contato</h4>
                 <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        (85) 3401-2313
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
                 </ul>
                 <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
-
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
-            <p class="rodape_copia-secundaria">
-                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
         </div>
-
     </footer>
-    <script src="../scripts/script.js"></script>
+
     <script src="../js/menu.js"></script>
-    <script src="../js/faq.js"></script>
+    <script src="../js/busca.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
