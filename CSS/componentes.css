@@ -16,6 +16,7 @@
     transition: background-color var(--transicao-rapida), transform 0.2s ease;
     font-weight: 600;
 }
+
 .botao-pop-up,
 .botao-fechar {
     display: inline-block;
@@ -27,6 +28,7 @@
     transition: var(--transicao-rapida);
     font-weight: 600;
 }
+
 .botao-2 {
     display: inline-block;
     padding: var(--sp-3) var(--sp-6);
@@ -355,16 +357,29 @@ body.dark-mode .card-apple {
     pointer-events: auto;
 }
 
-dialog::backdrop{
+dialog::backdrop {
     background-color: rgb(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
 }
 
-dialog{
+dialog {
     margin: auto;
     border: none;
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: 0 0 1em rgb(0, 0, 0 / 0.2);
     width: 80%;
+}
+
+
+.theme-btn i,
+.theme-btn-icon i {
+    color: black !important;
+    transition: color 0.3s ease;
+}
+
+
+body.dark-mode .theme-btn i,
+body.dark-mode .theme-btn-icon i {
+    color: #ffffff !important;
 }
