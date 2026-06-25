@@ -369,8 +369,29 @@ dialog {
     border-radius: .5rem;
     box-shadow: 0 0 1em rgb(0, 0, 0 / 0.2);
     width: 80%;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto);
 }
 
+body.dark-mode dialog {
+    background-color: #1e1e1e;
+    color: var(--cor-texto);
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode dialog h2,
+body.dark-mode dialog h3 {
+    color: var(--cor-primaria-hover);
+}
+
+body.dark-mode dialog p {
+    color: var(--cor-texto-secundario);
+}
+
+body.dark-mode dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
 
 .theme-btn i,
 .theme-btn-icon i {

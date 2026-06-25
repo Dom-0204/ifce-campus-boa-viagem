@@ -16,33 +16,63 @@
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">Contato</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras ativo" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras " href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <!-- BOTÃO DO MODO ESCURO AQUI -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="disciplinas.html">Disciplinas</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Utilidade Geral</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="caads.html">Centro Acadêmico</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal…" autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
     <section class="contato-banner">
