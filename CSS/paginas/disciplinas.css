@@ -4,12 +4,15 @@
    ========================================================== */
 
 /* Hero Header */
-.disciplinas-hero-header {
-    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-hover) 100%);
-    color:  var(--cor-texto-banner);
-    padding: var(--sp-12) var(--sp-6);
+.disciplinas-hero-header {   
+    background:
+        linear-gradient(135deg, rgba(20, 108, 67, 0.88), rgba(25, 135, 84, 0.92)),
+        url("../../images/ads.png") center/cover no-repeat;
+
+    padding: 160px var(--sp-5) 120px;
     text-align: center;
-    margin-bottom: var(--sp-8);
+    color: var(--cor-texto-banner);
+    position: relative;
 }
 
 .disciplinas-hero-header h1 {
@@ -186,7 +189,6 @@
 .tabela-noturno td:nth-child(5) {
     text-align: center;
     color: var(--cor-texto-secundario);
-    font-style: italic;
     width: 100px;
 }
 

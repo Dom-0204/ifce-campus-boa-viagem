@@ -7,7 +7,7 @@
     EXTENSÃO E IFCEINTERNACIONAL
 ========================= */
 .extensao-banner {
-    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/extensaoo.png") center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("/images/extensaoo.png") center/cover no-repeat;
     text-align: center;
     color: var(--cor-texto-banner);
     padding: 6rem var(--sp-4);
