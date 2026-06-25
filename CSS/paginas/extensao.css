@@ -194,13 +194,27 @@
 }
 
 .impacto-topo span {
-    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(25, 135, 84, .08);
+
+    color: var(--cor-primaria);
+
+    font-size: 1.6rem;
 }
 
 .impacto-topo small {
     font-size: 2rem;
     font-weight: 700;
-    color: rgba(25, 135, 84, .15);
+
+    color: rgba(25, 135, 84, .18);
 }
 
 .internacional-cards .card h3 {
@@ -208,6 +222,63 @@
     min-height: auto;
     color: var(--cor-primaria-hover);
 }
+
+.badge-card {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    padding: .45rem .9rem;
+
+    border-radius: 999px;
+
+    background: rgba(25, 135, 84, .1);
+
+    color: var(--cor-primaria);
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+}
+
+.cards-projetos .card {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    overflow: hidden;
+
+}
+
+.cards-projetos .card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .12);
+
+}
+
+.cards-projetos img {
+
+    height: 230px;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.cards-projetos .card:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
 
 .extensao_card .card {
     background: #fff;
@@ -258,7 +329,16 @@
 }
 
 .impacto_extensao .card {
-    text-align: left;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.impacto_extensao .card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .12);
 }
 
 .impacto_extensao .card p {
@@ -294,7 +374,6 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: .3s ease;
 }
 
@@ -320,13 +399,6 @@
     margin: 3rem auto 0;
 }
 
-.cards-projetos .card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    max-width: 380px;
-}
-
 .cards-projetos .card:hover {
     transform: translateY(-8px);
 }
@@ -340,14 +412,6 @@
 
 .cards-projetos .card:hover img {
     transform: scale(1.05);
-}
-
-.card-conteudo {
-    padding: var(--sp-2);
-}
-
-.projetos_extensao .card:first-child {
-    border-top: 4px solid var(--cor-primaria);
 }
 
 .projetos_extensao .card a {
@@ -469,4 +533,3 @@ body.dark-mode .tag-internacional {
 body.dark-mode .impacto-topo small {
     color: rgba(255, 255, 255, 0.1) !important;
 }
-
