@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { titulo: "Extensão", url: "Paginas/extensao.html", tags: "comunidade sociedade" },
         { titulo: "IFCE Internacional", url: "Paginas/ifinternacional.html", tags: "intercambio exterior" },
         { titulo: "Institucional", url: "Paginas/institucional.html", tags: "campus boa viagem historia" },
-        { titulo: "Cursos", url: "Paginas/cursos.html", tags: "tecnico superior graduacao" },
+        { titulo: "Centro Acadêmico", url: "Paginas/caads.html", tags:"equipe alunos suporte"},
         { titulo: "Contato", url: "Paginas/contato.html", tags: "telefone email localizacao mapa falar" },
         { titulo: "Links Úteis", url: "Paginas/links-uteis.html", tags: "suap q-academico biblioteca" },
     ];

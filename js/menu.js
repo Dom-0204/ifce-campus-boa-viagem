@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Overlay
+    // Overlay{ titulo: "Cursos", url: "Paginas/cursos.html", tags: "tecnico superior graduacao" },
     overlay?.addEventListener("click", fecharMenu);
 
     // ESC

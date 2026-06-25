@@ -7,12 +7,18 @@
     CONTATO
 ========================= */
 .contato-banner {
-    background: linear-gradient(rgba(25, 135, 84, 0.75), rgba(20, 108, 67, 0.80)), url("../images/cont.png") center/cover no-repeat;
+    position: relative;
+    padding: 7rem var(--sp-4) 5rem;
     text-align: center;
     color: var(--cor-texto-banner);
-    padding: 8rem 2rem;
+    overflow: hidden;
     border-bottom: 5px solid var(--cor-secundaria);
-    margin-bottom: var(--sp-8);
+    background: linear-gradient(
+        150deg,
+        rgba(8, 45, 25, 0.96) 0%,
+        rgba(25, 135, 84, 0.82) 55%,
+        rgba(10, 50, 30, 0.97) 100%
+    );
 }
 
 .contato-banner h1 {
