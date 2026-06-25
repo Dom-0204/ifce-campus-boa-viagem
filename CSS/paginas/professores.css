@@ -1,8 +1,56 @@
 /* ==========================================================
-   PROFESSORES
+   PROFESSORES — ADS
    Usado por: professores.html
    ========================================================== */
 
+/* --- BANNER PRINCIPAL DA PÁGINA (SEM A LISTRA VERMELHA) --- */
+.professores-banner-hero {
+    background:
+        linear-gradient(135deg, rgba(14, 60, 38, 0.92), rgba(20, 90, 56, 0.95)),
+        url("../../images/auditorio.png") center/cover no-repeat !important;
+    padding: 160px var(--sp-5) 120px !important;
+    text-align: center;
+    position: relative;
+    border-bottom: none !important;
+    /* Remove qualquer linha ou listra inferior */
+}
+
+.professores-banner-hero h1 {
+    font-size: clamp(2.2rem, 5vw, var(--fs-3xl)) !important;
+    margin-bottom: var(--sp-4);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--cor-texto-banner) !important;
+}
+
+.professores-banner-hero p {
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.6;
+    background-color: transparent !important;
+    transform: none !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- GRID DE LARGURA UNIFICADA (1200PX) --- */
+.main-pagina-interna {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: var(--sp-12) auto var(--sp-16) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--sp-8) !important;
+}
+
+.main-pagina-interna,
+.universal-painel-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- GRID E CARDS DOS PROFESSORES --- */
 .professores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -16,12 +64,14 @@
     padding: var(--sp-6);
     text-align: center;
     transition: var(--transicao-rapida);
+    display: flex;
+    flex-direction: column;
 }
 
 .professor-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--sombra-lg);
-    border-color: transparent;
+    border-color: var(--cor-primaria);
 }
 
 .professor-avatar {
@@ -29,12 +79,13 @@
     height: 96px;
     margin: 0 auto var(--sp-4);
     border-radius: 50%;
-    background-color: var(--cor-primaria-clara);
+    background-color: var(--cor-fundo-secao);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-primaria-hover);
+    color: var(--cor-primaria);
     font-size: 2.4rem;
+    border: 2px solid var(--cor-borda);
 }
 
 .professor-card h3 {
@@ -55,7 +106,8 @@
     text-align: left;
     border-top: 1px solid var(--cor-borda);
     padding-top: var(--sp-4);
-    margin-top: var(--sp-2);
+    margin-top: auto;
+    /* Empurra as informações de contato para alinhar os rodapés dos cards */
 }
 
 .professor-info dt {
@@ -80,8 +132,11 @@
     font-size: var(--fs-sm);
     line-height: 1.6;
     margin-left: 20px;
+    word-break: break-all;
+    /* Impede que e-mails longos quebrem o card no mobile */
 }
 
+/* --- BLOCOS DE AVISO --- */
 .professor-aviso {
     background-color: var(--cor-fundo-mini-card);
     border-left: 4px solid var(--cor-primaria);
@@ -97,8 +152,80 @@
     color: var(--cor-texto);
 }
 
+/* ==========================================================
+   DARK MODE — PROFESSORES
+   ========================================================== */
+
+body.dark-mode .universal-painel-card {
+    background: #1e1e1e !important;
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .universal-painel-card h2,
+body.dark-mode .universal-painel-card p {
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .professor-card {
+    background-color: #252525 !important;
+    border-color: var(--cor-borda) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .professor-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .professor-cargo {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .professor-avatar {
+    background-color: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .professor-info {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .professor-info dt {
+    color: #ffffff !important;
+}
+
+body.dark-mode .professor-info dt i {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .professor-info dd {
+    color: var(--cor-texto-secundario) !important;
+}
+
+body.dark-mode .professor-aviso {
+    background-color: #252525 !important;
+    border-left-color: var(--cor-primaria) !important;
+}
+
+body.dark-mode .professor-aviso strong {
+    color: #ffffff !important;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
 @media (max-width: 768px) {
     .professores-grid {
         grid-template-columns: 1fr;
+    }
+
+    header.cabecalho {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+
+    body.dark-mode .cabecalho_nav {
+        background: rgba(15, 18, 15, 0.94) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
     }
 }
