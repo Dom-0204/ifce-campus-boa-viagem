@@ -1,0 +1,415 @@
+/* ==========================================================
+   IFCE INTERNACIONAL — MOBILIDADE ACADÊMICA
+   Usado por: ifinternacional.html
+   ========================================================== */
+
+/* --- BANNER PRINCIPAL PRINCIPAL --- */
+.internacional-banner-hero {
+    background:
+        linear-gradient(135deg, rgba(14, 60, 38, 0.92), rgba(20, 90, 56, 0.95)),
+        url('../../images/ifintertnacional.png') center/cover no-repeat !important;
+    padding: 160px var(--sp-5) 120px;
+    text-align: center;
+}
+
+.internacional-banner-hero h1 {
+    color: #ffffff !important;
+    font-size: clamp(2.2rem, 5vw, var(--fs-3xl));
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.internacional-banner-hero p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: var(--fs-md);
+    max-width: 720px;
+    margin: var(--sp-3) auto 0;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- GRID DE CONFIGURAÇÃO UNIFICADA (1200PX) --- */
+.main-pagina-interna-internacional {
+    max-width: 1200px;
+    width: 100%;
+    margin: var(--sp-12) auto var(--sp-16);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+    position: relative;
+    z-index: 10;
+}
+
+/* --- SEÇÃO O SETOR & CONTEXTO --- */
+.badge-cooperacao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cor-fundo-secao);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.painel-destaque-ads {
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.descricao-contexto {
+    margin-bottom: var(--sp-5);
+}
+
+.mini-card-contexto {
+    padding: var(--sp-5);
+    background: var(--cor-fundo-mini-card);
+    border-radius: var(--raio-md);
+}
+
+.mini-card-contexto h4 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--sp-2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mini-card-contexto p {
+    font-size: var(--fs-sm);
+    margin: 0;
+}
+
+/* --- SEÇÃO DO EDITAL & GRIDS --- */
+.texto-introducao-edital {
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--sp-5);
+}
+
+.grid-vagas-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sp-5);
+    margin-bottom: var(--sp-6);
+}
+
+.item-edital-destaque {
+    border-top: 4px solid var(--cor-primaria);
+}
+
+.item-edital-destaque h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.alerta-passagem {
+    color: var(--cor-primaria-hover);
+    font-weight: 600;
+    display: block;
+    margin-top: var(--sp-2);
+}
+
+.lista-destinos {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lista-destinos li i {
+    color: var(--cor-primaria);
+    margin-right: 4px;
+}
+
+/* --- REQUISITOS BULLETS --- */
+.container-requisitos-edital {
+    background: var(--cor-fundo-secao);
+    padding: var(--sp-6);
+    border-radius: var(--raio-md);
+    margin-bottom: var(--sp-6);
+}
+
+.container-requisitos-edital h3 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--sp-3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-requisitos-bullets {
+    padding-left: var(--sp-5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--sp-2);
+    list-style-type: disc;
+    font-size: var(--fs-sm);
+}
+
+/* --- CLASSIFICAÇÃO --- */
+.container-classificacao {
+    margin-bottom: var(--sp-6);
+}
+
+.container-classificacao h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tags-pesos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    margin-top: var(--sp-3);
+}
+
+.tag-peso-item {
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+}
+
+.nota-observacao-idioma {
+    margin-top: var(--sp-3);
+    padding: var(--sp-3);
+    border-left: 3px solid var(--cor-secundaria);
+    font-size: var(--fs-xs);
+    color: var(--cor-texto-secundario);
+}
+
+/* --- TABELA DO CRONOGRAMA --- */
+.container-cronograma-tabela {
+    margin-bottom: var(--sp-6);
+}
+
+.container-cronograma-tabela h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.responsivo-tabela-wrap {
+    overflow-x: auto;
+    margin-top: var(--sp-3);
+}
+
+.tabela-prazos-internacional {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: var(--fs-sm);
+}
+
+.tabela-prazos-internacional th {
+    padding: var(--sp-3);
+    border-bottom: 2px solid var(--cor-borda);
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.tabela-prazos-internacional td {
+    padding: var(--sp-3);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.tabela-prazos-internacional tr.linha-encerrada {
+    opacity: 0.65;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.badge-status-fechado {
+    color: #dc3545;
+    font-weight: 600;
+    font-size: var(--fs-xs);
+    margin-left: 8px;
+}
+
+.tabela-prazos-internacional tr.linha-destaque-final {
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* --- CONTAINER SUBMISSÃO FOOTER --- */
+.container-submissao-footer {
+    border: 1px dashed var(--cor-borda);
+    padding: var(--sp-5);
+    border-radius: var(--raio-md);
+    text-align: center;
+}
+
+.container-submissao-footer h4 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container-submissao-footer p {
+    font-size: var(--fs-sm);
+    max-width: 680px;
+    margin: var(--sp-2) auto var(--sp-4);
+}
+
+.alerta-bloqueio-inscricao {
+    padding: var(--sp-3);
+    background: rgba(220, 53, 69, 0.08);
+    border-left: 4px solid #dc3545;
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    color: var(--cor-texto);
+    display: inline-block;
+    text-align: left;
+}
+
+.alerta-bloqueio-inscricao i {
+    color: #dc3545;
+    margin-right: 4px;
+}
+
+/* ==========================================================
+   DARK MODE COMPATIBILIDADE — INTERNACIONAL
+   ========================================================== */
+
+body.dark-mode .universal-painel-card {
+    background: #1e1e1e !important;
+    color: var(--cor-texto) !important;
+    border-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .universal-painel-card h2,
+body.dark-mode .universal-painel-card p,
+body.dark-mode .container-classificacao p {
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .badge-cooperacao {
+    background: #252525 !important;
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .mini-card-contexto {
+    background: #252525 !important;
+}
+
+body.dark-mode .mini-card-contexto h4 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .card-interno {
+    background-color: #252525 !important;
+    color: var(--cor-texto) !important;
+    border-left-color: var(--cor-borda) !important;
+    border-right-color: var(--cor-borda) !important;
+    border-bottom-color: var(--cor-borda) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card-interno[style*="border-top"] {
+    border-top: 4px solid var(--cor-primaria) !important;
+}
+
+body.dark-mode .item-edital-destaque h3,
+body.dark-mode .container-classificacao h3,
+body.dark-mode .container-cronograma-tabela h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card-interno p,
+body.dark-mode .lista-destinos li,
+body.dark-mode .texto-introducao-edital {
+    color: var(--cor-texto-secundario) !important;
+}
+
+body.dark-mode .container-requisitos-edital {
+    background: #252525 !important;
+}
+
+body.dark-mode .container-requisitos-edital h3 {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .tag-peso-item {
+    background: #1e1e1e !important;
+    border-color: var(--cor-borda) !important;
+    color: var(--cor-texto-secundario) !important;
+}
+
+body.dark-mode .tabela-prazos-internacional th {
+    color: var(--cor-primaria-hover) !important;
+    border-bottom-color: var(--cor-borda) !important;
+}
+
+body.dark-mode .tabela-prazos-internacional td {
+    border-bottom-color: var(--cor-borda) !important;
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode tr.linha-destaque-final td {
+    color: var(--cor-primaria-hover) !important;
+}
+
+body.dark-mode .tabela-prazos-internacional tr.linha-encerrada {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .container-submissao-footer h4 {
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    header.cabecalho {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+
+    body.dark-mode .cabecalho_nav {
+        background: rgba(15, 18, 15, 0.94) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
+}
+
+/* Correção para listas em colunas/grid (evita bolinha em cima da letra) */
+.universal-painel-card ul {
+    list-style: none !important;
+    /* Remove a bolinha nativa bugada */
+    padding-left: 0 !important;
+    margin-top: var(--sp-4);
+}
+
+.universal-painel-card ul li {
+    position: relative;
+    padding-left: var(--sp-5) !important;
+    /* Abre espaço para a nova bolinha */
+    line-height: 1.6;
+    color: var(--cor-texto-secundario);
+}
+
+/* Cria uma bolinha perfeita e sempre alinhada à esquerda */
+.universal-painel-card ul li::before {
+    content: "•";
+    color: var(--cor-primaria);
+    /* Deixa a bolinha verde institucional */
+    font-weight: bold;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    /* Ajuste fino para alinhar verticalmente com a primeira linha */
+}
+
+/* Ajuste de cor para o Modo Escuro */
+body.dark-mode .universal-painel-card ul li {
+    color: var(--cor-texto) !important;
+}
+
+body.dark-mode .universal-painel-card ul li::before {
+    color: var(--cor-primaria-hover) !important;
+}

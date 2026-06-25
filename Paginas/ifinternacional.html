@@ -4,215 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF Internacional - IFCE Campus Boa Viagem</title>
-    <meta name="description" content="Programa de intercâmbio do IFCE Campus Boa Viagem.">
+    <title>Intercâmbio e Mobilidade Internacional - IFCE Campus Boa Viagem</title>
+    <meta name="description"
+        content="Oportunidades de intercâmbio, editais ARINTER e acordos de cooperação internacional para os estudantes de tecnologia do IFCE Boa Viagem.">
     <link rel="icon" href="../images/favicon1.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
     <link rel="stylesheet" href="../CSS/componentes.css">
-    <link rel="stylesheet" href="../CSS/paginas/extensao.css">
+    <link rel="stylesheet" href="../CSS/paginas/ads.css"> <!-- Base de layout comum -->
+    <link rel="stylesheet" href="../CSS/paginas/ifinternacional.css"> <!-- Nova folha dedicada -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header class="cabecalho">
-        <div class="logo">
+        <div class="logo-area">
             <a href="../index.html">
-                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="60">
+                <img src="../images/Logo-IFCE.png" alt="Logo IFCE" width="34">
             </a>
+            <span class="separador"></span>
+            <span class="pagina-atual">Intercâmbio</span>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
-            ☰
-        </button>
-        <nav class="cabecalho_nav">
-            <a class="cabecalho_nav_ancoras" href="../index.html">Início</a>
-            <a class="cabecalho_nav_ancoras" href="institucional.html">Conheça o IFCE</a>
-            <a class="cabecalho_nav_ancoras" href="cidts.html">CIDTS</a>
-            <a class="cabecalho_nav_ancoras" href="cursos.html">Cursos</a>
-            <a class="cabecalho_nav_ancoras" href="ingresso.html">Ingresso</a>
-            <a class="cabecalho_nav_ancoras" href="extensao.html">Extensão</a>
-            <a class="cabecalho_nav_ancoras" href="bolsas.html">Bolsas</a>
-            <a class="cabecalho_nav_ancoras" href="contato.html">Contato</a>
-            <a class="cabecalho_nav_ancoras ativo" href="ifinternacional.html">Intercâmbio</a>
-            <a class="cabecalho_nav_ancoras" href="pesquisas.html">Pesquisas</a>
-            <a class="cabecalho_nav_ancoras" href="noticias.html">Notícias</a>
-            <a class="cabecalho_nav_ancoras" href="links-uteis.html">Links Úteis</a>
-            <a class="cabecalho_nav_ancoras" href="ads.html">ADS</a>
 
-            <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
-                <span class="theme-btn-icon">🌙</span>
-            </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+        <div class="cabecalho_nav-overlay" id="nav-overlay"></div>
+
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_links">
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Ensino</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Cursos e Docentes</span>
+                        <a href="ads.html">Sobre o Curso ADS</a>
+                        <a href="professores.html">Corpo Docente</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Pesquisa</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Inovação e Projetos</span>
+                        <a href="cidts.html">Conheça o CIDTS</a>
+                        <a href="pesquisas.html">Projetos de Pesquisa</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras ativo" href="#">Extensão</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Comunidade</span>
+                        <a href="extensao.html">Projetos de Extensão</a>
+                        <a href="ifinternacional.html">Intercâmbio</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="cabecalho_nav_ancoras" href="#">Estudante</a>
+                    <div class="dropdown-menu">
+                        <span class="menu-title">Serviços e Apoio</span>
+                        <a href="ingresso.html">Formas de Ingresso</a>
+                        <a href="bolsas.html">Auxílios e Bolsas</a>
+                        <a href="links-uteis.html">Links Úteis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabecalho-busca">
+                <input type="search" id="busca-portal" class="busca-input" placeholder="Buscar no portal..."
+                    autocomplete="off">
+                <button class="busca-btn" type="button" id="busca-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="busca-sugestoes" id="busca-sugestoes" hidden></div>
+            </div>
         </nav>
     </header>
 
-    <section class="internacional-banner">
-        <div class="internacional-banner-filtro">
-            <h1>IFCE Internacional</h1>
-            <p>
-                Conectando estudantes, pesquisa e inovação a oportunidades
-                acadêmicas em âmbito internacional.
-            </p>
-        </div>
+    <!-- Botão de Alternância de Tema -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">
+        <span class="theme-btn-icon">
+            <i class="fa-solid fa-sun"></i>
+        </span>
+    </button>
+
+    <!-- Banner Hero Otimizado -->
+    <section class="internacional-banner-hero">
+        <h1>IFCE Internacional</h1>
+        <p>Conectando estudantes, pesquisa e inovação a oportunidades acadêmicas globais.</p>
     </section>
 
-    <main class="main universal-container">
+    <!-- Container Central Otimizado (1200px) -->
+    <main class="main-pagina-interna-internacional">
 
-        <aside class="universal-sidebar">
-            <h3>Navegação</h3>
-            <ul>
-                <li><a href="#o-setor">O Setor</a></li>
-                <li><a href="#eixos-acao">Eixos de Ação</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-            </ul>
-            <div class="sidebar-badge">
-                <strong>Relações</strong>
-                <span>Internacionais</span>
+        <!-- O SETOR -->
+        <section class="universal-painel-card" id="o-setor">
+            <div class="badge-cooperacao">
+                <i class="fa-solid fa-earth-americas"></i> Cooperação Acadêmica Internacional
             </div>
-        </aside>
+            <h2>O que é o Setor?</h2>
+            <p>O <strong>IFCE Internacional</strong> é o setor institucional responsável por promover ações de
+                cooperação acadêmica, científica e cultural entre o Instituto Federal do Ceará e prestigiadas
+                instituições de ensino de outros países.</p>
+            <p>Através de programas consolidados de mobilidade acadêmica, bolsas institucionais e acordos bilaterais, o
+                setor expande os horizontes dos alunos de graduação, impulsionando a internacionalização da pesquisa e
+                gerando vivências culturais transformadoras.</p>
+        </section>
 
-        <!-- CONTAINER ADAPTÁVEL -->
-        <div class="cidts-conteudo">
+        <!-- REALIDADE DE ADS EM BOA VIAGEM -->
+        <section class="universal-painel-card painel-destaque-ads" id="intercambio-ads">
+            <div class="card-tag">Exclusivo ADS</div>
+            <h2>O Intercâmbio no Curso de ADS</h2>
+            <p class="descricao-contexto">A internacionalização é um diferencial estratégico para os alunos de Análise e
+                Desenvolvimento de Sistemas do campus Boa Viagem, conectando o conhecimento do sertão cearense com os
+                principais polos de tecnologia do mundo.</p>
 
-            <!-- ADICIONADA A CLASSE DE PAINEL PADRÃO PARA DAR O ESPAÇAMENTO PERFEITO -->
-            <section class="universal-painel-card" id="o-setor">
-                <span class="tag-internacional">
-                    🌎 Cooperação Acadêmica Internacional
-                </span>
-
-                <h2 class="institucional_titulo" style="margin-top: 15px;">O que é o IFCE Internacional?</h2>
-
-                <p class="institucional_texto">
-                    O <strong>IFCE Internacional</strong> é o setor responsável por promover
-                    ações de <strong>cooperação acadêmica</strong>, científica e cultural entre o Instituto Federal do
-                    Ceará
-                    e instituições de ensino de outros países.
-                </p>
-
-                <p class="institucional_texto">
-                    Por meio de programas de mobilidade acadêmica, parcerias internacionais e
-                    oportunidades de intercâmbio, o setor busca ampliar a formação dos estudantes
-                    e fortalecer a presença do IFCE em redes de colaboração nacionais e
-                    internacionais.
-                </p>
-            </section>
-
-            <!-- ENVELOPADO EM PAINEL PADRÃO PARA AJUSTAR O ALINHAMENTO COM A SIDEBAR -->
-            <section class="universal-painel-card" id="eixos-acao">
-                <h2 class="institucional_titulo">Eixos de Ação</h2>
-
-                <div class="internacional-cards" style="margin-top: 20px;">
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span>✈️</span>
-                            <small>01</small>
-                        </div>
-                        <h3>Mobilidade Acadêmica</h3>
-                        <p>
-                            Possibilita que estudantes participem de experiências acadêmicas em
-                            instituições estrangeiras, ampliando conhecimentos e vivências culturais.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span>🌎</span>
-                            <small>02</small>
-                        </div>
-                        <h3>Parcerias Internacionais</h3>
-                        <p>
-                            Estabelece acordos de cooperação com universidades e centros de pesquisa
-                            de diferentes países para o desenvolvimento de projetos conjuntos.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="impacto-topo">
-                            <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
-                            <small>03</small>
-                        </div>
-                        <h3>Oportunidades para Estudantes</h3>
-                        <p>
-                            Divulga editais, programas de intercâmbio, cursos e ações voltadas para
-                            a internacionalização da educação e da pesquisa.
-                        </p>
-                    </div>
+            <div class="cards-grid-interna">
+                <div class="card card-interno mini-card-contexto">
+                    <h4><i class="fa-solid fa-calculator"></i> Validação de Créditos</h4>
+                    <p>Disciplinas de computação, engenharia de software e inteligência artificial cursadas no exterior
+                        podem ser plenamente aproveitadas na matriz curricular de ADS ao retornar, garantindo que sua
+                        fluência acadêmica internacional não atrase a formatura.</p>
                 </div>
-            </section>
-
-            <!-- ENVELOPADO EM PAINEL PADRÃO -->
-            <section class="universal-painel-card" id="beneficios">
-                <h2 class="institucional_titulo">Benefícios da Internacionalização</h2>
-
-                <div class="internacional-beneficios" style="padding: 0; margin: 2rem 0 0 0;">
-                    <div class="cards" style="margin-top: 0;">
-                        <div class="card">
-                            <h3>Experiência Global</h3>
-                            <p>Contato com diferentes culturas, idiomas e metodologias de ensino.</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Formação Acadêmica</h3>
-                            <p>Ampliação das oportunidades de aprendizado e desenvolvimento profissional.</p>
-                        </div>
-
-                        <div class="card">
-                            <h3>Pesquisa e Inovação</h3>
-                            <p>Participação em projetos colaborativos com instituições nacionais e internacionais.</p>
-                        </div>
-                    </div>
+                <div class="card card-interno mini-card-contexto">
+                    <h4><i class="fa-solid fa-seedling"></i> Parcerias Tecnológicas Rurais</h4>
+                    <p>Os institutos parceiros na Europa (como os Politécnicos em Portugal) possuem forte sinergia no
+                        desenvolvimento de softwares voltados a Smart Cities e Agrotechs. Isso permite criar conexões
+                        diretas entre seus estudos lá fora e as pesquisas aplicadas dentro do próprio CIDTS.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="universal-painel-card">
-                <h2 class="institucional_titulo">Construindo Conexões Globais</h2>
-                <p class="institucional_texto" style="margin: 0;">
-                    O IFCE busca fortalecer sua atuação internacional por meio da cooperação
-                    acadêmica e científica, contribuindo para uma formação cada vez mais
-                    qualificada e conectada às demandas globais.
-                </p>
-            </section>
+        <!-- EDITAL VIGENTE ARINTER -->
+        <section class="universal-painel-card" id="edital-arinter">
+            <h2>Edital ARINTER Nº 03/2026 – IFCE Internacional</h2>
+            <p class="texto-introducao-edital">O programa oficial de bolsas de mobilidade acadêmica oferece suporte
+                financeiro para estudantes cursarem um semestre letivo completo no exterior (com vigência de fevereiro a
+                julho de 2027).</p>
 
-        </div> <!-- FIM DA DIV cidts-conteudo -->
+            <div class="cards-grid-interna grid-vagas-valores">
+                <div class="card card-interno item-edital-destaque">
+                    <h3><i class="fa-solid fa-hand-holding-dollar"></i> Valor do Auxílio</h3>
+                    <p>Bolsa integral de <strong>US$ 6.000</strong> paga em duas parcelas para cobrir despesas de
+                        passaporte, vistos, seguro-saúde internacional, moradia, alimentação e material.</p>
+                    <small class="alerta-passagem"><i class="fa-solid fa-plane"></i> Passagens aéreas custeadas pelo
+                        campus.</small>
+                </div>
+
+                <div class="card card-interno item-edital-destaque">
+                    <h3><i class="fa-solid fa-passport"></i> Vagas e Destinos</h3>
+                    <p>Oferta de <strong>10 bolsas mundiais</strong> com convênios ativos distribuídos de forma
+                        estratégica:</p>
+                    <ul class="lista-destinos">
+                        <li><i class="fa-solid fa-square-check"></i> <strong>Estados Unidos:</strong> Campi Baturité e
+                            Camocim</li>
+                        <li><i class="fa-solid fa-square-check"></i> <strong>Espanha:</strong> Campus Crato</li>
+                        <li><i class="fa-solid fa-square-check"></i> <strong>Portugal:</strong> Demais campi
+                            participantes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- REQUISITOS -->
+            <div class="container-requisitos-edital">
+                <h3><i class="fa-solid fa-list-check"></i> Requisitos de Admissibilidade</h3>
+                <ul class="lista-requisitos-bullets">
+                    <li>Estar regularmente matriculado em um curso elegível (Anexo I)</li>
+                    <li>Ter nacionalidade brasileira e idade mínima de 18 anos</li>
+                    <li>Coeficiente de Rendimento Acadêmico (CRA) igual ou superior a <strong>7,0</strong></li>
+                    <li>Ter integralizado entre <strong>20% e 70%</strong> da matriz de disciplinas</li>
+                    <li>Não possuir reprovações pendentes na trajetória</li>
+                    <li>Nunca ter sido beneficiado por bolsas de mobilidade internacional do IFCE</li>
+                    <li>Comprovar proficiência linguística do país de destino (exceto Portugal)</li>
+                </ul>
+            </div>
+
+            <!-- CRITÉRIOS DE SELEÇÃO -->
+            <div class="container-classificacao">
+                <h3><i class="fa-solid fa-chart-pie"></i> Critérios de Classificação</h3>
+                <p>O cálculo da nota final dos candidatos utiliza ponderações socioacadêmicas estritas:</p>
+                <div class="tags-pesos-grid">
+                    <span class="tag-peso-item"><strong>CRA:</strong> Peso 3</span>
+                    <span class="tag-peso-item"><strong>Vulnerabilidade Socioeconômica:</strong> Peso 2</span>
+                    <span class="tag-peso-item"><strong>Atividades Acadêmicas (IC/Extensão):</strong> Peso 1</span>
+                </div>
+                <div class="nota-observacao-idioma">
+                    <strong>Nota:</strong> Candidatos com destino aos EUA e Espanha serão submetidos a uma prova escrita
+                    obrigatória (mínimo de 70% de acertos) e entrevista oral eliminatória (nota mínima 7,0).
+                </div>
+            </div>
+
+            <!-- CRONOGRAMA -->
+            <div class="container-cronograma-tabela">
+                <h3><i class="fa-solid fa-calendar-week"></i> Fluxo e Datas-Chave (Ciclo 2026)</h3>
+                <div class="responsivo-tabela-wrap">
+                    <table class="tabela-prazos-internacional">
+                        <thead>
+                            <tr>
+                                <th>Prazo / Data</th>
+                                <th>Etapa do Processo Seletivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="linha-encerrada">
+                                <td>05 a 17/06/2026</td>
+                                <td><strong>Período de Inscrições Online</strong> <span
+                                        class="badge-status-fechado">(Encerrado)</span></td>
+                            </tr>
+                            <tr>
+                                <td>24/07/2026</td>
+                                <td>Resultado preliminar das inscrições homologadas</td>
+                            </tr>
+                            <tr>
+                                <td>11/08/2026</td>
+                                <td>Resultado final pós-recursos das inscrições</td>
+                            </tr>
+                            <tr>
+                                <td>14/08/2026</td>
+                                <td>Aplicação dos exames de proficiência linguística (EUA/Espanha)</td>
+                            </tr>
+                            <tr class="linha-destaque-final">
+                                <td>28/08/2026</td>
+                                <td>Homologação do resultado final geral das bolsas</td>
+                            </tr>
+                            <tr>
+                                <td>14/02/2027</td>
+                                <td>Embarque e início oficial dos estudos na instituição internacional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- INSCRIÇÕES -->
+            <div class="container-submissao-footer">
+                <h4><i class="fa-solid fa-laptop-code"></i> Submissão de Candidaturas</h4>
+                <p>Os processos ocorrem em plataforma centralizada via
+                    <strong>arinter.ifce.edu.br/inscricao.php</strong> mediante upload obrigatório do histórico
+                    unificado, declarações de renda e portfólio acadêmico compilados em formato PDF.</p>
+                <div class="alerta-bloqueio-inscricao">
+                    <i class="fa-solid fa-triangle-exclamation"></i> <strong>Atenção:</strong> O ciclo de inscrições
+                    regulares para este período encontra-se encerrado. Demandas ou esclarecimentos sobre futuros editais
+                    devem ser direcionados para <strong>arinter.reitoria@ifce.edu.br</strong>.
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Rodapé Unificado -->
     <footer class="rodape">
-
         <div class="rodape-conteudo">
-
             <div class="rodape_sobre">
-
                 <img src="../images/Logo-IFCE.png" alt="Logo IFCE" class="rodape_logo-img">
-
                 <h3>IFCE Campus Boa Viagem</h3>
-
-                <p>
-                    Ensino público, gratuito e de excelência em educação
-                    profissional, científica e tecnológica.
-                </p>
-
+                <p>Ensino público, gratuito e de excelência em educação profissional, científica e tecnológica.</p>
                 <div class="rodape_redes">
                     <a href="https://www.instagram.com/ifceboaviagemoficial/" target="_blank" rel="noopener"
-                        aria-label="Instagram do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                        aria-label="Instagram do IFCE Campus Boa Viagem"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/ifcecampusboaviagem/" target="_blank" rel="noopener"
-                        aria-label="Facebook do IFCE Campus Boa Viagem">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                        aria-label="Facebook do IFCE Campus Boa Viagem"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.youtube.com/@ifce_oficial" target="_blank" rel="noopener"
-                        aria-label="YouTube do IFCE">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                        aria-label="YouTube do IFCE"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.linkedin.com/school/ifce-oficial/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn do IFCE">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                        aria-label="LinkedIn do IFCE"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.ifce.edu.br" target="_blank" rel="noopener"
-                        aria-label="Portal institucional do IFCE">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                        aria-label="Portal institutional do IFCE"><i class="fa-solid fa-globe"></i></a>
                 </div>
-
             </div>
 
             <div class="rodape_coluna">
@@ -255,42 +313,26 @@
                 </ul>
             </div>
 
-            <div class="rodape_coluna rodape_contato">
+            <div class="rodape_coluna r_contato">
                 <h4>Contato</h4>
                 <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        Rodovia BR-020, Km 209<br>Boa Viagem - Ceará, CEP 63870-000
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        (85) 3401-2313
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rodovia BR-020, Km 209<br>Boa Viagem
+                        - Ceará, CEP 63870-000</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i>(85) 3401-2313</li>
+                    <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a
+                            href="mailto:ddi.proap@ifce.edu.br">ddi.proap@ifce.edu.br</a></li>
                 </ul>
                 <a class="botao-2 rodape_botao-contato" href="../Paginas/contato.html">Fale com a gente</a>
             </div>
-
         </div>
 
         <div class="rodape_copia">
-
-            <p>
-                © 2026 IFCE Campus Boa Viagem |
-                Desenvolvido pela Equipe Madalena
-            </p>
-
-            <p class="rodape_copia-secundaria">
-                Instituto Federal de Educação, Ciência e Tecnologia do Ceará
-            </p>
-
+            <p>© 2026 IFCE Campus Boa Viagem | Desenvolvido pela Equipe Madalena</p>
+            <p class="rodape_copia-secundaria">Instituto Federal de Educação, Ciência e Tecnologia do Ceará</p>
         </div>
-
     </footer>
 
+    <script src="../js/busca.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../js/menu.js"></script>
 </body>
